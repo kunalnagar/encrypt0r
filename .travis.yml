@@ -3,7 +3,10 @@ language: node_js
 node_js:
 - 8.10.0
 before_install:
-- sudo apt install wine64
+- sudo dpkg --add-architecture i386
+- wget -qO - https://dl.winehq.org/wine-builds/winehq.key | sudo apt-key add -
+- sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ xenial main'
+- sudo apt-get install --install-recommends winehq-stable
 addons:
  apt:
    update: true
