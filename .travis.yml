@@ -3,8 +3,7 @@ language: node_js
 node_js:
 - 8.10.0
 before_install:
-#- sudo add-apt-repository -y ppa:wine/wine-builds && sudo apt-get update && sudo apt-get install -y --install-recommends winehq-devel
-- sudo add-apt-repository -y ppa:wine/wine-builds && sudo apt-get install -y --install-recommends winehq-devel
+- sudo add-apt-repository -y ppa:wine/wine-builds && sudo apt-get update && sudo apt-get install -y --install-recommends winehq-devel
 cache:
   npm: true
 script:
