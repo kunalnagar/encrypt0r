@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>encrypt0r</title>
+        <link rel="stylesheet" type="text/css" href="css/app.min.css">
+    </head>
+    <body>
+        <section class="text-center">
+            <h3>encrypt0r</h3>
+            <p>A simple way to encrypt and decrypt your files</p>
+        </section>
+        <section id="area_choices">
+            <p>What would you like to do?</p>
+            <ol>
+                <li><a href="#" id="choice_encrypt" class="btn--choice">Encrypt</a></li>
+                <li><a href="#" id="choice_decrypt" class="btn--choice">Decrypt</a></li>
+            </ol>
+        </section><br />
+        <div class="d--flex items--center m-r-1">
+            <input type="password" id="passphrase" class="d--none w-100" name="" placeholder="Enter passphrase" />
+            <a href="#" id="btn_encrypt" class="d--none m-r-1">Encrypt</a>
+            <a href="#" id="btn_decrypt" class="d--none m-r-1">Decrypt</a>
+            <a href="#" id="choice_reset" class="d--none">Reset</a>
+        </div>
+        <div id="area_drag" class="text-center d--none">
+            <h4>Drag file here</h4>
+            <p id="file_path"></p>
+            <p class="notice"></p>
+        </div>
+        <script>window.$ = window.jQuery = require('jquery');</script>
+        <script>require('./renderer.js')</script>
+    </body>
+</html>
