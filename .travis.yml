@@ -3,11 +3,6 @@ language: node_js
 node_js:
 - 8.10.0
 before_install:
-#- sudo dpkg --add-architecture i386
-#- wget -qO - https://dl.winehq.org/wine-builds/winehq.key | sudo apt-key add -
-#- sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ xenial main'
-#- sudo apt-get install aptitude
-#- sudo aptitude install winehq-stable
 - sudo add-apt-repository -y ppa:wine/wine-builds && sudo apt-get update && sudo apt-get install -y --install-recommends winehq-devel
 addons:
  apt:
@@ -18,9 +13,16 @@ script:
 - npm run build
 deploy:
   provider: releases
-  api_key: "$ENCRYPTOR_TOKEN"
+  api_key: $ENCRYPTOR_TOKEN
   skip_cleanup: true
-tags: true
+  file:
+    - release-builds/encrypt0r-win32-ia32
+    - release-builds/encrypt0r-darwin-x64
+    - release-builds/encrypt0r-linux-x64
+    - release-builds/encrypt0r-mas-x64
+    - release-builds/encrypt0r-win32-x64
+    - release-builds/encrypt0r-linux-armv7l
+    - release-builds/encrypt0r-linux-arm64
 env:
   global:
-    secure: f8IuRKIxsnyZ+2fYqaRueEvUaKaWVPAuEi0BuG4YlU0ieauVghfqDayvWlai8rjQpHWjn7AsCUevHRuNjs0iVNfFhTROAv+srZLHncUNUGlXwZOlmA/rD/dUpKPi7/WDKajeGsx7eGMkyP4VXGJJKUUlHZXuHP2wjKEBPwdT1HJys6MvI4YNItIsAE5kuFHkLlCWElB0RbSCegkSzxl9TYyQF0YjIr/i6mzwun4mSXE2DMYyL1EDGMpI6ogpdJTucLHcZufnJkqsU5oz7xTwK8zoqaN3tvUIQVtLQonZH2qPUy1vuJBhREcNI7Ts1vFsXj0BS+HptaSlxTSFR2QsJR8qOt9QYRqh+fyyqq/BlZApZXFaYfppjXswyU7x7V75bCPAlG9Po5Zo2GHQM5JcUmPdQnGcWmPvvGPcToclKLpXux8iKXBThY/ZThJSOmQcy9gkiZGOk2LsJj7kt9b5cdF+bRohk7InDlQd+Iz5ydkUd0WHzd7Hak2odiDRKRPMWcVTXhmBjIAmST/CuNjW7s10AvJrAbqMl+XOYsZSAfcsRVAP3nrdK68CFcTKdUhqSFqkbfptxYPvvD/cJBsiyOT/BOyYoIy3iIDYEGtyJjlxE1ieeKCisVrjsmurepX2iuLbzomm6AWPRTlfqcS4+gR8A9cUx294UfqRFI6IUdw=
+    - secure: f8IuRKIxsnyZ+2fYqaRueEvUaKaWVPAuEi0BuG4YlU0ieauVghfqDayvWlai8rjQpHWjn7AsCUevHRuNjs0iVNfFhTROAv+srZLHncUNUGlXwZOlmA/rD/dUpKPi7/WDKajeGsx7eGMkyP4VXGJJKUUlHZXuHP2wjKEBPwdT1HJys6MvI4YNItIsAE5kuFHkLlCWElB0RbSCegkSzxl9TYyQF0YjIr/i6mzwun4mSXE2DMYyL1EDGMpI6ogpdJTucLHcZufnJkqsU5oz7xTwK8zoqaN3tvUIQVtLQonZH2qPUy1vuJBhREcNI7Ts1vFsXj0BS+HptaSlxTSFR2QsJR8qOt9QYRqh+fyyqq/BlZApZXFaYfppjXswyU7x7V75bCPAlG9Po5Zo2GHQM5JcUmPdQnGcWmPvvGPcToclKLpXux8iKXBThY/ZThJSOmQcy9gkiZGOk2LsJj7kt9b5cdF+bRohk7InDlQd+Iz5ydkUd0WHzd7Hak2odiDRKRPMWcVTXhmBjIAmST/CuNjW7s10AvJrAbqMl+XOYsZSAfcsRVAP3nrdK68CFcTKdUhqSFqkbfptxYPvvD/cJBsiyOT/BOyYoIy3iIDYEGtyJjlxE1ieeKCisVrjsmurepX2iuLbzomm6AWPRTlfqcS4+gR8A9cUx294UfqRFI6IUdw=
