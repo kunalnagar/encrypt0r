@@ -1,16 +1,12 @@
-os:
-    - osx
-osx_image: xcode8
+dist: xenial
 language: node_js
 node_js:
 - 8.10.0
 before_install:
-- ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-- brew cask install xquartz
-- brew install wine
-#addons:
-#  apt:
-#    update: true
+- sudo apt install wine64
+addons:
+ apt:
+   update: true
 cache:
   npm: true
 script:
