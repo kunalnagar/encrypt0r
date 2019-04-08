@@ -8,10 +8,10 @@ Easily Encrypt and Decrypt files on Mac, Windows and Linux
 
 ### Download
 
-- [macOS](https://github.com/kunalnagar/encrypt0r/releases/download/v1.0.1/encrypt0r-darwin-x64.zip)
-- [Linux x64](https://github.com/kunalnagar/encrypt0r/releases/download/v1.0.1/encrypt0r-linux-x64.zip)
-- [Windows x32](https://github.com/kunalnagar/encrypt0r/releases/download/v1.0.1/encrypt0r-win32-ia32.zip)
-- [Windows x64](https://github.com/kunalnagar/encrypt0r/releases/download/v1.0.1/encrypt0r-win32-x64.zip)
+- [macOS](https://github.com/kunalnagar/encrypt0r/releases/latest/download/encrypt0r-darwin-x64.zip)
+- [Linux x64](https://github.com/kunalnagar/encrypt0r/releases/latest/download/encrypt0r-linux-x64.zip)
+- [Windows x32](https://github.com/kunalnagar/encrypt0r/releases/latest/download/encrypt0r-win32-ia32.zip)
+- [Windows x64](https://github.com/kunalnagar/encrypt0r/releases/latest/download/encrypt0r-win32-x64.zip)
 
 ### Screenshots
 
