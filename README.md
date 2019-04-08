@@ -4,11 +4,7 @@
 
 Easily Encrypt and Decrypt files on Mac, Windows and Linux
 
-### Demo Video
-
-Click on the GIF below to view the video on YouTube
-
-[![Watch the video](https://i.imgur.com/wdViVGA.gif)](https://youtu.be/WBf2bRMRFME)
+**Note:** Only single files supported for now. If you want to encrypt a folder, you need to zip it first and then drag it to encrypt0r
 
 ### Download
 
@@ -20,3 +16,9 @@ Click on the GIF below to view the video on YouTube
 ### Screenshots
 
 ![](https://i.imgur.com/WQXyqsj.png)
+
+### Demo Video
+
+Click on the GIF below to view the video on YouTube
+
+[![Watch the video](https://i.imgur.com/wdViVGA.gif)](https://youtu.be/WBf2bRMRFME)
