@@ -4,7 +4,7 @@
   "description": "A simple way to encrypt and decrypt your files",
   "main": "main.js",
   "scripts": {
-    "build": "./node_modules/.bin/electron-packager . --all --overwrite --icon=assets/icons/icon.png --out=release-builds && zip -r release-builds/encrypt0r-darwin-x64.zip release-builds/encrypt0r-darwin-x64 && zip -r release-builds/encrypt0r-linux-arm64.zip release-builds/encrypt0r-linux-arm64 && zip -r release-builds/encrypt0r-linux-armv7l.zip release-builds/encrypt0r-linux-armv7l && zip -r release-builds/encrypt0r-linux-x64.zip release-builds/encrypt0r-linux-x64 && zip -r release-builds/encrypt0r-win32-ia32.zip release-builds/encrypt0r-win32-ia32 && zip -r release-builds/encrypt0r-win32-x64.zip release-builds/encrypt0r-win32-x64 && zip -r release-builds/encrypt0r-win32-x64.zip release-builds/encrypt0r-win32-x64",
+    "build": "./node_modules/.bin/electron-packager . --all --overwrite --icon=assets/icons/icon.png --out=release-builds",
     "dev": "./node_modules/.bin/grunt watch & ./node_modules/.bin/electron .",
     "start": "electron ."
   },
