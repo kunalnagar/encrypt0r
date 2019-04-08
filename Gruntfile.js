@@ -40,5 +40,7 @@
                 }
             }
         });
+
+        grunt.registerTask('build', ['sass', 'cssmin'])
     };
 })();
