@@ -32,6 +32,7 @@
     "time-grunt": "^2.0.0"
   },
   "dependencies": {
+    "electron-log": "^3.0.5",
     "jquery": "^3.3.1"
   }
 }

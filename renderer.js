@@ -25,9 +25,17 @@ $(function () {
         $btnReset.show();
         $fieldPassphrase.show();
         if($that.attr('id') === 'choice_encrypt') {
+            ipcRenderer.send('event:log', {
+                action: 'click',
+                element: 'choice_encrypt'
+            });
             $btnEncrypt.show();
             $btnDecrypt.hide();
         } else {
+            ipcRenderer.send('event:log', {
+                action: 'click',
+                element: 'choice_decrypt'
+            });
             $btnEncrypt.hide();
             $btnDecrypt.show();
         }
@@ -43,7 +51,10 @@ $(function () {
         $filePath.empty();
         $fieldPassphrase.val('').hide();
         filePath = '';
-        ipcRenderer.send('action:reset');
+        ipcRenderer.send('event:log', {
+            action: 'click',
+            element: 'choice_reset'
+        });
     });
 
     $areaDrag.on('drop', function(e) {
@@ -52,14 +63,20 @@ $(function () {
         $fieldNotice.empty();
         var originalEvent = e.originalEvent;
         var file = originalEvent.dataTransfer.files[0];
-        console.log(file);
         filePath = file.path;
         $filePath.html(file.path);
+        ipcRenderer.send('event:log', {
+            action: 'drag_drop',
+            filePath: file.path
+        });
         return false;
     });
 
-    // TODO
     $btnEncrypt.on('click', function() {
+        ipcRenderer.send('event:log', {
+            action: 'click',
+            element: 'choice_encrypt'
+        });
         ipcRenderer.send('action:encrypt_decrypt', {
             action: 'encrypt',
             filePath: filePath,
@@ -68,6 +85,10 @@ $(function () {
     });
 
     $btnDecrypt.on('click', function() {
+        ipcRenderer.send('event:log', {
+            action: 'click',
+            element: 'choice_decrypt'
+        });
         ipcRenderer.send('action:encrypt_decrypt', {
             action: 'decrypt',
             filePath: filePath,
@@ -81,7 +102,6 @@ $(function () {
     });
 
     ipcRenderer.on('notice-status', function (e, notice) {
-        console.warn(notice);
         $fieldNotice.html(notice);
     });
 
