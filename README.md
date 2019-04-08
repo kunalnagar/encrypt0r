@@ -6,7 +6,7 @@ Easily Encrypt and Decrypt files on Mac, Windows and Linux
 
 ### Demo Video
 
-![![](https://i.imgur.com/2EgMeUp.gifv)](https://youtu.be/WBf2bRMRFME)
+[![Watch the video](https://i.imgur.com/2EgMeUp.gifv)](https://youtu.be/WBf2bRMRFME)
 
 ### Download
 
