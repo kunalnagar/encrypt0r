@@ -21,5 +21,3 @@ deploy:
   file_glob: true
   file: release-builds/*
   skip_cleanup: true
-  on:
-    tags: true
