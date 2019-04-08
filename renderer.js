@@ -73,27 +73,35 @@ $(function () {
     });
 
     $btnEncrypt.on('click', function() {
-        ipcRenderer.send('event:log', {
-            action: 'click',
-            element: 'choice_encrypt'
-        });
-        ipcRenderer.send('action:encrypt_decrypt', {
-            action: 'encrypt',
-            filePath: filePath,
-            passphrase: $fieldPassphrase.val()
-        });
+        if($fieldPassphrase.val()) {
+            ipcRenderer.send('event:log', {
+                action: 'click',
+                element: 'choice_encrypt'
+            });
+            ipcRenderer.send('action:encrypt_decrypt', {
+                action: 'encrypt',
+                filePath: filePath,
+                passphrase: $fieldPassphrase.val()
+            });
+        } else {
+            $fieldNotice.html("Passphrase is required");
+        }
     });
 
     $btnDecrypt.on('click', function() {
-        ipcRenderer.send('event:log', {
-            action: 'click',
-            element: 'choice_decrypt'
-        });
-        ipcRenderer.send('action:encrypt_decrypt', {
-            action: 'decrypt',
-            filePath: filePath,
-            passphrase: $fieldPassphrase.val()
-        });
+        if($fieldPassphrase.val()) {
+            ipcRenderer.send('event:log', {
+                action: 'click',
+                element: 'choice_decrypt'
+            });
+            ipcRenderer.send('action:encrypt_decrypt', {
+                action: 'decrypt',
+                filePath: filePath,
+                passphrase: $fieldPassphrase.val()
+            });
+        } else {
+            $fieldNotice.html("Passphrase is required");
+        }
     });
 
     $areaDrag.on('dragover', function (e) {

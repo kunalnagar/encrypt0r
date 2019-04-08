@@ -11,6 +11,8 @@ var path = require("path")
 var fs = require("fs");
 var http = require("http");
 var exec = require("child_process").exec
+var crypto = require("crypto");
+var EncryptDecryptHelper = require("./encrypt_decrypt");
 var child;
 
 function createWindow() {
@@ -52,38 +54,43 @@ ipcMain.on("event:log", function(e, arg) {
 ipcMain.on("action:encrypt_decrypt", function (e, arg) {
     log.info("encrypting or decrypting...");
     log.debug(arg);
-    var nameWithExt = "";
+    var key = arg.passphrase;
+    var cipher;
+    var input;
+    var output;
+    var popupFileName;
     if(arg.action === "encrypt") {
-        nameWithExt = arg.filePath + ".enc";
+        popupFileName = arg.filePath + ".enc";
     } else if(arg.action === "decrypt") {
-        nameWithExt = arg.filePath.replace(/\.[^/.]+$/, "")
+        popupFileName = arg.filePath.replace(".enc", "");
     }
+    var edHelper;
+    var result;
     dialog.showSaveDialog({
-        defaultPath: nameWithExt
+        defaultPath: popupFileName
     }, function (filename) {
         if(typeof filename !== "undefined") {
+            edHelper = new EncryptDecryptHelper(filename, arg.filePath, arg.passphrase)
             if(arg.action === "encrypt") {
                 log.info("Encrypting " + filename + " with password <redacted>");
                 e.sender.send("notice-status", "Encrypting...")
-                sCommand = "openssl enc -aes-256-cbc -salt -in " + arg.filePath + " -out " + filename + " -k " + arg.passphrase
+                result = edHelper.encrypt(fs.createReadStream(arg.filePath));
+                if(result && result.code === 200) {
+                    log.info("File successfully encrypted!");
+                    e.sender.send("notice-status", "Done! File has been saved to: " + filename)
+                }
             } else if(arg.action === "decrypt") {
                 log.info("Decrypting " + filename + " with password <redacted>");
                 e.sender.send("notice-status", "Decrypting...")
-                sCommand = "openssl enc -d -aes-256-cbc -in " + arg.filePath + " -out " + filename + " -k " + arg.passphrase
-            }
-            child = exec(sCommand, function (err, stdout, stderr) {
-                if (err !== null) {
-                    log.error("Something went wrong while encrypting/decrypting...");
-                    log.error(err);
-                    e.sender.send("notice-status", "Something went wrong.");
-                } else {
-                    log.info("File successfully: " + arg.action);
+                result = edHelper.decrypt(fs.createReadStream(arg.filePath));
+                if(result && result.code === 200) {
+                    log.info("File successfully decrypted!");
                     e.sender.send("notice-status", "Done! File has been saved to: " + filename)
                 }
-            });
+            }
         } else {
             log.warn("Destination file location not selected");
-            e.sender.send("notice-status", "Oops. Destination file location not selected. Press the Reset button and try again!")
+            e.sender.send("notice-status", "Oops. Destination file location not selected. Please try again!")
         }
     });
 });
