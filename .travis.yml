@@ -8,11 +8,11 @@ cache:
   npm: true
 script:
 - npm run build
+if: tag IS present
 deploy:
   provider: releases
   script: .travis/pu.sh
   on:
-    branch: master
     tags: true
   api_key: $GITHUB_TOKEN
   file_glob: true
