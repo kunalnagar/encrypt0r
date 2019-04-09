@@ -5,6 +5,8 @@ const {
     dialog
 } = require("electron");
 
+require('update-electron-app')()
+
 var mainWindow;
 var log = require("electron-log")
 var path = require("path")
