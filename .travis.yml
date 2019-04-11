@@ -7,11 +7,10 @@ before_install:
 cache:
   npm: true
 script:
-- npm run build
+- npm run deploy
 if: tag IS present
 deploy:
   provider: releases
-  script: .travis/pu.sh
   on:
     tags: true
   api_key: $GITHUB_TOKEN
