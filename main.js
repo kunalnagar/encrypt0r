@@ -9,10 +9,11 @@ var mainWindow;
 var log = require("electron-log")
 var path = require("path")
 var fs = require("fs");
+const zlib = require("zlib");
 var http = require("http");
 var exec = require("child_process").exec
 var crypto = require("crypto");
-var EncryptDecryptHelper = require("./encrypt_decrypt");
+var Utils = require('./src/utils');
 var child;
 
 function createWindow() {
@@ -53,7 +54,6 @@ ipcMain.on("event:log", function(e, arg) {
 
 ipcMain.on("action:encrypt_decrypt", function (e, arg) {
     log.info("encrypting or decrypting...");
-    log.debug(arg);
     var key = arg.passphrase;
     var cipher;
     var input;
@@ -66,31 +66,32 @@ ipcMain.on("action:encrypt_decrypt", function (e, arg) {
     }
     var edHelper;
     var result;
+    let utils;
     dialog.showSaveDialog({
         defaultPath: popupFileName
     }, function (filename) {
         if(typeof filename !== "undefined") {
-            edHelper = new EncryptDecryptHelper(filename, arg.filePath, arg.passphrase)
+            utils = new Utils(arg.filePath, filename, arg.passphrase);
             if(arg.action === "encrypt") {
                 log.info("Encrypting " + filename + " with password <redacted>");
-                e.sender.send("notice-status", "Encrypting...")
-                result = edHelper.encrypt(fs.createReadStream(arg.filePath));
-                if(result && result.code === 200) {
+                utils.encrypt();
+                let _size = 0;
+                let _stat = fs.statSync(arg.filePath);
+                utils.readStream.on('data', function(chunk) {
+                    _size += chunk.length;
+                    let _progress = Math.floor((_size / _stat.size) * 100);
+                    e.sender.send("notice-status", "Encrypting..." + _progress + "%");
+                });
+                utils.writeStream.on('finish', function() {
                     log.info("File successfully encrypted!");
-                    e.sender.send("notice-status", "Done! File has been saved to: " + filename)
-                }
+                    e.sender.send("notice-status", "Done! File has been saved to: " + filename);
+                });
             } else if(arg.action === "decrypt") {
-                log.info("Decrypting " + filename + " with password <redacted>");
-                e.sender.send("notice-status", "Decrypting...")
-                result = edHelper.decrypt(fs.createReadStream(arg.filePath));
-                if(result && result.code === 200) {
-                    log.info("File successfully decrypted!");
-                    e.sender.send("notice-status", "Done! File has been saved to: " + filename)
-                }
+                // utils.decrypt();
             }
         } else {
-            log.warn("Destination file location not selected");
-            e.sender.send("notice-status", "Oops. Destination file location not selected. Please try again!")
+            // log.warn("Destination file location not selected");
+            // e.sender.send("notice-status", "Oops. Destination file location not selected. Please try again!")
         }
     });
 });
