@@ -30,14 +30,12 @@ class Utils {
     const cipher = crypto.createCipheriv('aes-256-cbc', cipherKey, initVector);
     const initVectorStream = new Vector(initVector);
     const writeStream = fs.createWriteStream(path.join(this.destinationFile));
-    let size = 0;
     const stat = fs.statSync(this.originalFile);
+    let size = 0;
     readStream
       .pipe(cipher)
       .pipe(initVectorStream)
       .pipe(writeStream);
-    size = 0;
-
     readStream.on('data', (chunk) => {
       size += chunk.length;
       that.emit('progress', calculateProgress(size, stat.size));
@@ -49,13 +47,13 @@ class Utils {
 
   decrypt() {
     const that = this;
+    const initVectorStream = fs.createReadStream(this.originalFile, { end: 15 });
     let initVector;
     let size = 0;
-    const initVectorStream = fs.createReadStream(this.originalFile, { end: 15 });
-    let cipherKey; let
-      decipher;
-    let readStream; let
-      writeStream;
+    let cipherKey;
+    let decipher;
+    let readStream;
+    let writeStream;
     initVectorStream.on('data', (chunk) => {
       initVector = chunk;
     });
@@ -69,7 +67,6 @@ class Utils {
         .pipe(writeStream);
     });
     initVectorStream.on('close', () => {
-      size = 0;
       const stat = fs.statSync(this.originalFile);
       readStream.on('data', (chunk) => {
         size += chunk.length;
