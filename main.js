@@ -2,95 +2,93 @@ const {
     app,
     BrowserWindow,
     ipcMain,
-    dialog
-} = require("electron");
+    dialog,
+} = require('electron');
 
-var mainWindow;
-var log = require("electron-log")
-var path = require("path")
-var fs = require("fs");
-var http = require("http");
-var exec = require("child_process").exec
-var crypto = require("crypto");
-var EncryptDecryptHelper = require("./encrypt_decrypt");
-var child;
+let mainWindow;
+const log = require('electron-log');
+const path = require('path');
+
+const Utils = require('./src/utils');
 
 function createWindow() {
     mainWindow = new BrowserWindow({
         width: 600,
         height: 600,
         webPreferences: {
-            nodeIntegration: true
+            nodeIntegration: true,
         },
-        icon: path.join(__dirname, "assets/icons/png/64x64.png")
+        icon: path.join(__dirname, 'assets/icons/png/64x64.png'),
     });
-    mainWindow.loadFile("index.html");
-    log.info("created main window and loaded main page");
-    // mainWindow.webContents.openDevTools()
-    mainWindow.on("closed", function () {
+    mainWindow.loadFile('index.html');
+    log.info('created main window and loaded main page');
+    mainWindow.on('closed', () => {
         mainWindow = null;
-        log.info("closed main window");
+        log.info('closed main window');
     });
 }
 
-app.on("ready", createWindow);
+app.on('ready', createWindow);
 
-app.on("window-all-closed", function () {
-    if (process.platform !== "darwin") {
+app.on('window-all-closed', () => {
+    if (process.platform !== 'darwin') {
         app.quit();
     }
 });
 
-app.on("activate", function () {
+app.on('activate', () => {
     if (mainWindow === null) {
         createWindow();
     }
 });
 
-ipcMain.on("event:log", function(e, arg) {
+ipcMain.on('event:log', (e, arg) => {
     log.debug(arg);
 });
 
-ipcMain.on("action:encrypt_decrypt", function (e, arg) {
-    log.info("encrypting or decrypting...");
-    log.debug(arg);
-    var key = arg.passphrase;
-    var cipher;
-    var input;
-    var output;
-    var popupFileName;
-    if(arg.action === "encrypt") {
-        popupFileName = arg.filePath + ".enc";
-    } else if(arg.action === "decrypt") {
-        popupFileName = arg.filePath.replace(".enc", "");
+ipcMain.on('action:encrypt_decrypt', (e, arg) => {
+    log.info('encrypting or decrypting...');
+    let popupFileName;
+    if (arg.action === 'encrypt') {
+        popupFileName = `${arg.filePath}.enc`;
+    } else if (arg.action === 'decrypt') {
+        popupFileName = arg.filePath.replace('.enc', '');
     }
-    var edHelper;
-    var result;
+    let utils;
     dialog.showSaveDialog({
-        defaultPath: popupFileName
-    }, function (filename) {
-        if(typeof filename !== "undefined") {
-            edHelper = new EncryptDecryptHelper(filename, arg.filePath, arg.passphrase)
-            if(arg.action === "encrypt") {
-                log.info("Encrypting " + filename + " with password <redacted>");
-                e.sender.send("notice-status", "Encrypting...")
-                result = edHelper.encrypt(fs.createReadStream(arg.filePath));
-                if(result && result.code === 200) {
-                    log.info("File successfully encrypted!");
-                    e.sender.send("notice-status", "Done! File has been saved to: " + filename)
-                }
-            } else if(arg.action === "decrypt") {
-                log.info("Decrypting " + filename + " with password <redacted>");
-                e.sender.send("notice-status", "Decrypting...")
-                result = edHelper.decrypt(fs.createReadStream(arg.filePath));
-                if(result && result.code === 200) {
-                    log.info("File successfully decrypted!");
-                    e.sender.send("notice-status", "Done! File has been saved to: " + filename)
-                }
+        defaultPath: popupFileName,
+    }, (filename) => {
+        if (typeof filename !== 'undefined') {
+            utils = new Utils(arg.filePath, filename, arg.passphrase);
+            if (arg.action === 'encrypt') {
+                log.info(`Encrypting ${filename} with password <redacted>`);
+                utils.encrypt();
+                utils.on('progress', (progress) => {
+                    e.sender.send('notice-status', `Encrypting...${progress}%`);
+                });
+                utils.on('finished', () => {
+                    log.info('File successfully encrypted!');
+                    e.sender.send('notice-status', `Done! File has been saved to: ${filename}`);
+                });
+            } else if (arg.action === 'decrypt') {
+                log.info(`Decrypting ${filename} with password <redacted>`);
+                utils.decrypt();
+                utils.on('progress', (progress) => {
+                    e.sender.send('notice-status', `Decrypting...${progress}%`);
+                });
+                utils.on('finished', () => {
+                    log.info('File successfully decrypted!');
+                    e.sender.send('notice-status', `Done! File has been saved to: ${filename}`);
+                });
+                utils.on('error', (reason) => {
+                    if (reason === 'BAD_DECRYPT') {
+                        e.sender.send('notice-status', 'Oops. The passphrase is incorrect.');
+                    }
+                });
             }
         } else {
-            log.warn("Destination file location not selected");
-            e.sender.send("notice-status", "Oops. Destination file location not selected. Please try again!")
+            log.warn('Destination file location not selected');
+            e.sender.send('notice-status', 'Oops. Destination file location not selected. Please try again!');
         }
     });
 });

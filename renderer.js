@@ -1,47 +1,42 @@
-// This file is required by the index.html file and will
-// be executed in the renderer process for that window.
-// All of the Node.js APIs are available in this process.
+const { ipcRenderer } = require('electron');
 
-const ipcRenderer = require('electron').ipcRenderer;
+$(() => {
+    let filePath = '';
 
-$(function () {
+    const $areaChoices = $('#area_choices');
+    const $areaDrag = $('#area_drag');
+    const $filePath = $('#file_path');
+    const $fieldNotice = $('.notice');
+    const $btnChoice = $('.btn--choice');
+    const $btnReset = $('#choice_reset');
+    const $btnEncrypt = $('#btn_encrypt');
+    const $btnDecrypt = $('#btn_decrypt');
+    const $fieldPassphrase = $('#passphrase');
 
-    var filePath = '';
-
-    var $areaChoices = $('#area_choices');
-    var $areaDrag = $('#area_drag');
-    var $filePath = $('#file_path');
-    var $fieldNotice = $('.notice');
-    var $btnChoice = $('.btn--choice');
-    var $btnReset = $('#choice_reset');
-    var $btnEncrypt = $('#btn_encrypt');
-    var $btnDecrypt = $('#btn_decrypt');
-    var $fieldPassphrase = $('#passphrase');
-
-    $btnChoice.on('click', function() {
-        var $that = $(this);
+    $btnChoice.on('click', () => {
+        const $that = $(this);
         $areaChoices.hide();
         $areaDrag.show();
         $btnReset.show();
         $fieldPassphrase.show();
-        if($that.attr('id') === 'choice_encrypt') {
+        if ($that.attr('id') === 'choice_encrypt') {
             ipcRenderer.send('event:log', {
                 action: 'click',
-                element: 'choice_encrypt'
+                element: 'choice_encrypt',
             });
             $btnEncrypt.show();
             $btnDecrypt.hide();
         } else {
             ipcRenderer.send('event:log', {
                 action: 'click',
-                element: 'choice_decrypt'
+                element: 'choice_decrypt',
             });
             $btnEncrypt.hide();
             $btnDecrypt.show();
         }
     });
 
-    $btnReset.on('click', function() {
+    $btnReset.on('click', () => {
         $areaChoices.show();
         $areaDrag.hide();
         $btnReset.hide();
@@ -53,64 +48,63 @@ $(function () {
         filePath = '';
         ipcRenderer.send('event:log', {
             action: 'click',
-            element: 'choice_reset'
+            element: 'choice_reset',
         });
     });
 
-    $areaDrag.on('drop', function(e) {
+    $areaDrag.on('drop', (e) => {
         e.preventDefault();
         e.stopPropagation();
         $fieldNotice.empty();
-        var originalEvent = e.originalEvent;
-        var file = originalEvent.dataTransfer.files[0];
+        const { originalEvent } = e;
+        const file = originalEvent.dataTransfer.files[0];
         filePath = file.path;
         $filePath.html(file.path);
         ipcRenderer.send('event:log', {
             action: 'drag_drop',
-            filePath: file.path
+            filePath: file.path,
         });
         return false;
     });
 
-    $btnEncrypt.on('click', function() {
-        if($fieldPassphrase.val()) {
+    $btnEncrypt.on('click', () => {
+        if ($fieldPassphrase.val()) {
             ipcRenderer.send('event:log', {
                 action: 'click',
-                element: 'choice_encrypt'
+                element: 'choice_encrypt',
             });
             ipcRenderer.send('action:encrypt_decrypt', {
                 action: 'encrypt',
-                filePath: filePath,
-                passphrase: $fieldPassphrase.val()
+                filePath,
+                passphrase: $fieldPassphrase.val(),
             });
         } else {
-            $fieldNotice.html("Passphrase is required");
+            $fieldNotice.html('Passphrase is required');
         }
     });
 
-    $btnDecrypt.on('click', function() {
-        if($fieldPassphrase.val()) {
+    $btnDecrypt.on('click', () => {
+        if ($fieldPassphrase.val()) {
             ipcRenderer.send('event:log', {
                 action: 'click',
-                element: 'choice_decrypt'
+                element: 'choice_decrypt',
             });
             ipcRenderer.send('action:encrypt_decrypt', {
                 action: 'decrypt',
-                filePath: filePath,
-                passphrase: $fieldPassphrase.val()
+                filePath,
+                passphrase: $fieldPassphrase.val(),
             });
         } else {
-            $fieldNotice.html("Passphrase is required");
+            $fieldNotice.html('Passphrase is required');
         }
     });
 
-    $areaDrag.on('dragover', function (e) {
+    $areaDrag.on('dragover', (e) => {
         e.preventDefault();
         e.stopPropagation();
     });
 
-    ipcRenderer.on('notice-status', function (e, notice) {
+    ipcRenderer.on('notice-status', (e, notice) => {
         $fieldNotice.html(notice);
     });
-
 });
