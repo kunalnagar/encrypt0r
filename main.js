@@ -14,6 +14,8 @@ var http = require("http");
 var exec = require("child_process").exec
 var crypto = require("crypto");
 var Utils = require('./src/utils');
+var EventEmitter = require('events').EventEmitter;
+var pubsub = new EventEmitter();
 var child;
 
 function createWindow() {
@@ -27,7 +29,6 @@ function createWindow() {
     });
     mainWindow.loadFile("index.html");
     log.info("created main window and loaded main page");
-    // mainWindow.webContents.openDevTools()
     mainWindow.on("closed", function () {
         mainWindow = null;
         log.info("closed main window");
@@ -75,23 +76,27 @@ ipcMain.on("action:encrypt_decrypt", function (e, arg) {
             if(arg.action === "encrypt") {
                 log.info("Encrypting " + filename + " with password <redacted>");
                 utils.encrypt();
-                let _size = 0;
-                let _stat = fs.statSync(arg.filePath);
-                utils.readStream.on('data', function(chunk) {
-                    _size += chunk.length;
-                    let _progress = Math.floor((_size / _stat.size) * 100);
-                    e.sender.send("notice-status", "Encrypting..." + _progress + "%");
+                utils.on('progress', function(progress) {
+                    e.sender.send("notice-status", "Encrypting..." + progress + "%");
                 });
-                utils.writeStream.on('finish', function() {
+                utils.on('finished', function() {
                     log.info("File successfully encrypted!");
                     e.sender.send("notice-status", "Done! File has been saved to: " + filename);
                 });
             } else if(arg.action === "decrypt") {
-                // utils.decrypt();
+                log.info("Decrypting " + filename + " with password <redacted>");
+                utils.decrypt();
+                utils.on('progress', function(progress) {
+                    e.sender.send("notice-status", "Decrypting..." + progress + "%");
+                });
+                utils.on('finished', function() {
+                    log.info("File successfully decrypted!");
+                    e.sender.send("notice-status", "Done! File has been saved to: " + filename);
+                });
             }
         } else {
-            // log.warn("Destination file location not selected");
-            // e.sender.send("notice-status", "Oops. Destination file location not selected. Please try again!")
+            log.warn("Destination file location not selected");
+            e.sender.send("notice-status", "Oops. Destination file location not selected. Please try again!")
         }
     });
 });
