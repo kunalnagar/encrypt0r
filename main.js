@@ -80,6 +80,11 @@ ipcMain.on('action:encrypt_decrypt', (e, arg) => {
                     log.info('File successfully decrypted!');
                     e.sender.send('notice-status', `Done! File has been saved to: ${filename}`);
                 });
+                utils.on('error', (reason) => {
+                    if (reason === 'BAD_DECRYPT') {
+                        e.sender.send('notice-status', 'Oops. The passphrase is incorrect.');
+                    }
+                });
             }
         } else {
             log.warn('Destination file location not selected');

@@ -64,6 +64,11 @@ class Utils {
             writeStream = fs.createWriteStream(path.join(this.destinationFile));
             readStream
                 .pipe(decipher)
+                .on('error', (err) => {
+                    if (err.reason === 'BAD_DECRYPT') {
+                        that.emit('error', err.reason);
+                    }
+                })
                 .pipe(writeStream);
         });
         initVectorStream.on('close', () => {
