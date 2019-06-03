@@ -7,6 +7,10 @@ const inherits = require('util').inherits;
 
 const Vector = require('./vector');
 
+function _calculateProgress(chunkSize, totalSize) {
+    return Math.floor((chunkSize / totalSize) * 100);
+}
+
 class Utils {
 
     constructor(originalFile, destinationFile, password) {
@@ -14,9 +18,6 @@ class Utils {
         this.originalFile = originalFile;
         this.destinationFile = destinationFile;
         this.password = password;
-        this.readStream;
-        this.writeStream;
-        this.readIv;
     }
 
     getCipherKey() {
@@ -25,53 +26,55 @@ class Utils {
 
     encrypt() {
         let that = this;
-        const initVector = crypto.randomBytes(16);
-        const cipherKey = this.getCipherKey();
-        this.readStream = fs.createReadStream(this.originalFile);
-        const cipher = crypto.createCipheriv('aes-256-cbc', cipherKey, initVector);
-        const initVectorStream = new Vector(initVector);
-        this.writeStream = fs.createWriteStream(path.join(this.destinationFile));
-        this.readStream
+        let initVector = crypto.randomBytes(16);
+        let cipherKey = this.getCipherKey();
+        let readStream = fs.createReadStream(this.originalFile);
+        let cipher = crypto.createCipheriv('aes-256-cbc', cipherKey, initVector);
+        let initVectorStream = new Vector(initVector);
+        let writeStream = fs.createWriteStream(path.join(this.destinationFile));
+        let _size = 0, _stat;
+        readStream
             .pipe(cipher)
             .pipe(initVectorStream)
-            .pipe(this.writeStream);
-        let _size = 0;
-        let _stat = fs.statSync(this.originalFile);
-        this.readStream.on('data', function(chunk) {
+            .pipe(writeStream);
+        _size = 0;
+        _stat = fs.statSync(this.originalFile);
+        readStream.on('data', function(chunk) {
             _size += chunk.length;
-            let _progress = Math.floor((_size / _stat.size) * 100);
-            that.emit('progress', _progress);
+            that.emit('progress', _calculateProgress(_size, _stat.size));
         });
-        this.writeStream.on('finish', function() {
+        writeStream.on('finish', function() {
             that.emit('finished');
         });
     }
 
     decrypt() {
-        let initVector;
         let that = this;
-        this.readIv = fs.createReadStream(this.originalFile, { end: 15 });
-        this.readIv.on('data', (chunk) => {
+        let initVector;
+        let _size = 0, _stat;
+        let initVectorStream = fs.createReadStream(this.originalFile, { end: 15 });
+        let cipherKey, decipher;
+        let readStream, writeStream;
+        initVectorStream.on('data', (chunk) => {
             initVector = chunk;
         });
-        this.readIv.on('close', (chunk) => {
-            const cipherKey = this.getCipherKey();
-            const decipher = crypto.createDecipheriv('aes-256-cbc', cipherKey, initVector);
-            this.readStream = fs.createReadStream(this.originalFile, { start: 16 });
-            this.writeStream = fs.createWriteStream(path.join(this.destinationFile));
-            this.readStream
+        initVectorStream.on('close', (chunk) => {
+            cipherKey = this.getCipherKey();
+            decipher = crypto.createDecipheriv('aes-256-cbc', cipherKey, initVector);
+            readStream = fs.createReadStream(this.originalFile, { start: 16 });
+            writeStream = fs.createWriteStream(path.join(this.destinationFile));
+            readStream
                 .pipe(decipher)
-                .pipe(this.writeStream);
+                .pipe(writeStream);
         });
-        this.readIv.on('close', (chunk) => {
-            let _size = 0;
-            let _stat = fs.statSync(this.originalFile);
-            this.readStream.on('data', function(chunk) {
+        initVectorStream.on('close', (chunk) => {
+            _size = 0;
+            _stat = fs.statSync(this.originalFile);
+            readStream.on('data', function(chunk) {
                 _size += chunk.length;
-                let _progress = Math.floor((_size / _stat.size) * 100);
-                that.emit('progress', _progress);
+                that.emit('progress', _calculateProgress(_size, _stat.size));
             });
-            this.writeStream.on('finish', function() {
+            writeStream.on('finish', function() {
                 that.emit('finished');
             });
         });
