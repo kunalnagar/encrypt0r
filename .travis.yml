@@ -7,7 +7,8 @@ before_install:
 cache:
   npm: true
 script:
-- npm run deploy
+  - npm run lint
+  - npm run deploy
 if: tag IS present
 deploy:
   provider: releases

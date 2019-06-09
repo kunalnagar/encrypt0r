@@ -4,6 +4,7 @@
   "description": "A simple way to encrypt and decrypt your files",
   "main": "main.js",
   "scripts": {
+    "lint": "./node_modules/.bin/eslint **/*.js --fix",
     "build-grunt": "./node_modules/.bin/grunt build",
     "build-mac-x64": "./node_modules/.bin/electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/icon.icns --prune=true --out=release-builds",
     "zip-mac-x64": "zip -r release-builds/encrypt0r-mac.zip release-builds/encrypt0r-darwin-x64",
