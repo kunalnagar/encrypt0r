@@ -1,6 +1,6 @@
 const { ipcRenderer } = require('electron');
 
-$(() => {
+$(function() {
     let filePath = '';
 
     const $areaChoices = $('#area_choices');
@@ -13,7 +13,7 @@ $(() => {
     const $btnDecrypt = $('#btn_decrypt');
     const $fieldPassphrase = $('#passphrase');
 
-    $btnChoice.on('click', () => {
+    $btnChoice.on('click', function() {
         const $that = $(this);
         $areaChoices.hide();
         $areaDrag.show();
@@ -36,7 +36,7 @@ $(() => {
         }
     });
 
-    $btnReset.on('click', () => {
+    $btnReset.on('click', function() {
         $areaChoices.show();
         $areaDrag.hide();
         $btnReset.hide();
@@ -67,7 +67,7 @@ $(() => {
         return false;
     });
 
-    $btnEncrypt.on('click', () => {
+    $btnEncrypt.on('click', function() {
         if ($fieldPassphrase.val()) {
             ipcRenderer.send('event:log', {
                 action: 'click',
@@ -83,7 +83,7 @@ $(() => {
         }
     });
 
-    $btnDecrypt.on('click', () => {
+    $btnDecrypt.on('click', function() {
         if ($fieldPassphrase.val()) {
             ipcRenderer.send('event:log', {
                 action: 'click',
