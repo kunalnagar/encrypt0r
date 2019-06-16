@@ -1,0 +1,21 @@
+{
+	"env": {
+		"browser": true,
+		"commonjs": true,
+		"es6": true,
+		"node": true,
+		"jquery": true
+	},
+	"extends": [
+		"plugin:prettier/recommended"
+	],
+	"plugins": ["prettier"],
+	"parserOptions": {
+		"ecmaVersion": 2018
+	},
+	"rules": {
+		"prettier/prettier": "error",
+		"linebreak-style": ["error", "unix"],
+		"indent": ["error", 4]
+	}
+}
