@@ -50,7 +50,7 @@
   },
   "dependencies": {
     "electron": "^5.0.2",
-    "electron-installer-debian": "^1.1.1",
+    "electron-installer-debian": "^2.0.0",
     "electron-log": "^3.0.5",
     "jquery": "^3.4.1"
   }
