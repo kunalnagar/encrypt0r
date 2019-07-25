@@ -2,6 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const crypto = require("crypto");
 const EventEmitter = require("events");
+const zlib = require("zlib");
 const { inherits } = require("util");
 
 const Vector = require("./vector");
@@ -40,8 +41,10 @@ class Utils {
             path.join(this.destinationFile)
         );
         const stat = fs.statSync(this.originalFile);
+        const gzip = zlib.createGzip();
         let size = 0;
         readStream
+            .pipe(gzip)
             .pipe(cipher)
             .pipe(initVectorStream)
             .pipe(writeStream);
@@ -59,6 +62,7 @@ class Utils {
         const initVectorStream = fs.createReadStream(this.originalFile, {
             end: 15
         });
+        const unzip = zlib.createGunzip();
         let initVector;
         let size = 0;
         let cipherKey;
@@ -79,6 +83,7 @@ class Utils {
             writeStream = fs.createWriteStream(path.join(this.destinationFile));
             readStream
                 .pipe(decipher)
+                .pipe(unzip)
                 .on("error", err => {
                     that.emit("error", err.reason);
                 })
