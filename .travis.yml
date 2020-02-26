@@ -17,3 +17,4 @@ deploy:
   token: $GITHUB_TOKEN
   file_glob: true
   file: release-builds/*.zip
+  skip_cleanup: true
