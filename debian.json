@@ -1,10 +1,6 @@
 {
- 	"dest": "release-builds/",
-  	"icon": "assets/icons/icon.png",
-  	"categories": [
-    	"Utility"
-  	],
-  	"lintianOverrides": [
-    	"changelog-file-missing-in-native-package"
-  	]
+  "dest": "release-builds/",
+  "icon": "assets/icons/icon.png",
+  "categories": ["Utility"],
+  "lintianOverrides": ["changelog-file-missing-in-native-package"]
 }
