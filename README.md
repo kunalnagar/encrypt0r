@@ -1,7 +1,7 @@
 # encrypt0r
 
-![Travis Build](https://img.shields.io/travis/kunalnagar/encrypt0r)
-![Synk Vulnerabilities](https://img.shields.io/snyk/vulnerabilities/github/kunalnagar/encrypt0r)
+[![Travis Build](https://img.shields.io/travis/kunalnagar/encrypt0r)](https://travis-ci.org/kunalnagar/encrypt0r)
+[![Synk Vulnerabilities](https://img.shields.io/snyk/vulnerabilities/github/kunalnagar/encrypt0r)](https://snyk.io/test/github/kunalnagar/encrypt0r?targetFile=package.json)
 
 Easily Encrypt and Decrypt files on Mac, Windows and Linux
 
