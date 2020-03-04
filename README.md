@@ -1,7 +1,7 @@
 # encrypt0r
 
-[![Build Status](https://travis-ci.org/kunalnagar/encrypt0r.svg?branch=master)](https://travis-ci.org/kunalnagar/encrypt0r)
-[![Known Vulnerabilities](https://snyk.io/test/github/kunalnagar/encrypt0r/badge.svg?targetFile=package.json)](https://snyk.io/test/github/kunalnagar/encrypt0r?targetFile=package.json)
+![Travis Build](https://img.shields.io/travis/kunalnagar/encrypt0r)
+![Synk Vulnerabilities](https://img.shields.io/snyk/vulnerabilities/github/kunalnagar/encrypt0r)
 
 Easily Encrypt and Decrypt files on Mac, Windows and Linux
 
