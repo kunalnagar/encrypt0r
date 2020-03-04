@@ -3,6 +3,10 @@
   "version": "3.1.0",
   "description": "A simple way to encrypt and decrypt your files",
   "main": "main.js",
+  "engines": {
+    "node": "8.10.0"
+  },
+  "engineStrict": true,
   "scripts": {
     "build-grunt": "./node_modules/.bin/grunt build",
     "build-mac-x64": "./node_modules/.bin/electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/icon.icns --prune=true --out=release-builds",
@@ -16,7 +20,8 @@
     "build-linux-deb": "./node_modules/.bin/electron-installer-debian --src release-builds/encrypt0r-linux-x64/ --dest release-builds/ --arch amd64 --config debian.json",
     "zip-linux-deb": "zip -r release-builds/encrypt0r-linux-deb.zip release-builds/*.deb",
     "dev": "./node_modules/.bin/grunt build & ./node_modules/.bin/grunt watch & ./node_modules/.bin/electron .",
-    "deploy": "npm run build-grunt && npm run build-mac-x64 && npm run zip-mac-x64 && npm run build-win-x86 && npm run zip-win-x86 && npm run build-win-x64 && npm run zip-win-x64 && npm run build-linux-x64 && npm run zip-linux-x64 && npm run build-linux-deb && npm run zip-linux-deb"
+    "deploy": "npm run build-grunt && npm run build-mac-x64 && npm run zip-mac-x64 && npm run build-win-x86 && npm run zip-win-x86 && npm run build-win-x64 && npm run zip-win-x64 && npm run build-linux-x64 && npm run zip-linux-x64 && npm run build-linux-deb && npm run zip-linux-deb",
+    "preinstall": "node config/version-check/config.js"
   },
   "repository": "https://github.com/kunalnagar/encrypt0r",
   "keywords": [
