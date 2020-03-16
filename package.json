@@ -1,10 +1,10 @@
 {
   "name": "encrypt0r",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "description": "A simple way to encrypt and decrypt your files",
   "main": "main.js",
   "engines": {
-    "node": "8.10.0"
+    "node": "12.16.1"
   },
   "engineStrict": true,
   "scripts": {
