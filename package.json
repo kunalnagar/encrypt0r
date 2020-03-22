@@ -37,7 +37,8 @@
   "author": "Kunal Nagar <knlnagar@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "electron-packager": "^13.1.1",
+    "electron": "^5.0.6",
+    "electron-packager": "^14.2.1",
     "grunt": "^1.0.4",
     "grunt-cli": "^1.3.2",
     "grunt-contrib-cssmin": "^3.0.0",
@@ -49,7 +50,6 @@
     "time-grunt": "^2.0.0"
   },
   "dependencies": {
-    "electron": "^5.0.6",
     "electron-installer-debian": "^2.0.0",
     "electron-log": "^3.0.6",
     "jquery": "^3.4.1"
