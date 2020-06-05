@@ -1,0 +1,34 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install wine
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wine64
+          sudo apt-get install -y fakeroot
+      - name: Run build
+        run: npm run build
+      # - name: Create release
+      #   if:
+      #   uses: actions/create-release@v1
+      #     env:
+      #       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #     with:
+      #       tag_name: ${{ github.ref }}
+      #       release_name: Release ${{ github.ref }}
+      #       draft: false
+      #       prerelease: false
+      # - name: Upload Release Assets
+      #   uses: actions/upload-release-asset@v1
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #   with:
+      #     asset_path: ./release-builds/*.zip
