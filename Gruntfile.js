@@ -1,44 +1,44 @@
-;(function() {
-  'use strict'
+(function() {
+  'use strict';
 
   module.exports = function(grunt) {
-    const sass = require('node-sass')
+    const sass = require('node-sass');
 
-    require('load-grunt-tasks')(grunt)
+    require('load-grunt-tasks')(grunt);
 
     grunt.initConfig({
       sass: {
         options: {
           implementation: sass,
-          style: 'compressed'
+          style: 'compressed',
         },
         dist: {
           files: {
-            'css/app.css': 'scss/app.scss'
-          }
-        }
+            'css/app.css': 'scss/app.scss',
+          },
+        },
       },
       cssmin: {
         options: {
-          sourceMap: true
+          sourceMap: true,
         },
         target: {
           files: {
-            'css/app.min.css': ['css/app.css']
-          }
-        }
+            'css/app.min.css': ['css/app.css'],
+          },
+        },
       },
       watch: {
         options: {
-          nospawn: true
+          nospawn: true,
         },
         css: {
           files: 'scss/**/*.scss',
-          tasks: ['sass', 'cssmin']
-        }
-      }
-    })
+          tasks: ['sass', 'cssmin'],
+        },
+      },
+    });
 
-    grunt.registerTask('build', ['sass', 'cssmin'])
-  }
-})()
+    grunt.registerTask('build', ['sass', 'cssmin']);
+  };
+})();
