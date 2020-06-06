@@ -32,5 +32,6 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/')
         uses: csexton/release-asset-action@v2
         with:
-          pattern: 'release-builds/*.zip'
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          release-url: ${{ steps.create_release.outputs.upload_url }}
+          pattern: 'release-builds/*.zip'
