@@ -15,7 +15,7 @@ jobs:
       - name: Run build
         run: npm run build
       - name: Upload artifacts
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v2
         with:
           name: release-builds
           path: release-builds/*.zip
