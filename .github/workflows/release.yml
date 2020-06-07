@@ -8,6 +8,7 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
+    needs: build
     steps:
       - name: Create release
         id: create_release
