@@ -8,7 +8,7 @@ before_install:
   - sudo apt-get install -y --install-recommends winehq-devel
   - sudo apt-get install -y fakeroot
 script:
-  - npm run deploy
+  - npm run build
 if: tag IS present
 deploy:
   provider: releases
