@@ -7,7 +7,7 @@ Easily Encrypt and Decrypt files on Mac, Windows and Linux
 
 **Note:** Only single files supported for now. If you want to encrypt a folder, you need to zip it first and then drag it to encrypt0r
 
-### Signing
+### Signing Apps
 
 If you download the app on Mac/Windows, you will get an untrusted developer warning. This is because the app is not signed by the developer (aka me). Signing an app requires a Signing Certificate that costs hundreds of dollars per year.
 
