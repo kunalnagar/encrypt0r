@@ -10,12 +10,8 @@ before_install:
   - sudo apt-get install -y fakeroot
 jobs:
   include:
-    - stage: Build
-      name: 'Build'
-      script: npm run build
-    - stage: Deploy
-      name: 'Deploy'
-      if: branch = master
+    - script: npm run build
+    - if: branch = master
       deploy:
         provider: releases
         on:
@@ -23,4 +19,3 @@ jobs:
         token: $GITHUB_TOKEN
         file_glob: true
         file: release-builds/*.zip
-        skip_cleanup: true
