@@ -1,20 +1,25 @@
 dist: xenial
 language: node_js
 node_js:
-  - 12.18.0
+  - 12.18.1
 before_install:
   - sudo add-apt-repository -y ppa:wine/wine-builds
   - sudo apt-get update
   - sudo apt-get install -y --install-recommends winehq-devel
   - sudo apt-get install -y fakeroot
-script:
-  - npm run build
-if: tag IS present
-deploy:
-  provider: releases
-  on:
-    tags: true
-  api_key: $GITHUB_TOKEN
-  file_glob: true
-  file: release-builds/*.zip
-  skip_cleanup: true
+jobs:
+  include:
+    - stage: Build
+      name: 'Build'
+      script: npm run build
+    - stage: Deploy
+      name: 'Deploy'
+      if: branch = master
+      deploy:
+        provider: releases
+        on:
+          tags: true
+        api_key: $GITHUB_TOKEN
+        file_glob: true
+        file: release-builds/*.zip
+        skip_cleanup: true
