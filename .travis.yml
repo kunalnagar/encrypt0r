@@ -11,10 +11,10 @@ before_install:
 jobs:
   include:
     - script: npm run build
-    - if: branch = master
-      deploy:
+    - deploy:
         provider: releases
         on:
+          branch: master
           tags: true
         token: $GITHUB_TOKEN
         file_glob: true
