@@ -1,13 +1,13 @@
 # encrypt0r
 
-[![Travis Build](https://img.shields.io/travis/kunalnagar/encrypt0r)](https://travis-ci.org/kunalnagar/encrypt0r)
+![](https://github.com/kunalnagar/encrypt0r/workflows/build/badge.svg)
 [![Synk Vulnerabilities](https://img.shields.io/snyk/vulnerabilities/github/kunalnagar/encrypt0r)](https://snyk.io/test/github/kunalnagar/encrypt0r?targetFile=package.json)
 
 Easily Encrypt and Decrypt files on Mac, Windows and Linux
 
 **Note:** Only single files supported for now. If you want to encrypt a folder, you need to zip it first and then drag it to encrypt0r
 
-### Signing
+### Signing Apps
 
 If you download the app on Mac/Windows, you will get an untrusted developer warning. This is because the app is not signed by the developer (aka me). Signing an app requires a Signing Certificate that costs hundreds of dollars per year.
 

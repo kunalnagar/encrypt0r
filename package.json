@@ -1,6 +1,6 @@
 {
   "name": "encrypt0r",
-  "version": "3.2.0",
+  "version": "3.2.2",
   "description": "A simple way to encrypt and decrypt your files",
   "main": "main.js",
   "scripts": {
@@ -16,7 +16,9 @@
     "build-linux-deb": "./node_modules/.bin/electron-installer-debian --src release-builds/encrypt0r-linux-x64/ --dest release-builds/ --arch amd64 --config debian.json",
     "zip-linux-deb": "zip -r release-builds/encrypt0r-linux-deb.zip release-builds/*.deb",
     "dev": "./node_modules/.bin/grunt build & ./node_modules/.bin/grunt watch & ./node_modules/.bin/electron .",
-    "build": "npm run build-grunt && npm run build-mac-x64 && npm run zip-mac-x64 && npm run build-win-x86 && npm run zip-win-x86 && npm run build-win-x64 && npm run zip-win-x64 && npm run build-linux-x64 && npm run zip-linux-x64 && npm run build-linux-deb && npm run zip-linux-deb"
+    "build": "npm run build-grunt && npm run build-mac-x64 && npm run zip-mac-x64 && npm run build-win-x86 && npm run zip-win-x86 && npm run build-win-x64 && npm run zip-win-x64 && npm run build-linux-x64 && npm run zip-linux-x64 && npm run build-linux-deb && npm run zip-linux-deb",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": "https://github.com/kunalnagar/encrypt0r",
   "keywords": [
@@ -33,7 +35,7 @@
   "license": "MIT",
   "devDependencies": {
     "electron": "^5.0.6",
-    "electron-packager": "^14.2.1",
+    "electron-packager": "^15.0.0",
     "grunt": "^1.1.0",
     "grunt-cli": "^1.3.2",
     "grunt-contrib-cssmin": "^3.0.0",
@@ -47,6 +49,8 @@
   "dependencies": {
     "electron-installer-debian": "^2.0.1",
     "electron-log": "^3.0.9",
-    "jquery": "^3.5.1"
-  }
+    "jquery": "^3.5.1",
+    "snyk": "^1.346.0"
+  },
+  "snyk": true
 }
