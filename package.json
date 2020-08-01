@@ -49,8 +49,7 @@
   "dependencies": {
     "electron-installer-debian": "^2.0.1",
     "electron-log": "^3.0.9",
-    "jquery": "^3.5.1",
-    "snyk": "^1.346.0"
+    "jquery": "^3.5.1"
   },
   "snyk": true
 }
