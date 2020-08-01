@@ -1,7 +1,6 @@
 # encrypt0r
 
 ![](https://github.com/kunalnagar/encrypt0r/workflows/build/badge.svg)
-[![Synk Vulnerabilities](https://img.shields.io/snyk/vulnerabilities/github/kunalnagar/encrypt0r)](https://snyk.io/test/github/kunalnagar/encrypt0r?targetFile=package.json)
 
 Easily Encrypt and Decrypt files on Mac, Windows and Linux
 
