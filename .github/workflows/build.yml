@@ -1,0 +1,24 @@
+name: Build encrypt0r
+
+on:
+  push:
+    branches:
+      - '**'
+    tags-ignore:
+      - '*.*'
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install npm dependencies
+        run: npm install
+      - name: Install windows dependencies
+        run: |
+          sudo add-apt-repository -y ppa:wine/wine-builds
+          sudo apt-get update
+          sudo apt-get install -y --install-recommends winehq-devel
+          sudo apt-get install -y fakeroot
+      - name: Create build
+        run: npm run build
