@@ -1,0 +1,30 @@
+name: Build encrypt0r
+
+on:
+  push:
+    branches:
+      - '**'
+    tags-ignore:
+      - '*.*'
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install npm dependencies
+        run: npm install
+      - name: Install windows dependencies
+        run: |
+          sudo dpkg --add-architecture i386
+          sudo apt update
+          wget -qO- https://dl.winehq.org/wine-builds/winehq.key | sudo apt-key add -
+          sudo apt install software-properties-common
+          sudo apt-add-repository 'deb http://dl.winehq.org/wine-builds/ubuntu/ bionic main'
+          wget -qO- https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_18.04/Release.key | sudo apt-key add -
+          sudo sh -c 'echo "deb https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_18.04/ ./" > /etc/apt/sources.list.d/obs.list'
+          sudo apt update
+          sudo apt-get install -y --install-recommends winehq-devel
+          sudo apt-get install -y fakeroot
+      - name: Create build
+        run: npm run build
