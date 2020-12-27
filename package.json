@@ -1,6 +1,6 @@
 {
   "name": "encrypt0r",
-  "version": "3.2.9",
+  "version": "3.2.10",
   "description": "A simple way to encrypt and decrypt your files",
   "main": "main.js",
   "scripts": {

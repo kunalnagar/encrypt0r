@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.2.10](https://github.com/kunalnagar/encrypt0r/compare/v3.2.9...v3.2.10) (2020-12-27)
+
+
+### Chores
+
+* Add deploy script ([#24](https://github.com/kunalnagar/encrypt0r/issues/24)) ([06e2914](https://github.com/kunalnagar/encrypt0r/commit/06e2914bb3700b901664244b1df81f027a48e36a))
+* Bump package.json ([4a6c6dc](https://github.com/kunalnagar/encrypt0r/commit/4a6c6dca735d64238caa8e32d9bfb70155b464ec))
+
 ### [3.2.9](https://github.com/kunalnagar/encrypt0r/compare/v3.2.8...v3.2.9) (2020-12-27)
 
 
