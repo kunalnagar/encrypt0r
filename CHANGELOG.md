@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.2.11](https://github.com/kunalnagar/encrypt0r/compare/v3.2.10...v3.2.11) (2020-12-27)
+
+
+### Bug Fixes
+
+* Encrypt/Decrypt on Ubuntu 18.04 ([#26](https://github.com/kunalnagar/encrypt0r/issues/26)) ([529c4c9](https://github.com/kunalnagar/encrypt0r/commit/529c4c9154801e4586ec28e48a6fdb070851291f))
+
 ### [3.2.10](https://github.com/kunalnagar/encrypt0r/compare/v3.2.9...v3.2.10) (2020-12-27)
 
 
