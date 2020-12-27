@@ -41,7 +41,7 @@ ipcMain.on('event:log', (e, arg) => {
   log.debug(arg);
 });
 
-ipcMain.on('action:encrypt_decrypt', (e, arg) => {
+ipcMain.on('action:encrypt_decrypt', async (e, arg) => {
   log.info('encrypting or decrypting...');
   let popupFileName;
   if (arg.action === 'encrypt') {
@@ -50,55 +50,61 @@ ipcMain.on('action:encrypt_decrypt', (e, arg) => {
     popupFileName = arg.filePath.replace('.enc', '');
   }
   let utils;
-  dialog.showSaveDialog(
-    {
-      defaultPath: popupFileName,
-    },
-    filename => {
-      if (typeof filename !== 'undefined') {
-        utils = new Utils(arg.filePath, filename, arg.passphrase);
-        if (arg.action === 'encrypt') {
-          log.info(`Encrypting ${filename} with password <redacted>`);
-          utils.encrypt();
-          utils.on('progress', progress => {
-            e.sender.send('notice-status', `Encrypting...${progress}%`);
-          });
-          utils.on('finished', () => {
-            log.info('File successfully encrypted!');
-            e.sender.send(
-              'notice-status',
-              `Done! File has been saved to: ${filename}`,
-            );
-          });
-        } else if (arg.action === 'decrypt') {
-          log.info(`Decrypting ${filename} with password <redacted>`);
-          utils.decrypt();
-          utils.on('progress', progress => {
-            e.sender.send('notice-status', `Decrypting...${progress}%`);
-          });
-          utils.on('finished', () => {
-            log.info('File successfully decrypted!');
-            e.sender.send(
-              'notice-status',
-              `Done! File has been saved to: ${filename}`,
-            );
-          });
-          utils.on('error', reason => {
-            if (reason === 'BAD_DECRYPT') {
-              e.sender.send(
-                'notice-status',
-                'Oops. The passphrase is incorrect.',
-              );
-            }
-          });
-        }
-      } else {
-        log.warn('Destination file location not selected');
-        e.sender.send(
-          'notice-status',
-          'Oops. Destination file location not selected. Please try again!',
-        );
+  try {
+    const file = await dialog.showSaveDialog(
+      {
+        defaultPath: popupFileName,
       }
-    },
-  );
+    );
+    if (typeof file !== 'undefined') {
+      utils = new Utils(arg.filePath, file.filePath, arg.passphrase);
+      if (arg.action === 'encrypt') {
+        log.info(`Encrypting ${file.filePath} with password <redacted>`);
+        utils.encrypt();
+        utils.on('progress', progress => {
+          e.sender.send('notice-status', `Encrypting...${progress}%`);
+        });
+        utils.on('finished', () => {
+          log.info('File successfully encrypted!');
+          e.sender.send(
+            'notice-status',
+            `Done! File has been saved to: ${file.filePath}`,
+          );
+        });
+      } else if (arg.action === 'decrypt') {
+        log.info(`Decrypting ${file.filePath} with password <redacted>`);
+        utils.decrypt();
+        utils.on('progress', progress => {
+          e.sender.send('notice-status', `Decrypting...${progress}%`);
+        });
+        utils.on('finished', () => {
+          log.info('File successfully decrypted!');
+          e.sender.send(
+            'notice-status',
+            `Done! File has been saved to: ${file.filePath}`,
+          );
+        });
+        utils.on('error', reason => {
+          if (reason === 'BAD_DECRYPT') {
+            e.sender.send(
+              'notice-status',
+              'Oops. The passphrase is incorrect.',
+            );
+          }
+        });
+      }
+    } else {
+      log.warn('Destination file location not selected');
+      e.sender.send(
+        'notice-status',
+        'Oops. Destination file location not selected. Please try again!',
+      );
+    }
+  } catch(err) {
+    log.error('Something went wrong', err);
+    e.sender.send(
+      'notice-status',
+      'Oops. Something went wrong. Please reset and try again.',
+    );
+  }
 });
