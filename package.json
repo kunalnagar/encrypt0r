@@ -18,6 +18,7 @@
     "dev": "./node_modules/.bin/grunt build & ./node_modules/.bin/grunt watch & ./node_modules/.bin/electron .",
     "build": "npm run build-grunt && npm run build-mac-x64 && npm run build-win-x86 && npm run build-win-x64 && npm run build-linux-x64 && npm run build-linux-deb",
     "release": "npm run build-grunt && npm run build-mac-x64 && npm run zip-mac-x64 && npm run build-win-x86 && npm run zip-win-x86 && npm run build-win-x64 && npm run zip-win-x64 && npm run build-linux-x64 && npm run zip-linux-x64 && npm run build-linux-deb && npm run zip-linux-deb",
+    "release:standard-version": "standard-version",
     "deploy": "sh ./scripts/deploy.sh"
   },
   "repository": "https://github.com/kunalnagar/encrypt0r",
