@@ -1,10 +1,11 @@
 const { app, BrowserWindow, ipcMain, dialog } = require('electron');
 
-let mainWindow;
 const log = require('electron-log');
 const path = require('path');
 
-const Utils = require('./src/utils');
+const Utils = require('./utils');
+
+let mainWindow;
 
 function createWindow() {
   mainWindow = new BrowserWindow({
@@ -51,17 +52,15 @@ ipcMain.on('action:encrypt_decrypt', async (e, arg) => {
   }
   let utils;
   try {
-    const file = await dialog.showSaveDialog(
-      {
-        defaultPath: popupFileName,
-      }
-    );
+    const file = await dialog.showSaveDialog({
+      defaultPath: popupFileName,
+    });
     if (typeof file !== 'undefined') {
       utils = new Utils(arg.filePath, file.filePath, arg.passphrase);
       if (arg.action === 'encrypt') {
         log.info(`Encrypting ${file.filePath} with password <redacted>`);
         utils.encrypt();
-        utils.on('progress', progress => {
+        utils.on('progress', (progress) => {
           e.sender.send('notice-status', `Encrypting...${progress}%`);
         });
         utils.on('finished', () => {
@@ -74,7 +73,7 @@ ipcMain.on('action:encrypt_decrypt', async (e, arg) => {
       } else if (arg.action === 'decrypt') {
         log.info(`Decrypting ${file.filePath} with password <redacted>`);
         utils.decrypt();
-        utils.on('progress', progress => {
+        utils.on('progress', (progress) => {
           e.sender.send('notice-status', `Decrypting...${progress}%`);
         });
         utils.on('finished', () => {
@@ -84,7 +83,7 @@ ipcMain.on('action:encrypt_decrypt', async (e, arg) => {
             `Done! File has been saved to: ${file.filePath}`,
           );
         });
-        utils.on('error', reason => {
+        utils.on('error', (reason) => {
           if (reason === 'BAD_DECRYPT') {
             e.sender.send(
               'notice-status',
@@ -100,7 +99,7 @@ ipcMain.on('action:encrypt_decrypt', async (e, arg) => {
         'Oops. Destination file location not selected. Please try again!',
       );
     }
-  } catch(err) {
+  } catch (err) {
     log.error('Something went wrong', err);
     e.sender.send(
       'notice-status',

@@ -20,10 +20,7 @@ class Utils {
   }
 
   getCipherKey() {
-    return crypto
-      .createHash('sha256')
-      .update(this.password)
-      .digest();
+    return crypto.createHash('sha256').update(this.password).digest();
   }
 
   encrypt() {
@@ -37,12 +34,8 @@ class Utils {
     const stat = fs.statSync(this.originalFile);
     const gzip = zlib.createGzip();
     let size = 0;
-    readStream
-      .pipe(gzip)
-      .pipe(cipher)
-      .pipe(initVectorStream)
-      .pipe(writeStream);
-    readStream.on('data', chunk => {
+    readStream.pipe(gzip).pipe(cipher).pipe(initVectorStream).pipe(writeStream);
+    readStream.on('data', (chunk) => {
       size += chunk.length;
       that.emit('progress', calculateProgress(size, stat.size));
     });
@@ -63,7 +56,7 @@ class Utils {
     let decipher;
     let readStream;
     let writeStream;
-    initVectorStream.on('data', chunk => {
+    initVectorStream.on('data', (chunk) => {
       initVector = chunk;
     });
     initVectorStream.on('close', () => {
@@ -74,14 +67,14 @@ class Utils {
       readStream
         .pipe(decipher)
         .pipe(unzip)
-        .on('error', err => {
+        .on('error', (err) => {
           that.emit('error', err.reason);
         })
         .pipe(writeStream);
     });
     initVectorStream.on('close', () => {
       const stat = fs.statSync(this.originalFile);
-      readStream.on('data', chunk => {
+      readStream.on('data', (chunk) => {
         size += chunk.length;
         that.emit('progress', calculateProgress(size, stat.size));
       });
