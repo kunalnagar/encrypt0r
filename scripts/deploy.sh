@@ -68,6 +68,9 @@ rm -rf release-notes.txt
 # Push changelog.md and release commit to master
 git push origin master
 
+# Remove local changes
+git stash
+
 # Output release info
 echo "\n"
 echo "============================="
