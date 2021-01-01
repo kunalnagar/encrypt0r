@@ -2,26 +2,6 @@
   "name": "encrypt0r",
   "version": "3.2.11",
   "description": "A simple way to encrypt and decrypt your files",
-  "main": "main.js",
-  "scripts": {
-    "build-grunt": "./node_modules/.bin/grunt build",
-    "build-mac-x64": "./node_modules/.bin/electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/icon.icns --prune=true --out=release-builds",
-    "zip-mac-x64": "zip -r release-builds/encrypt0r-mac.zip release-builds/encrypt0r-darwin-x64",
-    "build-win-x86": "./node_modules/.bin/electron-packager . --overwrite --asar --platform=win32 --arch=ia32 --icon=assets/icons/icon.ico --prune=true --out=release-builds",
-    "zip-win-x86": "zip -r release-builds/encrypt0r-windows-x86.zip release-builds/encrypt0r-win32-ia32",
-    "build-win-x64": "./node_modules/.bin/electron-packager . --overwrite --asar --platform=win32 --arch=x64 --icon=assets/icons/icon.ico --prune=true --out=release-builds",
-    "zip-win-x64": "zip -r release-builds/encrypt0r-windows-x64.zip release-builds/encrypt0r-win32-x64",
-    "build-linux-x64": "./node_modules/.bin/electron-packager . --overwrite --asar --platform=linux --arch=x64 --icon=assets/icons/icon.png --prune=true --out=release-builds",
-    "zip-linux-x64": "zip -r release-builds/encrypt0r-linux-x64.zip release-builds/encrypt0r-linux-x64",
-    "build-linux-deb": "./node_modules/.bin/electron-installer-debian --src release-builds/encrypt0r-linux-x64/ --dest release-builds/ --arch amd64 --config debian.json",
-    "zip-linux-deb": "zip -r release-builds/encrypt0r-linux-deb.zip release-builds/*.deb",
-    "dev": "./node_modules/.bin/grunt build & ./node_modules/.bin/grunt watch & ./node_modules/.bin/electron .",
-    "build": "npm run build-grunt && npm run build-mac-x64 && npm run build-win-x86 && npm run build-win-x64 && npm run build-linux-x64 && npm run build-linux-deb",
-    "release": "npm run build-grunt && npm run build-mac-x64 && npm run zip-mac-x64 && npm run build-win-x86 && npm run zip-win-x86 && npm run build-win-x64 && npm run zip-win-x64 && npm run build-linux-x64 && npm run zip-linux-x64 && npm run build-linux-deb && npm run zip-linux-deb",
-    "release:standard-version": "standard-version",
-    "deploy": "sh ./scripts/deploy.sh"
-  },
-  "repository": "https://github.com/kunalnagar/encrypt0r",
   "keywords": [
     "Electron",
     "encrypt",
@@ -32,25 +12,74 @@
     "linux",
     "files"
   ],
-  "author": "Kunal Nagar <knlnagar@gmail.com>",
+  "repository": "https://github.com/kunalnagar/encrypt0r",
   "license": "MIT",
-  "devDependencies": {
-    "electron": "^11.1.1",
-    "electron-packager": "^15.2.0",
-    "grunt": "^1.3.0",
-    "grunt-cli": "^1.3.2",
-    "grunt-contrib-cssmin": "^3.0.0",
-    "grunt-contrib-watch": "^1.1.0",
-    "grunt-sass": "^3.1.0",
-    "load-grunt-tasks": "^5.1.0",
-    "node-sass": "^5.0.0",
-    "prettier": "^2.2.1",
-    "standard-version": "^9.0.0",
-    "time-grunt": "^2.0.0"
+  "author": "Kunal Nagar <knlnagar@gmail.com>",
+  "main": "main.js",
+  "scripts": {
+    "build": "npm run build-grunt && npm run build-mac-x64 && npm run build-win-x86 && npm run build-win-x64 && npm run build-linux-x64 && npm run build-linux-deb",
+    "build-grunt": "./node_modules/.bin/grunt build",
+    "build-linux-deb": "./node_modules/.bin/electron-installer-debian --src release-builds/encrypt0r-linux-x64/ --dest release-builds/ --arch amd64 --config debian.json",
+    "build-linux-x64": "./node_modules/.bin/electron-packager . --overwrite --asar --platform=linux --arch=x64 --icon=assets/icons/icon.png --prune=true --out=release-builds",
+    "build-mac-x64": "./node_modules/.bin/electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/icon.icns --prune=true --out=release-builds",
+    "build-win-x64": "./node_modules/.bin/electron-packager . --overwrite --asar --platform=win32 --arch=x64 --icon=assets/icons/icon.ico --prune=true --out=release-builds",
+    "build-win-x86": "./node_modules/.bin/electron-packager . --overwrite --asar --platform=win32 --arch=ia32 --icon=assets/icons/icon.ico --prune=true --out=release-builds",
+    "deploy": "sh ./scripts/deploy.sh",
+    "dev": "./node_modules/.bin/grunt build & ./node_modules/.bin/grunt watch & ./node_modules/.bin/electron .",
+    "lint": "eslint src/ --ext .js --max-warnings 0",
+    "lint:fix": "eslint --fix src/ --ext .js --max-warnings 0",
+    "release": "npm run build-grunt && npm run build-mac-x64 && npm run zip-mac-x64 && npm run build-win-x86 && npm run zip-win-x86 && npm run build-win-x64 && npm run zip-win-x64 && npm run build-linux-x64 && npm run zip-linux-x64 && npm run build-linux-deb && npm run zip-linux-deb",
+    "release:standard-version": "standard-version",
+    "zip-linux-deb": "zip -r release-builds/encrypt0r-linux-deb.zip release-builds/*.deb",
+    "zip-linux-x64": "zip -r release-builds/encrypt0r-linux-x64.zip release-builds/encrypt0r-linux-x64",
+    "zip-mac-x64": "zip -r release-builds/encrypt0r-mac.zip release-builds/encrypt0r-darwin-x64",
+    "zip-win-x64": "zip -r release-builds/encrypt0r-windows-x64.zip release-builds/encrypt0r-win32-x64",
+    "zip-win-x86": "zip -r release-builds/encrypt0r-windows-x86.zip release-builds/encrypt0r-win32-ia32"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.md": [
+      "prettier --parser markdown --write"
+    ],
+    "package.json": [
+      "sort-package-json"
+    ],
+    "src/**/*.js": [
+      "prettier --write src/**/*.js",
+      "npm run lint:fix"
+    ]
   },
   "dependencies": {
     "electron-installer-debian": "^3.1.0",
     "electron-log": "^4.3.1",
     "jquery": "^3.5.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/eslint-parser": "^7.12.1",
+    "electron": "^11.1.1",
+    "electron-packager": "^15.2.0",
+    "eslint": "^7.16.0",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.3.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "grunt": "^1.3.0",
+    "grunt-cli": "^1.3.2",
+    "grunt-contrib-cssmin": "^3.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-sass": "^3.1.0",
+    "husky": "^4.3.6",
+    "lint-staged": "^10.5.3",
+    "load-grunt-tasks": "^5.1.0",
+    "node-sass": "^5.0.0",
+    "prettier": "^2.2.1",
+    "sort-package-json": "^1.48.0",
+    "standard-version": "^9.0.0",
+    "time-grunt": "^2.0.0"
   }
 }

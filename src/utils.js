@@ -1,18 +1,18 @@
-const fs = require('fs');
-const path = require('path');
-const crypto = require('crypto');
-const EventEmitter = require('events');
-const zlib = require('zlib');
-const { inherits } = require('util');
+import crypto from 'crypto';
+import { EventEmitter } from 'events';
+import fs from 'fs';
+import path from 'path';
+import zlib from 'zlib';
 
-const Vector = require('./vector');
+import Vector from './vector';
 
 function calculateProgress(chunkSize, totalSize) {
   return Math.floor((chunkSize / totalSize) * 100);
 }
 
-class Utils {
+export default class Utils extends EventEmitter {
   constructor(originalFile, destinationFile, password) {
+    super();
     EventEmitter.call(this);
     this.originalFile = originalFile;
     this.destinationFile = destinationFile;
@@ -20,10 +20,7 @@ class Utils {
   }
 
   getCipherKey() {
-    return crypto
-      .createHash('sha256')
-      .update(this.password)
-      .digest();
+    return crypto.createHash('sha256').update(this.password).digest();
   }
 
   encrypt() {
@@ -37,12 +34,8 @@ class Utils {
     const stat = fs.statSync(this.originalFile);
     const gzip = zlib.createGzip();
     let size = 0;
-    readStream
-      .pipe(gzip)
-      .pipe(cipher)
-      .pipe(initVectorStream)
-      .pipe(writeStream);
-    readStream.on('data', chunk => {
+    readStream.pipe(gzip).pipe(cipher).pipe(initVectorStream).pipe(writeStream);
+    readStream.on('data', (chunk) => {
       size += chunk.length;
       that.emit('progress', calculateProgress(size, stat.size));
     });
@@ -63,7 +56,7 @@ class Utils {
     let decipher;
     let readStream;
     let writeStream;
-    initVectorStream.on('data', chunk => {
+    initVectorStream.on('data', (chunk) => {
       initVector = chunk;
     });
     initVectorStream.on('close', () => {
@@ -74,14 +67,14 @@ class Utils {
       readStream
         .pipe(decipher)
         .pipe(unzip)
-        .on('error', err => {
+        .on('error', (err) => {
           that.emit('error', err.reason);
         })
         .pipe(writeStream);
     });
     initVectorStream.on('close', () => {
       const stat = fs.statSync(this.originalFile);
-      readStream.on('data', chunk => {
+      readStream.on('data', (chunk) => {
         size += chunk.length;
         that.emit('progress', calculateProgress(size, stat.size));
       });
@@ -91,7 +84,3 @@ class Utils {
     });
   }
 }
-
-inherits(Utils, EventEmitter);
-
-module.exports = Utils;

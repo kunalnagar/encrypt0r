@@ -1,10 +1,9 @@
-const { app, BrowserWindow, ipcMain, dialog } = require('electron');
+import { app, BrowserWindow, dialog, ipcMain } from 'electron';
+import { debug, error, info, warn } from 'electron-log';
+import { join } from 'path';
+import Utils from './src/utils';
 
 let mainWindow;
-const log = require('electron-log');
-const path = require('path');
-
-const Utils = require('./src/utils');
 
 function createWindow() {
   mainWindow = new BrowserWindow({
@@ -13,13 +12,13 @@ function createWindow() {
     webPreferences: {
       nodeIntegration: true,
     },
-    icon: path.join(__dirname, 'assets/icons/png/64x64.png'),
+    icon: join(__dirname, 'assets/icons/png/64x64.png'),
   });
   mainWindow.loadFile('index.html');
-  log.info('created main window and loaded main page');
+  info('created main window and loaded main page');
   mainWindow.on('closed', () => {
     mainWindow = null;
-    log.info('closed main window');
+    info('closed main window');
   });
 }
 
@@ -38,11 +37,11 @@ app.on('activate', () => {
 });
 
 ipcMain.on('event:log', (e, arg) => {
-  log.debug(arg);
+  debug(arg);
 });
 
 ipcMain.on('action:encrypt_decrypt', async (e, arg) => {
-  log.info('encrypting or decrypting...');
+  info('encrypting or decrypting...');
   let popupFileName;
   if (arg.action === 'encrypt') {
     popupFileName = `${arg.filePath}.enc`;
@@ -59,26 +58,26 @@ ipcMain.on('action:encrypt_decrypt', async (e, arg) => {
     if (typeof file !== 'undefined') {
       utils = new Utils(arg.filePath, file.filePath, arg.passphrase);
       if (arg.action === 'encrypt') {
-        log.info(`Encrypting ${file.filePath} with password <redacted>`);
+        info(`Encrypting ${file.filePath} with password <redacted>`);
         utils.encrypt();
         utils.on('progress', progress => {
           e.sender.send('notice-status', `Encrypting...${progress}%`);
         });
         utils.on('finished', () => {
-          log.info('File successfully encrypted!');
+          info('File successfully encrypted!');
           e.sender.send(
             'notice-status',
             `Done! File has been saved to: ${file.filePath}`,
           );
         });
       } else if (arg.action === 'decrypt') {
-        log.info(`Decrypting ${file.filePath} with password <redacted>`);
+        info(`Decrypting ${file.filePath} with password <redacted>`);
         utils.decrypt();
         utils.on('progress', progress => {
           e.sender.send('notice-status', `Decrypting...${progress}%`);
         });
         utils.on('finished', () => {
-          log.info('File successfully decrypted!');
+          info('File successfully decrypted!');
           e.sender.send(
             'notice-status',
             `Done! File has been saved to: ${file.filePath}`,
@@ -94,14 +93,14 @@ ipcMain.on('action:encrypt_decrypt', async (e, arg) => {
         });
       }
     } else {
-      log.warn('Destination file location not selected');
+      warn('Destination file location not selected');
       e.sender.send(
         'notice-status',
         'Oops. Destination file location not selected. Please try again!',
       );
     }
   } catch(err) {
-    log.error('Something went wrong', err);
+    error('Something went wrong', err);
     e.sender.send(
       'notice-status',
       'Oops. Something went wrong. Please reset and try again.',
