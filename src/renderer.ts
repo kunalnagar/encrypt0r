@@ -1,4 +1,6 @@
-const { ipcRenderer } = require('electron');
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+import { ipcRenderer } from 'electron';
+import $ from 'jquery';
 
 $(function () {
   let filePath = '';
@@ -56,8 +58,8 @@ $(function () {
     e.preventDefault();
     e.stopPropagation();
     $fieldNotice.empty();
-    const { originalEvent } = e;
-    const file = originalEvent.dataTransfer.files[0];
+    // @ts-ignore
+    const file = e.originalEvent.dataTransfer.files[0];
     filePath = file.path;
     $filePath.html(file.path);
     ipcRenderer.send('event:log', {

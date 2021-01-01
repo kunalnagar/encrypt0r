@@ -1,11 +1,10 @@
-const { app, BrowserWindow, ipcMain, dialog } = require('electron');
+import { app, BrowserWindow, dialog, ipcMain } from 'electron';
+import log from 'electron-log';
+import path from 'path';
 
-const log = require('electron-log');
-const path = require('path');
+import Utils from './utils';
 
-const Utils = require('./utils');
-
-let mainWindow;
+let mainWindow: BrowserWindow | null;
 
 function createWindow() {
   mainWindow = new BrowserWindow({
@@ -50,7 +49,7 @@ ipcMain.on('action:encrypt_decrypt', async (e, arg) => {
   } else if (arg.action === 'decrypt') {
     popupFileName = arg.filePath.replace('.enc', '');
   }
-  let utils;
+  let utils: Utils;
   try {
     const file = await dialog.showSaveDialog({
       defaultPath: popupFileName,
