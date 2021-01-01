@@ -1,6 +1,6 @@
-import { ipcRenderer } from 'electron';
+const { ipcRenderer } = require('electron');
 
-$(function() {
+$(function () {
   let filePath = '';
 
   const $areaChoices = $('#area_choices');
@@ -13,7 +13,7 @@ $(function() {
   const $btnDecrypt = $('#btn_decrypt');
   const $fieldPassphrase = $('#passphrase');
 
-  $btnChoice.on('click', function() {
+  $btnChoice.on('click', function () {
     const $that = $(this);
     $areaChoices.hide();
     $areaDrag.show();
@@ -36,7 +36,7 @@ $(function() {
     }
   });
 
-  $btnReset.on('click', function() {
+  $btnReset.on('click', function () {
     $areaChoices.show();
     $areaDrag.hide();
     $btnReset.hide();
@@ -52,7 +52,7 @@ $(function() {
     });
   });
 
-  $areaDrag.on('drop', e => {
+  $areaDrag.on('drop', (e) => {
     e.preventDefault();
     e.stopPropagation();
     $fieldNotice.empty();
@@ -67,7 +67,7 @@ $(function() {
     return false;
   });
 
-  $btnEncrypt.on('click', function() {
+  $btnEncrypt.on('click', function () {
     if ($fieldPassphrase.val()) {
       ipcRenderer.send('event:log', {
         action: 'click',
@@ -83,7 +83,7 @@ $(function() {
     }
   });
 
-  $btnDecrypt.on('click', function() {
+  $btnDecrypt.on('click', function () {
     if ($fieldPassphrase.val()) {
       ipcRenderer.send('event:log', {
         action: 'click',
@@ -99,7 +99,7 @@ $(function() {
     }
   });
 
-  $areaDrag.on('dragover', e => {
+  $areaDrag.on('dragover', (e) => {
     e.preventDefault();
     e.stopPropagation();
   });

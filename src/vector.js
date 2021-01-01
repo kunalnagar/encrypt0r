@@ -1,6 +1,6 @@
-import { Transform } from 'stream';
+const { Transform } = require('stream');
 
-export default class Vector extends Transform {
+class Vector extends Transform {
   constructor(initVector, options) {
     super(options);
     this.initVector = initVector;
@@ -16,3 +16,5 @@ export default class Vector extends Transform {
     cb();
   }
 }
+
+module.exports = Vector;

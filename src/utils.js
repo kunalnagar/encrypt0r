@@ -1,18 +1,18 @@
-import crypto from 'crypto';
-import { EventEmitter } from 'events';
-import fs from 'fs';
-import path from 'path';
-import zlib from 'zlib';
+const fs = require('fs');
+const path = require('path');
+const crypto = require('crypto');
+const EventEmitter = require('events');
+const zlib = require('zlib');
+const { inherits } = require('util');
 
-import Vector from './vector';
+const Vector = require('./vector');
 
 function calculateProgress(chunkSize, totalSize) {
   return Math.floor((chunkSize / totalSize) * 100);
 }
 
-export default class Utils extends EventEmitter {
+class Utils {
   constructor(originalFile, destinationFile, password) {
-    super();
     EventEmitter.call(this);
     this.originalFile = originalFile;
     this.destinationFile = destinationFile;
@@ -84,3 +84,7 @@ export default class Utils extends EventEmitter {
     });
   }
 }
+
+inherits(Utils, EventEmitter);
+
+module.exports = Utils;

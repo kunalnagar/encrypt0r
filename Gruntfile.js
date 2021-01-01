@@ -1,7 +1,7 @@
-(function() {
+(function () {
   'use strict';
 
-  module.exports = function(grunt) {
+  module.exports = function (grunt) {
     const sass = require('node-sass');
 
     require('load-grunt-tasks')(grunt);
