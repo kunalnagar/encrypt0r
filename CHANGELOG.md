@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.3.0](https://github.com/kunalnagar/encrypt0r/compare/v3.2.12...v3.3.0) (2021-01-01)
+
+### Features
+
+- Switch to TypeScript ([#29](https://github.com/kunalnagar/encrypt0r/issues/29)) ([f0d95e8](https://github.com/kunalnagar/encrypt0r/commit/f0d95e8bbc53ddeabe6675eea75af431d4131281))
+
+### Bug Fixes
+
+- Deploy script stash ([0544de6](https://github.com/kunalnagar/encrypt0r/commit/0544de689cde4998c619decece0fb707c6682c2e))
+
 ### [3.2.12](https://github.com/kunalnagar/encrypt0r/compare/v3.2.11...v3.2.12) (2021-01-01)
 
 ### Chores

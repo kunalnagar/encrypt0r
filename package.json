@@ -1,6 +1,6 @@
 {
   "name": "encrypt0r",
-  "version": "3.2.12",
+  "version": "3.3.0",
   "description": "A simple way to encrypt and decrypt your files",
   "keywords": [
     "Electron",
