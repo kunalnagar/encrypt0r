@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 (function () {
   'use strict';
 
@@ -14,7 +15,7 @@
         },
         dist: {
           files: {
-            'css/app.css': 'scss/app.scss',
+            'dist/css/app.css': 'scss/app.scss',
           },
         },
       },
@@ -24,7 +25,7 @@
         },
         target: {
           files: {
-            'css/app.min.css': ['css/app.css'],
+            'dist/css/app.min.css': ['dist/css/app.css'],
           },
         },
       },

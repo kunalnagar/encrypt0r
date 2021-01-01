@@ -1,30 +1,32 @@
-const fs = require('fs');
-const path = require('path');
-const crypto = require('crypto');
-const EventEmitter = require('events');
-const zlib = require('zlib');
-const { inherits } = require('util');
+import crypto from 'crypto';
+import { EventEmitter } from 'events';
+import fs from 'fs';
+import path from 'path';
+import zlib from 'zlib';
 
-const Vector = require('./vector');
+import Vector from './vector';
 
-function calculateProgress(chunkSize, totalSize) {
+function calculateProgress(chunkSize: number, totalSize: number) {
   return Math.floor((chunkSize / totalSize) * 100);
 }
 
-class Utils {
-  constructor(originalFile, destinationFile, password) {
-    EventEmitter.call(this);
+export default class Utils extends EventEmitter {
+  private originalFile: any;
+  private destinationFile: any;
+  private password: string;
+
+  constructor(originalFile: any, destinationFile: any, password: string) {
+    super();
     this.originalFile = originalFile;
     this.destinationFile = destinationFile;
     this.password = password;
   }
 
-  getCipherKey() {
+  getCipherKey(): Buffer {
     return crypto.createHash('sha256').update(this.password).digest();
   }
 
-  encrypt() {
-    const that = this;
+  encrypt(): void {
     const initVector = crypto.randomBytes(16);
     const cipherKey = this.getCipherKey();
     const readStream = fs.createReadStream(this.originalFile);
@@ -37,25 +39,24 @@ class Utils {
     readStream.pipe(gzip).pipe(cipher).pipe(initVectorStream).pipe(writeStream);
     readStream.on('data', (chunk) => {
       size += chunk.length;
-      that.emit('progress', calculateProgress(size, stat.size));
+      this.emit('progress', calculateProgress(size, stat.size));
     });
     writeStream.on('finish', () => {
-      that.emit('finished');
+      this.emit('finished');
     });
   }
 
-  decrypt() {
-    const that = this;
+  decrypt(): void {
     const initVectorStream = fs.createReadStream(this.originalFile, {
       end: 15,
     });
     const unzip = zlib.createGunzip();
-    let initVector;
+    let initVector: any;
     let size = 0;
     let cipherKey;
     let decipher;
-    let readStream;
-    let writeStream;
+    let readStream: any;
+    let writeStream: any;
     initVectorStream.on('data', (chunk) => {
       initVector = chunk;
     });
@@ -67,24 +68,20 @@ class Utils {
       readStream
         .pipe(decipher)
         .pipe(unzip)
-        .on('error', (err) => {
-          that.emit('error', err.reason);
+        .on('error', (err: any) => {
+          this.emit('error', err.reason);
         })
         .pipe(writeStream);
     });
     initVectorStream.on('close', () => {
       const stat = fs.statSync(this.originalFile);
-      readStream.on('data', (chunk) => {
+      readStream.on('data', (chunk: any) => {
         size += chunk.length;
-        that.emit('progress', calculateProgress(size, stat.size));
+        this.emit('progress', calculateProgress(size, stat.size));
       });
       writeStream.on('finish', () => {
-        that.emit('finished');
+        this.emit('finished');
       });
     });
   }
 }
-
-inherits(Utils, EventEmitter);
-
-module.exports = Utils;

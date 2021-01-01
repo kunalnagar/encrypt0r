@@ -2,3 +2,4 @@ node_modules
 release-builds
 .DS_Store
 css
+dist
