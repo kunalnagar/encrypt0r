@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.3.1](https://github.com/kunalnagar/encrypt0r/compare/v3.3.0...v3.3.1) (2021-01-02)
+
+### Chores
+
+- Reorganize code Part 1 ([#34](https://github.com/kunalnagar/encrypt0r/issues/34)) ([d447e7f](https://github.com/kunalnagar/encrypt0r/commit/d447e7fe3fb1df7da649ecdd804c93d4a76361fa))
+- **deps-dev:** bump @types/node from 14.14.17 to 14.14.19 ([#33](https://github.com/kunalnagar/encrypt0r/issues/33)) ([7272d5d](https://github.com/kunalnagar/encrypt0r/commit/7272d5dc48d946213dc6e823e30b6922db0f0ebc))
+- **deps-dev:** bump eslint from 7.16.0 to 7.17.0 ([#32](https://github.com/kunalnagar/encrypt0r/issues/32)) ([e9f7018](https://github.com/kunalnagar/encrypt0r/commit/e9f7018ab5ccd8ca1c3324ddb16963f2554e6a9b))
+- **deps-dev:** bump standard-version from 9.0.0 to 9.1.0 ([#31](https://github.com/kunalnagar/encrypt0r/issues/31)) ([0314c26](https://github.com/kunalnagar/encrypt0r/commit/0314c26207d9eb337e42b843612bf3b5b3713ab2))
+
 ## [3.3.0](https://github.com/kunalnagar/encrypt0r/compare/v3.2.12...v3.3.0) (2021-01-01)
 
 ### Features
