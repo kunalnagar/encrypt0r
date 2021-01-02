@@ -30,8 +30,8 @@
     "build:tsc:watch": "tsc --watch",
     "deploy": "sh ./scripts/deploy.sh",
     "dev": "npm run prebuild && npm run build:tsc && npm run build:copy && npm run build-grunt && electron dist/main.js & npm run build:tsc:watch & grunt watch",
-    "lint": "eslint src/ --ext .js --max-warnings 0",
-    "lint:fix": "eslint --fix src/ --ext .js --max-warnings 0",
+    "lint": "eslint src/ --ext .ts --max-warnings 0",
+    "lint:fix": "eslint --fix src/ --ext .ts --max-warnings 0",
     "release": "npm run prebuild && npm run build:tsc && npm run build:copy && npm run build-grunt && npm run build-mac-x64 && npm run zip-mac-x64 && npm run build-win-x86 && npm run zip-win-x86 && npm run build-win-x64 && npm run zip-win-x64 && npm run build-linux-x64 && npm run zip-linux-x64 && npm run build-linux-deb && npm run zip-linux-deb",
     "release:standard-version": "standard-version",
     "zip-linux-deb": "zip -r release-builds/encrypt0r-linux-deb.zip release-builds/*.deb",
@@ -52,8 +52,8 @@
     "package.json": [
       "sort-package-json"
     ],
-    "src/**/*.js": [
-      "prettier --write src/**/*.js",
+    "src/**/*.ts": [
+      "prettier --write src/**/*.ts",
       "npm run lint:fix"
     ]
   },

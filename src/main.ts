@@ -2,7 +2,7 @@ import { app, BrowserWindow, dialog, ipcMain } from 'electron';
 import log from 'electron-log';
 import path from 'path';
 
-import Utils from './utils';
+import Crypto, { ICrypto } from './Crypto';
 
 let mainWindow: BrowserWindow | null;
 
@@ -49,20 +49,24 @@ ipcMain.on('action:encrypt_decrypt', async (e, arg) => {
   } else if (arg.action === 'decrypt') {
     popupFileName = arg.filePath.replace('.enc', '');
   }
-  let utils: Utils;
+  let crypto: ICrypto;
   try {
     const file = await dialog.showSaveDialog({
       defaultPath: popupFileName,
     });
     if (typeof file !== 'undefined') {
-      utils = new Utils(arg.filePath, file.filePath, arg.passphrase);
+      crypto = new Crypto(
+        arg.filePath,
+        file.filePath as string,
+        arg.passphrase,
+      );
       if (arg.action === 'encrypt') {
         log.info(`Encrypting ${file.filePath} with password <redacted>`);
-        utils.encrypt();
-        utils.on('progress', (progress) => {
+        crypto.encrypt();
+        crypto.on('crypto:source_stream:progress', (progress) => {
           e.sender.send('notice-status', `Encrypting...${progress}%`);
         });
-        utils.on('finished', () => {
+        crypto.on('crypto:destination_stream:finish', () => {
           log.info('File successfully encrypted!');
           e.sender.send(
             'notice-status',
@@ -71,18 +75,18 @@ ipcMain.on('action:encrypt_decrypt', async (e, arg) => {
         });
       } else if (arg.action === 'decrypt') {
         log.info(`Decrypting ${file.filePath} with password <redacted>`);
-        utils.decrypt();
-        utils.on('progress', (progress) => {
+        crypto.decrypt();
+        crypto.on('crypto:source_stream:progress', (progress) => {
           e.sender.send('notice-status', `Decrypting...${progress}%`);
         });
-        utils.on('finished', () => {
+        crypto.on('crypto:destination_stream:finish', () => {
           log.info('File successfully decrypted!');
           e.sender.send(
             'notice-status',
             `Done! File has been saved to: ${file.filePath}`,
           );
         });
-        utils.on('error', (reason) => {
+        crypto.on('error', (reason) => {
           if (reason === 'BAD_DECRYPT') {
             e.sender.send(
               'notice-status',
