@@ -62,7 +62,6 @@ ipcMain.on('action:encrypt_decrypt', async (e, arg) => {
       );
       if (arg.action === 'encrypt') {
         log.info(`Encrypting ${file.filePath} with password <redacted>`);
-        // encrypt(arg.filePath, file.filePath as string, arg.passphrase);
         crypto.encrypt();
         crypto.on('crypto:source_stream:progress', (progress) => {
           e.sender.send('notice-status', `Encrypting...${progress}%`);
