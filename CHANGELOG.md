@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.4.0](https://github.com/kunalnagar/encrypt0r/compare/v3.3.1...v3.4.0) (2021-01-03)
+
+### Features
+
+- Re-organize UI code ([#36](https://github.com/kunalnagar/encrypt0r/issues/36)) ([ebed284](https://github.com/kunalnagar/encrypt0r/commit/ebed28492dbf59e6f67ca7058229c4971d90a78a))
+
 ### [3.3.1](https://github.com/kunalnagar/encrypt0r/compare/v3.3.0...v3.3.1) (2021-01-02)
 
 ### Chores
