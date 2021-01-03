@@ -16,9 +16,6 @@
   "license": "MIT",
   "author": "Kunal Nagar <knlnagar@gmail.com>",
   "main": "dist/electron/main.js",
-  "bin": {
-    "encrypt0r": "dist/cli/index.js"
-  },
   "scripts": {
     "prebuild": "rm -rf dist",
     "build": "npm run build:tsc && npm run build:copy && npm run build-grunt && npm run build-mac-x64 && npm run build-win-x86 && npm run build-win-x64 && npm run build-linux-x64 && npm run build-linux-deb",

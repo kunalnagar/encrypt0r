@@ -2,7 +2,12 @@
 import { ipcRenderer } from 'electron';
 import $ from 'jquery';
 
-import { EVENT_DECRYPT, EVENT_ENCRYPT, EVENT_LOG } from '../constants';
+import {
+  EVENT_DECRYPT,
+  EVENT_ENCRYPT,
+  EVENT_LOG,
+  EVENT_NOTICE,
+} from '../constants';
 
 const $window = $(window);
 
@@ -16,3 +21,7 @@ $window.on(EVENT_ENCRYPT, (e, data) =>
 $window.on(EVENT_DECRYPT, (e, data) =>
   sendEventToElectron(EVENT_DECRYPT, data),
 );
+
+ipcRenderer.on(EVENT_NOTICE, (e, data) => {
+  $window.trigger(EVENT_NOTICE, data);
+});

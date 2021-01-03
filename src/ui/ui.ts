@@ -1,7 +1,12 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import $ from 'jquery';
 
-import { EVENT_ENCRYPT, EVENT_LOG } from '../constants';
+import {
+  EVENT_DECRYPT,
+  EVENT_ENCRYPT,
+  EVENT_LOG,
+  EVENT_NOTICE,
+} from '../constants';
 
 $(function () {
   let filePath = '';
@@ -63,7 +68,7 @@ $(function () {
     $filePath.html(file.path);
     $window.trigger(EVENT_LOG, {
       message: 'drag_drop',
-      filePath: file.path,
+      filePath,
     });
     return false;
   });
@@ -75,31 +80,18 @@ $(function () {
         filePath,
         passphrase,
       });
-      // ipcRenderer.send('event:log', {
-      //   action: 'click',
-      //   element: 'choice_encrypt',
-      // });
-      // ipcRenderer.send('action:encrypt_decrypt', {
-      //   action: 'encrypt',
-      //   filePath,
-      //   passphrase: $fieldPassphrase.val(),
-      // });
     } else {
       $fieldNotice.html('Passphrase is required');
     }
   });
 
   $btnDecrypt.on('click', function () {
-    if ($fieldPassphrase.val()) {
-      // ipcRenderer.send('event:log', {
-      //   action: 'click',
-      //   element: 'choice_decrypt',
-      // });
-      // ipcRenderer.send('action:encrypt_decrypt', {
-      //   action: 'decrypt',
-      //   filePath,
-      //   passphrase: $fieldPassphrase.val(),
-      // });
+    const passphrase = $fieldPassphrase.val();
+    if (passphrase) {
+      $window.trigger(EVENT_DECRYPT, {
+        filePath,
+        passphrase,
+      });
     } else {
       $fieldNotice.html('Passphrase is required');
     }
@@ -110,7 +102,7 @@ $(function () {
     e.stopPropagation();
   });
 
-  // ipcRenderer.on('notice-status', (e, notice) => {
-  //   $fieldNotice.html(notice);
-  // });
+  $window.on(EVENT_NOTICE, (e, data) => {
+    $fieldNotice.html(data);
+  });
 });
