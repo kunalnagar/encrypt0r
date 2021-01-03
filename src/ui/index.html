@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>encrypt0r</title>
+    <title>encrypt0r - A simple way to encrypt and decrypt your files</title>
     <link rel="stylesheet" type="text/css" href="css/app.min.css" />
   </head>
   <body>
@@ -36,10 +36,11 @@
       <p class="notice"></p>
     </div>
     <script>
-      window.$ = window.jQuery = require('jquery');
-    </script>
-    <script>
-      require('./renderer.js');
+      require('./ui.js');
+      const userAgent = navigator.userAgent.toLowerCase();
+      if (userAgent.indexOf(' electron/') > -1) {
+        require('../electron/ui-adapter.js');
+      }
     </script>
   </body>
 </html>

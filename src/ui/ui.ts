@@ -1,10 +1,17 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-import { ipcRenderer } from 'electron';
 import $ from 'jquery';
+
+import {
+  EVENT_DECRYPT,
+  EVENT_ENCRYPT,
+  EVENT_LOG,
+  EVENT_NOTICE,
+} from '../constants';
 
 $(function () {
   let filePath = '';
 
+  const $window = $(window);
   const $areaChoices = $('#area_choices');
   const $areaDrag = $('#area_drag');
   const $filePath = $('#file_path');
@@ -22,16 +29,14 @@ $(function () {
     $btnReset.show();
     $fieldPassphrase.show();
     if ($that.attr('id') === 'choice_encrypt') {
-      ipcRenderer.send('event:log', {
-        action: 'click',
-        element: 'choice_encrypt',
+      $window.trigger(EVENT_LOG, {
+        message: 'choice_encrypt',
       });
       $btnEncrypt.show();
       $btnDecrypt.hide();
     } else {
-      ipcRenderer.send('event:log', {
-        action: 'click',
-        element: 'choice_decrypt',
+      $window.trigger(EVENT_LOG, {
+        message: 'choice_decrypt',
       });
       $btnEncrypt.hide();
       $btnDecrypt.show();
@@ -48,9 +53,8 @@ $(function () {
     $filePath.empty();
     $fieldPassphrase.val('').hide();
     filePath = '';
-    ipcRenderer.send('event:log', {
-      action: 'click',
-      element: 'choice_reset',
+    $window.trigger(EVENT_LOG, {
+      message: 'choice_reset',
     });
   });
 
@@ -62,23 +66,19 @@ $(function () {
     const file = e.originalEvent.dataTransfer.files[0];
     filePath = file.path;
     $filePath.html(file.path);
-    ipcRenderer.send('event:log', {
-      action: 'drag_drop',
-      filePath: file.path,
+    $window.trigger(EVENT_LOG, {
+      message: 'drag_drop',
+      filePath,
     });
     return false;
   });
 
   $btnEncrypt.on('click', function () {
-    if ($fieldPassphrase.val()) {
-      ipcRenderer.send('event:log', {
-        action: 'click',
-        element: 'choice_encrypt',
-      });
-      ipcRenderer.send('action:encrypt_decrypt', {
-        action: 'encrypt',
+    const passphrase = $fieldPassphrase.val();
+    if (passphrase) {
+      $window.trigger(EVENT_ENCRYPT, {
         filePath,
-        passphrase: $fieldPassphrase.val(),
+        passphrase,
       });
     } else {
       $fieldNotice.html('Passphrase is required');
@@ -86,15 +86,11 @@ $(function () {
   });
 
   $btnDecrypt.on('click', function () {
-    if ($fieldPassphrase.val()) {
-      ipcRenderer.send('event:log', {
-        action: 'click',
-        element: 'choice_decrypt',
-      });
-      ipcRenderer.send('action:encrypt_decrypt', {
-        action: 'decrypt',
+    const passphrase = $fieldPassphrase.val();
+    if (passphrase) {
+      $window.trigger(EVENT_DECRYPT, {
         filePath,
-        passphrase: $fieldPassphrase.val(),
+        passphrase,
       });
     } else {
       $fieldNotice.html('Passphrase is required');
@@ -106,7 +102,7 @@ $(function () {
     e.stopPropagation();
   });
 
-  ipcRenderer.on('notice-status', (e, notice) => {
-    $fieldNotice.html(notice);
+  $window.on(EVENT_NOTICE, (e, data) => {
+    $fieldNotice.html(data);
   });
 });

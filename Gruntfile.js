@@ -15,7 +15,7 @@
         },
         dist: {
           files: {
-            'dist/css/app.css': 'scss/app.scss',
+            'dist/ui/css/app.css': 'scss/app.scss',
           },
         },
       },
@@ -25,7 +25,7 @@
         },
         target: {
           files: {
-            'dist/css/app.min.css': ['dist/css/app.css'],
+            'dist/ui/css/app.min.css': ['dist/ui/css/app.css'],
           },
         },
       },
