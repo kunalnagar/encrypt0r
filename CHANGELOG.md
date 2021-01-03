@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.4.1](https://github.com/kunalnagar/encrypt0r/compare/v3.4.0...v3.4.1) (2021-01-03)
+
+### Bug Fixes
+
+- Deploy script push ([38fa89b](https://github.com/kunalnagar/encrypt0r/commit/38fa89b51b006d8897d1f94e0ee66e5fdf74884b))
+
 ## [3.4.0](https://github.com/kunalnagar/encrypt0r/compare/v3.3.1...v3.4.0) (2021-01-03)
 
 ### Features
