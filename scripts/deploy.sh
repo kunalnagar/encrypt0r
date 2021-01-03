@@ -60,16 +60,16 @@ echo $TAG > release-notes.txt
 echo "\n" >> release-notes.txt
 echo "$NOTES" >> release-notes.txt
 
-# Create the actual release
-# More info: https://hub.github.com/hub-release.1.html
-hub release create --copy -F release-notes.txt ${TAG}
-rm -rf release-notes.txt
-
 # Push changelog.md and release commit to master
 git push origin master
 
 # Remove local changes
 git stash
+
+# Create the actual release
+# More info: https://hub.github.com/hub-release.1.html
+hub release create --copy -F release-notes.txt ${TAG}
+rm -rf release-notes.txt
 
 # Output release info
 echo "\n"
