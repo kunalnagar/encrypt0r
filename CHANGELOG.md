@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.5.0](https://github.com/kunalnagar/encrypt0r/compare/v3.4.1...v3.5.0) (2021-01-04)
+
+### Features
+
+- Add CLI support ([#38](https://github.com/kunalnagar/encrypt0r/issues/38)) ([ac97890](https://github.com/kunalnagar/encrypt0r/commit/ac97890bf74302914ebdd97f3276b78fd06c586c))
+
 ### [3.4.1](https://github.com/kunalnagar/encrypt0r/compare/v3.4.0...v3.4.1) (2021-01-03)
 
 ### Bug Fixes
