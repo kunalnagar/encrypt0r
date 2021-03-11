@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.5.1](https://github.com/kunalnagar/encrypt0r/compare/v3.5.0...v3.5.1) (2021-03-11)
+
+### Chores
+
+- Update .nvmrc ([89212ec](https://github.com/kunalnagar/encrypt0r/commit/89212ec1db6c10d4e65e33dee4d95603da7e82cd))
+- **deps-dev:** bump @types/node from 14.14.19 to 14.14.20 ([#42](https://github.com/kunalnagar/encrypt0r/issues/42)) ([4bdf8d6](https://github.com/kunalnagar/encrypt0r/commit/4bdf8d63cd7351d3cd0b504138ba6fbfb7c3065b))
+- **deps-dev:** bump @typescript-eslint/parser from 4.11.1 to 4.12.0 ([#44](https://github.com/kunalnagar/encrypt0r/issues/44)) ([30f146b](https://github.com/kunalnagar/encrypt0r/commit/30f146bfcff38031c6aae21ebfcc48e05e39f00c))
+- **deps-dev:** bump eslint-plugin-prettier from 3.3.0 to 3.3.1 ([#40](https://github.com/kunalnagar/encrypt0r/issues/40)) ([5100fb9](https://github.com/kunalnagar/encrypt0r/commit/5100fb93735b98c31dbdf4b2f0f430175f70d01a))
+- **deps-dev:** bump husky from 4.3.6 to 4.3.7 ([#41](https://github.com/kunalnagar/encrypt0r/issues/41)) ([4f209b8](https://github.com/kunalnagar/encrypt0r/commit/4f209b82b967c3745c4486ac18491a24ac5c4317))
+- **deps-dev:** bump sort-package-json from 1.48.0 to 1.48.1 ([#43](https://github.com/kunalnagar/encrypt0r/issues/43)) ([d2e4da1](https://github.com/kunalnagar/encrypt0r/commit/d2e4da18547286414b6b75460461f47d9a5ce343))
+- Remove dependabot updates ([ead7bae](https://github.com/kunalnagar/encrypt0r/commit/ead7bae5b5d46214a3a6fa76bc7fe4d361069d5d))
+
 ## [3.5.0](https://github.com/kunalnagar/encrypt0r/compare/v3.4.1...v3.5.0) (2021-01-04)
 
 ### Features
