@@ -15,8 +15,8 @@ jobs:
       - uses: actions/setup-node@v2-beta
         with:
           node-version: '14'
-      - name: Install npm dependencies
-        run: npm ci
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
       - name: Install windows dependencies
         run: |
           sudo dpkg --add-architecture i386
@@ -30,4 +30,4 @@ jobs:
           sudo apt-get install -y --install-recommends winehq-devel
           sudo apt-get install -y fakeroot
       - name: Create build
-        run: npm run build
+        run: yarn build

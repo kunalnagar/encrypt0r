@@ -44,12 +44,12 @@ git fetch
 git reset --hard HEAD
 
 # Generate release notes with a dry-run
-npm run release:standard-version -- --dry-run > out.txt
+yarn release:standard-version -- --dry-run > out.txt
 NOTES=$(cat out.txt | sed -n '/^---$/,/^---$/p' | sed '1d;$d')
 rm -rf out.txt
 
 # Run standard-version
-npm run release:standard-version
+yarn release:standard-version
 
 # Get the latest created tag
 TAG=$(git describe HEAD --abbrev=0)
