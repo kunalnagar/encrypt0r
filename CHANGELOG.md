@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.5.2](https://github.com/kunalnagar/encrypt0r/compare/v3.5.1...v3.5.2) (2021-03-13)
+
+### Chores
+
+- Switch to yarn ([c307ed0](https://github.com/kunalnagar/encrypt0r/commit/c307ed05203c657b811a20cac97bb047fdbde5d0))
+
 ### [3.5.1](https://github.com/kunalnagar/encrypt0r/compare/v3.5.0...v3.5.1) (2021-03-11)
 
 ### Chores
