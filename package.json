@@ -92,7 +92,7 @@
     "lint-staged": "10.5.4",
     "load-grunt-tasks": "5.1.0",
     "node-sass": "5.0.0",
-    "prettier": "2.2.1",
+    "prettier": "2.3.0",
     "sort-package-json": "1.49.0",
     "standard-version": "9.1.1",
     "time-grunt": "2.0.0",
