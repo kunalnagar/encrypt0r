@@ -19,12 +19,16 @@ jobs:
         run: yarn install --frozen-lockfile
       - name: Install windows dependencies
         run: |
-          sudo apt update
           sudo dpkg --add-architecture i386
           wget -qO - https://dl.winehq.org/wine-builds/winehq.key | sudo apt-key add -
-          sudo add-apt-repository ppa:cybermax-dexter/sdl2-backport
-          sudo apt-add-repository "deb https://dl.winehq.org/wine-builds/ubuntu $(lsb_release -cs) main"
-          sudo apt install --install-recommends winehq-stable
+          sudo add-apt-repository "deb https://dl.winehq.org/wine-builds/ubuntu $(lsb_release -cs) main"
+          sudo apt-get update
+
+          # Workaround the issue with Wine.
+          sudo apt-get install libasound2-plugins:i386 libgphoto2-6:i386
+          sudo apt-get install wine-stable-i386
+          sudo apt-get install wine-stable
+          sudo apt-get install --install-recommends winehq-stable
           sudo apt install -y fakeroot
       - name: Create build
         run: yarn build
