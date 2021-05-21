@@ -85,7 +85,7 @@
     "eslint-plugin-simple-import-sort": "7.0.0",
     "grunt": "1.4.0",
     "grunt-cli": "1.4.2",
-    "grunt-contrib-cssmin": "3.0.0",
+    "grunt-contrib-cssmin": "4.0.0",
     "grunt-contrib-watch": "1.1.0",
     "grunt-sass": "3.1.0",
     "husky": "4.3.8",
