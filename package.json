@@ -70,7 +70,7 @@
   },
   "devDependencies": {
     "@babel/core": "7.14.3",
-    "@babel/eslint-parser": "7.14.3",
+    "@babel/eslint-parser": "7.14.4",
     "@types/jquery": "3.5.5",
     "@types/node": "14.17.1",
     "@types/yargs": "15.0.13",
