@@ -25,7 +25,7 @@ const options = yargs
     alias: 'passphrase',
     describe: 'Passphrase',
     demandOption: true,
-  }).argv;
+  }).parseSync();
 
 const oMode = `${options.m}`;
 const oInput = `${options.i}`;
