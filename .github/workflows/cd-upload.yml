@@ -2,7 +2,7 @@ name: Continuous Deployment (Upload)
 
 on:
   release:
-    types: [published]
+    types: [released]
 
 jobs:
   release:
