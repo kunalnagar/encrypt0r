@@ -1,5 +1,12 @@
 # Changelog
 
+### [3.7.3](https://github.com/kunalnagar/encrypt0r/compare/v3.7.2...v3.7.3) (2021-06-11)
+
+### Chores
+
+- Validate Pull Request Title ([#83](https://github.com/kunalnagar/encrypt0r/issues/83)) ([8463f8b](https://github.com/kunalnagar/encrypt0r/commit/8463f8b42b88112fdb6f417b7685ce680fc1d1b9))
+- **deps:** lock file maintenance ([#82](https://github.com/kunalnagar/encrypt0r/issues/82)) ([a828f3b](https://github.com/kunalnagar/encrypt0r/commit/a828f3bd2076455c9e2c6761fb5256f2ced89437))
+
 ### [3.7.2](https://github.com/kunalnagar/encrypt0r/compare/v3.7.1...v3.7.2) (2021-06-11)
 
 ### Bug Fixes
