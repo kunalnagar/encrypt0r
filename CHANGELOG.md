@@ -1,5 +1,11 @@
 # Changelog
 
+### [3.7.2](https://github.com/kunalnagar/encrypt0r/compare/v3.7.1...v3.7.2) (2021-06-11)
+
+### Bug Fixes
+
+- Semantic Release GitHub token issue ([4c851d2](https://github.com/kunalnagar/encrypt0r/commit/4c851d2fa297f94b241592f12235a41f9d2c0e83))
+
 ### [3.7.1](https://github.com/kunalnagar/encrypt0r/compare/v3.7.0...v3.7.1) (2021-06-11)
 
 ### Bug Fixes
