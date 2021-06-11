@@ -33,3 +33,5 @@ jobs:
         run: yarn build
       - name: Release (dry-run)
         run: yarn release --dry-run
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
