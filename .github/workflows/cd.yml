@@ -1,12 +1,13 @@
-name: Release encrypt0r
+name: Continuous Deployment
 
 on:
-  release:
-    types: [published]
+  push:
+    branches:
+      - main
 
 jobs:
   release:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2-beta
@@ -27,7 +28,11 @@ jobs:
           sudo apt-get install -y --install-recommends winehq-devel
           sudo apt-get install -y fakeroot
       - name: Create release files
+        run: yarn release:prepare
+      - name: Release
         run: yarn release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Upload release files
         uses: svenstaro/upload-release-action@v2
         with:
