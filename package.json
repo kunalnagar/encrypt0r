@@ -35,8 +35,8 @@
     "dev": "yarn prebuild && yarn build:tsc && yarn build:copy && yarn build-grunt && electron . & yarn build:tsc:watch & grunt watch",
     "lint": "eslint src/ --ext .ts --max-warnings 0",
     "lint:fix": "eslint --fix src/ --ext .ts --max-warnings 0",
-    "release": "yarn prebuild && yarn build:tsc && yarn build:copy && yarn build-grunt && yarn build-mac-x64 && yarn zip-mac-x64 && yarn build-win-x86 && yarn zip-win-x86 && yarn build-win-x64 && yarn zip-win-x64 && yarn build-linux-x64 && yarn zip-linux-x64 && yarn build-linux-deb && yarn zip-linux-deb",
-    "release:standard-version": "standard-version",
+    "release:prepare": "yarn prebuild && yarn build:tsc && yarn build:copy && yarn build-grunt && yarn build-mac-x64 && yarn zip-mac-x64 && yarn build-win-x86 && yarn zip-win-x86 && yarn build-win-x64 && yarn zip-win-x64 && yarn build-linux-x64 && yarn zip-linux-x64 && yarn build-linux-deb && yarn zip-linux-deb",
+    "release": "semantic-release",
     "zip-linux-deb": "zip -r release-builds/encrypt0r-linux-deb.zip release-builds/*.deb",
     "zip-linux-x64": "zip -r release-builds/encrypt0r-linux-x64.zip release-builds/encrypt0r-linux-x64",
     "zip-mac-x64": "zip -r release-builds/encrypt0r-mac.zip release-builds/encrypt0r-darwin-x64",
@@ -90,7 +90,6 @@
     "node-sass": "6.0.0",
     "prettier": "2.3.1",
     "sort-package-json": "1.50.0",
-    "standard-version": "9.3.0",
     "time-grunt": "2.0.0",
     "typescript": "4.3.2",
     "yargs": "17.0.1"

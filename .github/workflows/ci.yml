@@ -1,4 +1,4 @@
-name: Build encrypt0r
+name: Continuous Integration
 
 on:
   push:
@@ -9,7 +9,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2-beta
@@ -31,3 +31,5 @@ jobs:
           sudo apt-get install -y fakeroot
       - name: Create build
         run: yarn build
+      - name: Release (dry-run)
+        run: yarn release --dry-run
