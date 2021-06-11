@@ -1,5 +1,11 @@
 # Changelog
 
+### [3.7.1](https://github.com/kunalnagar/encrypt0r/compare/v3.7.0...v3.7.1) (2021-06-11)
+
+### Bug Fixes
+
+- Change cd-upload type to released ([331fcc4](https://github.com/kunalnagar/encrypt0r/commit/331fcc4eb005aad9b10b08bbe412f53513303705))
+
 ## [3.7.0](https://github.com/kunalnagar/encrypt0r/compare/v3.6.0...v3.7.0) (2021-06-11)
 
 ### Features
