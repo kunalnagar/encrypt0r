@@ -41,12 +41,8 @@
     "zip-linux-x64": "zip -r release-builds/encrypt0r-linux-x64.zip release-builds/encrypt0r-linux-x64",
     "zip-mac-x64": "zip -r release-builds/encrypt0r-mac.zip release-builds/encrypt0r-darwin-x64",
     "zip-win-x64": "zip -r release-builds/encrypt0r-windows-x64.zip release-builds/encrypt0r-win32-x64",
-    "zip-win-x86": "zip -r release-builds/encrypt0r-windows-x86.zip release-builds/encrypt0r-win32-ia32"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+    "zip-win-x86": "zip -r release-builds/encrypt0r-windows-x86.zip release-builds/encrypt0r-win32-ia32",
+    "prepare": "husky install"
   },
   "lint-staged": {
     "*.md": [
@@ -88,7 +84,7 @@
     "grunt-contrib-cssmin": "4.0.0",
     "grunt-contrib-watch": "1.1.0",
     "grunt-sass": "3.1.0",
-    "husky": "6.0.0",
+    "husky": "^6.0.0",
     "lint-staged": "11.0.0",
     "load-grunt-tasks": "5.1.0",
     "node-sass": "6.0.0",
