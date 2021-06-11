@@ -1,5 +1,11 @@
 # Changelog
 
+### [3.7.4](https://github.com/kunalnagar/encrypt0r/compare/v3.7.3...v3.7.4) (2021-06-11)
+
+### Chores
+
+- **deps:** pin dependencies ([f584dff](https://github.com/kunalnagar/encrypt0r/commit/f584dff4d2663b192f6b82555ad4e60da0352bdc))
+
 ### [3.7.3](https://github.com/kunalnagar/encrypt0r/compare/v3.7.2...v3.7.3) (2021-06-11)
 
 ### Chores
