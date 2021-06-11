@@ -1,5 +1,11 @@
 # Changelog
 
+### [3.7.7](https://github.com/kunalnagar/encrypt0r/compare/v3.7.6...v3.7.7) (2021-06-11)
+
+### Chores
+
+- **deps:** update dependency electron to v12.0.11 ([bf47f73](https://github.com/kunalnagar/encrypt0r/commit/bf47f73ba16c23effa97cb8548c3d618cca302c6))
+
 ### [3.7.6](https://github.com/kunalnagar/encrypt0r/compare/v3.7.5...v3.7.6) (2021-06-11)
 
 ### Chores
