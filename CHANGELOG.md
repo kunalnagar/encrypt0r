@@ -1,5 +1,72 @@
 # Changelog
 
+## [3.6.0](https://github.com/kunalnagar/encrypt0r/compare/v3.5.2...v3.6.0) (2021-06-11)
+
+### Features
+
+- Switch to semantic-release ([#81](https://github.com/kunalnagar/encrypt0r/issues/81)) ([8ce05ad](https://github.com/kunalnagar/encrypt0r/commit/8ce05ad3831ef47883631662f62bfe6bd6950724))
+
+### Bug Fixes
+
+- Tag name in upload releases ([5db0d87](https://github.com/kunalnagar/encrypt0r/commit/5db0d87c3829113e56bd0f8948bf89d38c20933c))
+- Wine development issues ([#52](https://github.com/kunalnagar/encrypt0r/issues/52)) ([38ff8c7](https://github.com/kunalnagar/encrypt0r/commit/38ff8c73158bc37dcd1c6a03ecefaf757730ace5))
+
+### Chores
+
+- Add github token as env variable ([640e8ab](https://github.com/kunalnagar/encrypt0r/commit/640e8aba544a5baf834d53dc3e964cc39a84a839))
+- Fix master branch in cd.yml ([3eb63e4](https://github.com/kunalnagar/encrypt0r/commit/3eb63e44a92d653f698babc51417aa358dedd5eb))
+- Update husky to v6 ([#79](https://github.com/kunalnagar/encrypt0r/issues/79)) ([3a26d29](https://github.com/kunalnagar/encrypt0r/commit/3a26d29d3e7664dc0a07626b9e69a856dff454f6))
+- **deps:** lock file maintenance ([#75](https://github.com/kunalnagar/encrypt0r/issues/75)) ([565180f](https://github.com/kunalnagar/encrypt0r/commit/565180f25ddea684706d202bf67f061bf7c4ebae))
+- **deps:** lock file maintenance ([#76](https://github.com/kunalnagar/encrypt0r/issues/76)) ([e72e00c](https://github.com/kunalnagar/encrypt0r/commit/e72e00c1bd2b9437b7cb561a02707d1e01dc264f))
+- **deps:** pin dependencies ([#48](https://github.com/kunalnagar/encrypt0r/issues/48)) ([a386e16](https://github.com/kunalnagar/encrypt0r/commit/a386e16f764ffdf3b6c7e88e46cf804362d66786))
+- **deps:** update babel monorepo ([573741c](https://github.com/kunalnagar/encrypt0r/commit/573741c291965789fd5afc3e8bcc0e61af2d566d))
+- **deps:** update babel monorepo to v7.14.2 ([3a88885](https://github.com/kunalnagar/encrypt0r/commit/3a88885d58e6cd71176e066c5bd5764e55d7ef0b))
+- **deps:** update babel monorepo to v7.14.3 ([7175da7](https://github.com/kunalnagar/encrypt0r/commit/7175da748b5814d3394c6f9a0f1e119b76ae01b2))
+- **deps:** update dependency @babel/eslint-parser to v7.14.4 ([776e1ac](https://github.com/kunalnagar/encrypt0r/commit/776e1ac5cf3b087e59089a2bbc581e5cbff8a5ee))
+- **deps:** update dependency @types/node to v14.14.45 ([6194d03](https://github.com/kunalnagar/encrypt0r/commit/6194d035d88a3ff11fc564caca3d96ccce080b28))
+- **deps:** update dependency @types/node to v14.17.0 ([0146ebb](https://github.com/kunalnagar/encrypt0r/commit/0146ebba308bac60af3585ccd929c4b5766c5de9))
+- **deps:** update dependency @types/node to v14.17.1 ([fe7d086](https://github.com/kunalnagar/encrypt0r/commit/fe7d0862c04cfce744685a53b317538adbd4def8))
+- **deps:** update dependency @types/node to v14.17.2 ([593ca06](https://github.com/kunalnagar/encrypt0r/commit/593ca06fc8b6ab940697c90bf33d88e77f5b274c))
+- **deps:** update dependency electron to v11.4.6 ([1917140](https://github.com/kunalnagar/encrypt0r/commit/1917140b3d032e40648befe868222578adfde772))
+- **deps:** update dependency electron to v11.4.7 ([49bbb13](https://github.com/kunalnagar/encrypt0r/commit/49bbb13b877ae65a9d8d49411eb6b5338129bbaf))
+- **deps:** update dependency electron to v12 ([#65](https://github.com/kunalnagar/encrypt0r/issues/65)) ([ee48f01](https://github.com/kunalnagar/encrypt0r/commit/ee48f0118041dfa0349bc733b3867886905bd757))
+- **deps:** update dependency electron to v12.0.10 ([d6f8249](https://github.com/kunalnagar/encrypt0r/commit/d6f8249df554426d3391f02b24b0c3f88ed6a4b5))
+- **deps:** update dependency eslint to v7.26.0 ([51eb66a](https://github.com/kunalnagar/encrypt0r/commit/51eb66ad1f0a4deab0392cb0125aef8086332657))
+- **deps:** update dependency eslint to v7.27.0 ([84f3506](https://github.com/kunalnagar/encrypt0r/commit/84f3506a03c42a1a8a8b0568f71495b7a117ed84))
+- **deps:** update dependency eslint to v7.28.0 ([a570aa0](https://github.com/kunalnagar/encrypt0r/commit/a570aa0cdc4255af2d1dc81e6068d4d2e9cebc78))
+- **deps:** update dependency eslint-config-prettier to v8 ([#66](https://github.com/kunalnagar/encrypt0r/issues/66)) ([7c25d0e](https://github.com/kunalnagar/encrypt0r/commit/7c25d0e9edabbafcc446b546ef3959532d0b71d2))
+- **deps:** update dependency eslint-plugin-import to v2.23.0 ([02f2c48](https://github.com/kunalnagar/encrypt0r/commit/02f2c48d6fd9a055e0cb5bccc1a15e228f2eef65))
+- **deps:** update dependency eslint-plugin-import to v2.23.1 ([360aa45](https://github.com/kunalnagar/encrypt0r/commit/360aa45ba6a28858a5868ac7c1f539d93ed3e835))
+- **deps:** update dependency eslint-plugin-import to v2.23.2 ([78de8f3](https://github.com/kunalnagar/encrypt0r/commit/78de8f30e57cc634160f937deca913bd430fb2ea))
+- **deps:** update dependency eslint-plugin-import to v2.23.3 ([4932c8f](https://github.com/kunalnagar/encrypt0r/commit/4932c8fd721f8aa39574c2f1b79e8f9138c71407))
+- **deps:** update dependency eslint-plugin-import to v2.23.4 ([a47e040](https://github.com/kunalnagar/encrypt0r/commit/a47e040c252e30d2146d17e5769234cd74720294))
+- **deps:** update dependency eslint-plugin-prettier to v3.4.0 ([76a6d45](https://github.com/kunalnagar/encrypt0r/commit/76a6d45d498997f656d842cf608ce2db9a1cf27f))
+- **deps:** update dependency grunt to v1.4.0 ([37662a9](https://github.com/kunalnagar/encrypt0r/commit/37662a9c508b078c7a270d0a46814ebcc1cb65d7))
+- **deps:** update dependency grunt to v1.4.1 ([e1fa558](https://github.com/kunalnagar/encrypt0r/commit/e1fa558b1b92b96abcf8851c350bc8231803eed5))
+- **deps:** update dependency grunt-cli to v1.4.2 ([f3c59a1](https://github.com/kunalnagar/encrypt0r/commit/f3c59a165461fe6ad08fccef226cdcf4c8f58348))
+- **deps:** update dependency grunt-cli to v1.4.3 ([0457d8d](https://github.com/kunalnagar/encrypt0r/commit/0457d8d0bc20a0b9c922a6323d679960a0a11bfb))
+- **deps:** update dependency grunt-contrib-cssmin to v4 ([#68](https://github.com/kunalnagar/encrypt0r/issues/68)) ([1b294a4](https://github.com/kunalnagar/encrypt0r/commit/1b294a412242a4817dbfa6b01c66adc21a03c9b6))
+- **deps:** update dependency husky to v6 ([#69](https://github.com/kunalnagar/encrypt0r/issues/69)) ([7255071](https://github.com/kunalnagar/encrypt0r/commit/72550712d409df25d7fa29836ef8e4535cac67ba))
+- **deps:** update dependency lint-staged to v11 ([#70](https://github.com/kunalnagar/encrypt0r/issues/70)) ([b7c5615](https://github.com/kunalnagar/encrypt0r/commit/b7c56156d50eeaec53845a32f2ed550792c80b84))
+- **deps:** update dependency node-sass to v6 ([#71](https://github.com/kunalnagar/encrypt0r/issues/71)) ([1cdacf0](https://github.com/kunalnagar/encrypt0r/commit/1cdacf0056e4e0922c376921c9056e19abde18ca))
+- **deps:** update dependency prettier to v2.3.0 ([df61c43](https://github.com/kunalnagar/encrypt0r/commit/df61c4370599fe771f50d030803a245ebe19f6d4))
+- **deps:** update dependency prettier to v2.3.1 ([e65337b](https://github.com/kunalnagar/encrypt0r/commit/e65337b53a97ef3d02c480001a4767122e64e0ee))
+- **deps:** update dependency sort-package-json to v1.50.0 ([9b5e67a](https://github.com/kunalnagar/encrypt0r/commit/9b5e67ae4862b471fd6c6a9a7d69350c9dd9faa1))
+- **deps:** update dependency standard-version to v9.3.0 ([8f46ab2](https://github.com/kunalnagar/encrypt0r/commit/8f46ab2c95f573948548aaa9d3f2bccc10a86646))
+- **deps:** update dependency typescript to v4.2.4 ([6bf60d3](https://github.com/kunalnagar/encrypt0r/commit/6bf60d3320855880de42aa9c08f9c32f0975e5fb))
+- **deps:** update dependency typescript to v4.3.2 ([8aa9aa5](https://github.com/kunalnagar/encrypt0r/commit/8aa9aa52b7ed73f5ba3aab5150253e7303bf569b))
+- **deps:** update dependency xmldom to v0.6.0 ([70ba37b](https://github.com/kunalnagar/encrypt0r/commit/70ba37b52e4e84c0dbb22eefc6b8de2c0ab92d24))
+- **deps:** update dependency yargs to v17 ([#72](https://github.com/kunalnagar/encrypt0r/issues/72)) ([2bfe028](https://github.com/kunalnagar/encrypt0r/commit/2bfe02848efca22dd1d51e758663de67109d0c95))
+- **deps:** update node.js to v14.16.1 ([#53](https://github.com/kunalnagar/encrypt0r/issues/53)) ([b777e6e](https://github.com/kunalnagar/encrypt0r/commit/b777e6e2632b56794411fe0a83d75f73eb42f581))
+- **deps:** update node.js to v14.17.0 ([25f1bea](https://github.com/kunalnagar/encrypt0r/commit/25f1beaf2c7a096abdc0946c1e5c8a8c69480eb4))
+- **deps:** update typescript-eslint monorepo to v4.22.1 ([7c8b03e](https://github.com/kunalnagar/encrypt0r/commit/7c8b03e3e77faf576101138b769a0246c6d0a53e))
+- **deps:** update typescript-eslint monorepo to v4.23.0 ([3d07d68](https://github.com/kunalnagar/encrypt0r/commit/3d07d68d8483e8f1e37636c4b8cf5dfc23fc2ca8))
+- **deps:** update typescript-eslint monorepo to v4.24.0 ([e5df964](https://github.com/kunalnagar/encrypt0r/commit/e5df96408ad5afe5f096bc675b1123a72f6b4ea6))
+- **deps:** update typescript-eslint monorepo to v4.25.0 ([5ede029](https://github.com/kunalnagar/encrypt0r/commit/5ede029588bc9ca799417b78eba7756f2ca24a41))
+- **deps:** update typescript-eslint monorepo to v4.26.0 ([8300886](https://github.com/kunalnagar/encrypt0r/commit/8300886e0536229061c8bd8160df3f77ac26eaf6))
+- Add Renovate config ([16fc8f6](https://github.com/kunalnagar/encrypt0r/commit/16fc8f67b19551c025127594b7a586d8266172c3))
+- Update README.md ([1ae6595](https://github.com/kunalnagar/encrypt0r/commit/1ae6595a9f92292df0210e5ba6c34ca5b633768e))
+
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
 ### [3.5.2](https://github.com/kunalnagar/encrypt0r/compare/v3.5.1...v3.5.2) (2021-03-13)
