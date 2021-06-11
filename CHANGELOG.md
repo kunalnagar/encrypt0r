@@ -1,5 +1,11 @@
 # Changelog
 
+### [3.7.6](https://github.com/kunalnagar/encrypt0r/compare/v3.7.5...v3.7.6) (2021-06-11)
+
+### Chores
+
+- **deps:** update dependency @types/node to v14.17.3 ([1db89f1](https://github.com/kunalnagar/encrypt0r/commit/1db89f18b23cb478da6adb2c501f43c38adec628))
+
 ### [3.7.5](https://github.com/kunalnagar/encrypt0r/compare/v3.7.4...v3.7.5) (2021-06-11)
 
 ### Chores
