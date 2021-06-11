@@ -1,5 +1,15 @@
 # Changelog
 
+## [3.7.0](https://github.com/kunalnagar/encrypt0r/compare/v3.6.0...v3.7.0) (2021-06-11)
+
+### Features
+
+- Add CD upload step ([5e3db81](https://github.com/kunalnagar/encrypt0r/commit/5e3db81ca779c5a3bafce65129dffce47ee02626))
+
+### Bug Fixes
+
+- Remove dist directory ([f402d5e](https://github.com/kunalnagar/encrypt0r/commit/f402d5e25251c1bd7dbe5dcb27751c6e0617bb68))
+
 ## [3.6.0](https://github.com/kunalnagar/encrypt0r/compare/v3.5.2...v3.6.0) (2021-06-11)
 
 ### Features
