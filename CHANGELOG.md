@@ -1,5 +1,11 @@
 # Changelog
 
+### [3.7.16](https://github.com/kunalnagar/encrypt0r/compare/v3.7.15...v3.7.16) (2021-06-15)
+
+### Chores
+
+- **deps:** update dependency @babel/core to v7.14.6 ([ca3f5a3](https://github.com/kunalnagar/encrypt0r/commit/ca3f5a37d02deecd430b0c004addde60ef600370))
+
 ### [3.7.15](https://github.com/kunalnagar/encrypt0r/compare/v3.7.14...v3.7.15) (2021-06-14)
 
 ### Chores
