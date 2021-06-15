@@ -1,5 +1,11 @@
 # Changelog
 
+### [3.7.19](https://github.com/kunalnagar/encrypt0r/compare/v3.7.18...v3.7.19) (2021-06-15)
+
+### Chores
+
+- **deps:** update node.js to v14.17.1 ([7c2764a](https://github.com/kunalnagar/encrypt0r/commit/7c2764aca3de547f999315a4edd70a30a67857c6))
+
 ### [3.7.18](https://github.com/kunalnagar/encrypt0r/compare/v3.7.17...v3.7.18) (2021-06-15)
 
 ### Chores
