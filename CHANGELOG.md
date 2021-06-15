@@ -1,5 +1,11 @@
 # Changelog
 
+### [3.7.20](https://github.com/kunalnagar/encrypt0r/compare/v3.7.19...v3.7.20) (2021-06-15)
+
+### Chores
+
+- **deps:** update dependency semantic-release to v17.4.4 ([94258ed](https://github.com/kunalnagar/encrypt0r/commit/94258ed6fa11b40273760526cc280284d5010bd5))
+
 ### [3.7.19](https://github.com/kunalnagar/encrypt0r/compare/v3.7.18...v3.7.19) (2021-06-15)
 
 ### Chores
