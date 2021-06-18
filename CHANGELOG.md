@@ -1,5 +1,11 @@
 # Changelog
 
+### [3.7.25](https://github.com/kunalnagar/encrypt0r/compare/v3.7.24...v3.7.25) (2021-06-18)
+
+### Chores
+
+- **deps:** update dependency eslint to v7.29.0 ([4fa9eb2](https://github.com/kunalnagar/encrypt0r/commit/4fa9eb2e5e92c1e171154b5fca9e69441d53b97d))
+
 ### [3.7.24](https://github.com/kunalnagar/encrypt0r/compare/v3.7.23...v3.7.24) (2021-06-17)
 
 ### Chores
