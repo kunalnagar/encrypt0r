@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { app, BrowserWindow, dialog, ipcMain } from 'electron';
-import { IpcMainEvent } from 'electron/main';
+import { app, BrowserWindow, dialog, ipcMain, IpcMainEvent } from 'electron';
 import log from 'electron-log';
 import path from 'path';
 

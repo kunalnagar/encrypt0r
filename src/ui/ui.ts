@@ -8,7 +8,7 @@ import {
   EVENT_NOTICE,
 } from '../constants';
 
-$(function () {
+$(() => {
   let filePath = '';
 
   const $window = $(window);
@@ -22,8 +22,8 @@ $(function () {
   const $btnDecrypt = $('#btn_decrypt');
   const $fieldPassphrase = $('#passphrase');
 
-  $btnChoice.on('click', function () {
-    const $that = $(this);
+  $btnChoice.on('click', (e) => {
+    const $that = $(e.target);
     $areaChoices.hide();
     $areaDrag.show();
     $btnReset.show();
@@ -43,7 +43,7 @@ $(function () {
     }
   });
 
-  $btnReset.on('click', function () {
+  $btnReset.on('click', () => {
     $areaChoices.show();
     $areaDrag.hide();
     $btnReset.hide();
@@ -73,7 +73,7 @@ $(function () {
     return false;
   });
 
-  $btnEncrypt.on('click', function () {
+  $btnEncrypt.on('click', () => {
     const passphrase = $fieldPassphrase.val();
     if (passphrase) {
       $window.trigger(EVENT_ENCRYPT, {
@@ -85,7 +85,7 @@ $(function () {
     }
   });
 
-  $btnDecrypt.on('click', function () {
+  $btnDecrypt.on('click', () => {
     const passphrase = $fieldPassphrase.val();
     if (passphrase) {
       $window.trigger(EVENT_DECRYPT, {
