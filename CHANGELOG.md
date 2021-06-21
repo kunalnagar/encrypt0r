@@ -1,5 +1,11 @@
 # Changelog
 
+### [3.7.27](https://github.com/kunalnagar/encrypt0r/compare/v3.7.26...v3.7.27) (2021-06-21)
+
+### Chores
+
+- Switch to @kunalnagarco/eslint-config package ([#88](https://github.com/kunalnagar/encrypt0r/issues/88)) ([be0ec30](https://github.com/kunalnagar/encrypt0r/commit/be0ec30f2beb3ab5023dc47bfb5442bdd6e89c87))
+
 ### [3.7.26](https://github.com/kunalnagar/encrypt0r/compare/v3.7.25...v3.7.26) (2021-06-20)
 
 ### Chores
