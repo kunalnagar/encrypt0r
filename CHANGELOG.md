@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.8.0](https://github.com/kunalnagar/encrypt0r/compare/v3.7.28...v3.8.0) (2021-06-21)
+
+### Features
+
+- Add build for m1 macs ([#91](https://github.com/kunalnagar/encrypt0r/issues/91)) ([a39c1f9](https://github.com/kunalnagar/encrypt0r/commit/a39c1f9f120119b1f4233c5afee45d5334abca0c))
+
 ### [3.7.28](https://github.com/kunalnagar/encrypt0r/compare/v3.7.27...v3.7.28) (2021-06-21)
 
 ### Chores
