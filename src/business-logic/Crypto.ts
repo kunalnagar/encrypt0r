@@ -23,9 +23,11 @@ export interface ICrypto extends EventEmitter {
 }
 
 export default class Crypto extends EventEmitter implements ICrypto {
-  private _sourceFilePath: string;
-  private _destinationFilePath: string;
-  private _passphrase: string;
+  private sourceFilePath: string;
+
+  private destinationFilePath: string;
+
+  private passphrase: string;
 
   constructor(
     sourceFilePath: string,
@@ -33,19 +35,18 @@ export default class Crypto extends EventEmitter implements ICrypto {
     passphrase: string,
   ) {
     super();
-    this._sourceFilePath = sourceFilePath;
-    this._destinationFilePath = destinationFilePath;
-    this._passphrase = passphrase;
+    this.sourceFilePath = sourceFilePath;
+    this.destinationFilePath = destinationFilePath;
+    this.passphrase = passphrase;
   }
 
   encrypt(): void {
     const initializationVector = getInitializationVector();
-    const initializationVectorStream = getInitializationVectorStream(
-      initializationVector,
-    );
-    const cipher = getCipher(this._passphrase, initializationVector);
-    const sourceStream = getSourceStream(this._sourceFilePath);
-    const destinationStream = getDestinationStream(this._destinationFilePath);
+    const initializationVectorStream =
+      getInitializationVectorStream(initializationVector);
+    const cipher = getCipher(this.passphrase, initializationVector);
+    const sourceStream = getSourceStream(this.sourceFilePath);
+    const destinationStream = getDestinationStream(this.destinationFilePath);
     pipeline(
       sourceStream,
       compress(),
@@ -59,21 +60,21 @@ export default class Crypto extends EventEmitter implements ICrypto {
         }
       },
     );
-    this._handleSourceStream(sourceStream);
-    this._handleDestinationStream(destinationStream);
+    this.handleSourceStream(sourceStream);
+    this.handleDestinationStream(destinationStream);
   }
 
   decrypt(): void {
     const initializationVectorStream = getSourceStream(
-      this._sourceFilePath,
+      this.sourceFilePath,
       0,
       15,
     );
-    const sourceStream = getSourceStream(this._sourceFilePath, 16);
-    const destinationStream = getDestinationStream(this._destinationFilePath);
+    const sourceStream = getSourceStream(this.sourceFilePath, 16);
+    const destinationStream = getDestinationStream(this.destinationFilePath);
     initializationVectorStream.on('data', (chunk) => {
       const initializationVector = chunk as Buffer;
-      const decipher = getDecipher(this._passphrase, initializationVector);
+      const decipher = getDecipher(this.passphrase, initializationVector);
       pipeline(
         sourceStream,
         decipher,
@@ -87,13 +88,13 @@ export default class Crypto extends EventEmitter implements ICrypto {
         },
       );
     });
-    this._handleSourceStream(sourceStream);
-    this._handleDestinationStream(destinationStream);
+    this.handleSourceStream(sourceStream);
+    this.handleDestinationStream(destinationStream);
   }
 
-  private _handleSourceStream(sourceStream: ReadStream) {
+  private handleSourceStream(sourceStream: ReadStream) {
     let currentSize = 0;
-    const totalSize = getFileSize(this._sourceFilePath).size;
+    const totalSize = getFileSize(this.sourceFilePath).size;
     sourceStream.on('data', (chunk) => {
       currentSize += chunk.length;
       this.emit(
@@ -103,7 +104,7 @@ export default class Crypto extends EventEmitter implements ICrypto {
     });
   }
 
-  private _handleDestinationStream(destinationStream: WriteStream) {
+  private handleDestinationStream(destinationStream: WriteStream) {
     destinationStream.on('finish', () => {
       this.emit(EVENT_DESTINATION_STREAM_FINISH);
     });

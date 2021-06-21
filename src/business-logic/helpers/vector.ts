@@ -4,6 +4,7 @@ import { Transform, TransformCallback } from 'stream';
 
 export default class Vector extends Transform {
   private initVector: Buffer;
+
   private isAppended: boolean;
 
   constructor(initVector: Buffer) {
@@ -12,11 +13,7 @@ export default class Vector extends Transform {
     this.isAppended = false;
   }
 
-  _transform(
-    chunk: any,
-    encoding: BufferEncoding,
-    cb: TransformCallback,
-  ): void {
+  transform(chunk: any, encoding: BufferEncoding, cb: TransformCallback): void {
     if (!this.isAppended) {
       this.push(this.initVector);
       this.isAppended = true;

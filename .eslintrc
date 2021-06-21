@@ -1,0 +1,15 @@
+{
+  "extends": ["@kunalnagarco"],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "overrides": [
+    {
+      "files": ["**/*.ts", "**/*.tsx"],
+      "rules": {
+        "no-console": "off",
+        "import/prefer-default-export": "off"
+      }
+    }
+  ]
+}

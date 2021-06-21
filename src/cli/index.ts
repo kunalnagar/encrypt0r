@@ -25,7 +25,8 @@ const options = yargs
     alias: 'passphrase',
     describe: 'Passphrase',
     demandOption: true,
-  }).parseSync();
+  })
+  .parseSync();
 
 const oMode = `${options.m}`;
 const oInput = `${options.i}`;
@@ -58,12 +59,10 @@ if (oOutput) {
   } else if (oMode === 'decrypt') {
     outputFile = `${oOutput}/${filename.replace('.enc', '')}`;
   }
-} else {
-  if (oMode === 'encrypt') {
-    outputFile = `${oInput}.enc`;
-  } else if (oMode === 'decrypt') {
-    outputFile = `${oInput.replace('.enc', '')}`;
-  }
+} else if (oMode === 'encrypt') {
+  outputFile = `${oInput}.enc`;
+} else if (oMode === 'decrypt') {
+  outputFile = `${oInput.replace('.enc', '')}`;
 }
 
 const crypto = new Crypto(oInput, outputFile, oPassphrase);
