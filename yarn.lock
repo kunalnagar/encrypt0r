@@ -263,10 +263,10 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@kunalnagarco/eslint-config@0.1.14":
-  version "0.1.14"
-  resolved "https://registry.yarnpkg.com/@kunalnagarco/eslint-config/-/eslint-config-0.1.14.tgz#2c595b3b2f98b3ed591e0504b976671df170e5b1"
-  integrity sha512-N5ERm7Soz3dp7ypMw5Vxz+fV0qiB9mAjAgDkzNctLN1dT6GjYYEr63cJSaEyJYvN/zWnim1+IJvcQNjv9eFARw==
+"@kunalnagarco/eslint-config@0.1.16":
+  version "0.1.16"
+  resolved "https://registry.yarnpkg.com/@kunalnagarco/eslint-config/-/eslint-config-0.1.16.tgz#5df5280db12cb7962feef3154508c78d276ff8af"
+  integrity sha512-ow3WTPbCSbeRysxD91a8DqmVs/mQbuQGA3YQZijZHDCW93OsMcGWe2bAeFYOpZmCiqsQVR4o8zkmQexi+UAskw==
 
 "@malept/cross-spawn-promise@^1.0.0":
   version "1.1.1"
