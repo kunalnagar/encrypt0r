@@ -20,6 +20,8 @@ const createWindow = (): BrowserWindow => {
     webPreferences: {
       devTools: true,
       nodeIntegration: true,
+      contextIsolation: false,
+      enableRemoteModule: true,
     },
     icon: path.join('../../assets/icons/png/64x64.png'),
   });
