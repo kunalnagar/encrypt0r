@@ -1,5 +1,11 @@
 # Changelog
 
+### [3.8.6](https://github.com/kunalnagar/encrypt0r/compare/v3.8.5...v3.8.6) (2021-06-21)
+
+### Chores
+
+- **deps:** update dependency @babel/eslint-parser to v7.14.7 ([e6d35d6](https://github.com/kunalnagar/encrypt0r/commit/e6d35d62a7f960d7828c1dd772758ade5f3ab9be))
+
 ### [3.8.5](https://github.com/kunalnagar/encrypt0r/compare/v3.8.4...v3.8.5) (2021-06-21)
 
 ### Bug Fixes
