@@ -1,5 +1,11 @@
 # Changelog
 
+### [3.8.10](https://github.com/kunalnagar/encrypt0r/compare/v3.8.9...v3.8.10) (2021-06-24)
+
+### Chores
+
+- **deps:** update dependency node-sass to v6.0.1 ([aa76f15](https://github.com/kunalnagar/encrypt0r/commit/aa76f159bdbf1eac7e5e632be4cfe25d6d4a2253))
+
 ### [3.8.9](https://github.com/kunalnagar/encrypt0r/compare/v3.8.8...v3.8.9) (2021-06-23)
 
 ### Chores
