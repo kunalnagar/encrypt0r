@@ -1,5 +1,11 @@
 # Changelog
 
+### [3.8.20](https://github.com/kunalnagar/encrypt0r/compare/v3.8.19...v3.8.20) (2021-07-01)
+
+### Chores
+
+- **deps:** update dependency typescript to v4.3.5 ([6f54f41](https://github.com/kunalnagar/encrypt0r/commit/6f54f41309571fa791c701cec88a5cbc2fad8033))
+
 ### [3.8.19](https://github.com/kunalnagar/encrypt0r/compare/v3.8.18...v3.8.19) (2021-06-29)
 
 ### Chores
