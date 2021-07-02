@@ -84,7 +84,7 @@
     "@typescript-eslint/parser": "4.28.1",
     "conventional-changelog-conventionalcommits": "4.6.0",
     "electron-packager": "15.2.0",
-    "eslint": "7.29.0",
+    "eslint": "7.30.0",
     "eslint-config-airbnb-typescript-prettier": "4.2.0",
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-import": "2.23.4",
