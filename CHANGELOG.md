@@ -1,5 +1,11 @@
 # Changelog
 
+### [3.8.38](https://github.com/kunalnagar/encrypt0r/compare/v3.8.37...v3.8.38) (2021-07-07)
+
+### Chores
+
+- **deps:** update kunalnagarco/action-semantic-pr action to v1.2.30 ([258007c](https://github.com/kunalnagar/encrypt0r/commit/258007c44fd45daade3984e1fc1b65dd12b4938d))
+
 ### [3.8.37](https://github.com/kunalnagar/encrypt0r/compare/v3.8.36...v3.8.37) (2021-07-07)
 
 ### Chores
