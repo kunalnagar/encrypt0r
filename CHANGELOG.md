@@ -1,5 +1,11 @@
 # Changelog
 
+### [3.8.37](https://github.com/kunalnagar/encrypt0r/compare/v3.8.36...v3.8.37) (2021-07-07)
+
+### Chores
+
+- **deps:** update dependency @types/jquery to v3.5.6 ([e59ecdf](https://github.com/kunalnagar/encrypt0r/commit/e59ecdf9db150add3de8b0de9cd94bdae60a3dab))
+
 ### [3.8.36](https://github.com/kunalnagar/encrypt0r/compare/v3.8.35...v3.8.36) (2021-07-06)
 
 ### Bug Fixes
