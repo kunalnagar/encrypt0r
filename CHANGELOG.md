@@ -1,5 +1,11 @@
 # Changelog
 
+### [3.8.43](https://github.com/kunalnagar/encrypt0r/compare/v3.8.42...v3.8.43) (2021-07-12)
+
+### Chores
+
+- **deps:** update typescript-eslint monorepo to v4.28.3 ([b686ee9](https://github.com/kunalnagar/encrypt0r/commit/b686ee9e3ef9315878a36bcc4a23978873bd346a))
+
 ### [3.8.42](https://github.com/kunalnagar/encrypt0r/compare/v3.8.41...v3.8.42) (2021-07-12)
 
 ### Chores
