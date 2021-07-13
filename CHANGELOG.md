@@ -1,5 +1,11 @@
 # Changelog
 
+### [3.8.44](https://github.com/kunalnagar/encrypt0r/compare/v3.8.43...v3.8.44) (2021-07-13)
+
+### Chores
+
+- **deps:** update dependency lint-staged to v11.0.1 ([eba0994](https://github.com/kunalnagar/encrypt0r/commit/eba09945b7da5f3ee8db8e457ec9d96ca6b8a3ed))
+
 ### [3.8.43](https://github.com/kunalnagar/encrypt0r/compare/v3.8.42...v3.8.43) (2021-07-12)
 
 ### Chores
