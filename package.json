@@ -71,7 +71,7 @@
   "devDependencies": {
     "@babel/core": "7.14.8",
     "@babel/eslint-parser": "7.14.7",
-    "@kunalnagarco/eslint-config": "0.1.31",
+    "@kunalnagarco/eslint-config": "0.1.32",
     "@semantic-release/changelog": "5.0.1",
     "@semantic-release/commit-analyzer": "8.0.1",
     "@semantic-release/git": "9.0.0",
