@@ -1,5 +1,11 @@
 # Changelog
 
+### [3.8.90](https://github.com/kunalnagar/encrypt0r/compare/v3.8.89...v3.8.90) (2021-08-09)
+
+### Chores
+
+- **deps:** update dependency eslint-plugin-import to v2.24.0 ([fe23418](https://github.com/kunalnagar/encrypt0r/commit/fe234186b192c673e52f55d9cce9ba9e52d64d10))
+
 ### [3.8.89](https://github.com/kunalnagar/encrypt0r/compare/v3.8.88...v3.8.89) (2021-08-07)
 
 ### Chores
