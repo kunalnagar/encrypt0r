@@ -1,5 +1,11 @@
 # Changelog
 
+### [3.8.97](https://github.com/kunalnagar/encrypt0r/compare/v3.8.96...v3.8.97) (2021-08-13)
+
+### Bug Fixes
+
+- **deps:** update dependency yargs to v17.1.1 ([11ef3ae](https://github.com/kunalnagar/encrypt0r/commit/11ef3aef5a7db1b4d287a992bb2c3c52fe0ef19c))
+
 ### [3.8.96](https://github.com/kunalnagar/encrypt0r/compare/v3.8.95...v3.8.96) (2021-08-11)
 
 ### Chores
