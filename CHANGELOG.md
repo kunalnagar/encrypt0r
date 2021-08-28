@@ -1,5 +1,11 @@
 # Changelog
 
+### [3.8.115](https://github.com/kunalnagar/encrypt0r/compare/v3.8.114...v3.8.115) (2021-08-28)
+
+### Chores
+
+- **deps:** update dependency typescript to v4.4.2 ([57476d7](https://github.com/kunalnagar/encrypt0r/commit/57476d712bb9db82e3a72f5445e6978b732cbb9d))
+
 ### [3.8.114](https://github.com/kunalnagar/encrypt0r/compare/v3.8.113...v3.8.114) (2021-08-28)
 
 ### Bug Fixes
