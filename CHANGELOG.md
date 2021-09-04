@@ -1,5 +1,11 @@
 # Changelog
 
+### [3.8.117](https://github.com/kunalnagar/encrypt0r/compare/v3.8.116...v3.8.117) (2021-09-04)
+
+### Chores
+
+- **deps:** update babel monorepo to v7.15.4 ([5563fea](https://github.com/kunalnagar/encrypt0r/commit/5563feac152f3056fbadc3a7e36f9c9b7cb75417))
+
 ### [3.8.116](https://github.com/kunalnagar/encrypt0r/compare/v3.8.115...v3.8.116) (2021-09-01)
 
 ### Chores
