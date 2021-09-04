@@ -1,5 +1,11 @@
 # Changelog
 
+### [3.8.119](https://github.com/kunalnagar/encrypt0r/compare/v3.8.118...v3.8.119) (2021-09-04)
+
+### Chores
+
+- **deps:** update node.js to v14.17.6 ([7d92cd0](https://github.com/kunalnagar/encrypt0r/commit/7d92cd05777096c7336df2145d2dfa62da7b0952))
+
 ### [3.8.118](https://github.com/kunalnagar/encrypt0r/compare/v3.8.117...v3.8.118) (2021-09-04)
 
 ### Chores
