@@ -1,5 +1,11 @@
 # Changelog
 
+### [3.8.120](https://github.com/kunalnagar/encrypt0r/compare/v3.8.119...v3.8.120) (2021-09-04)
+
+### Chores
+
+- **deps:** update dependency @babel/core to v7.15.5 ([9980a1f](https://github.com/kunalnagar/encrypt0r/commit/9980a1f95d3b1fcec78ebd46e1ff2036aaf3ef84))
+
 ### [3.8.119](https://github.com/kunalnagar/encrypt0r/compare/v3.8.118...v3.8.119) (2021-09-04)
 
 ### Chores
