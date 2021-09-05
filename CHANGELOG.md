@@ -1,5 +1,11 @@
 # Changelog
 
+### [3.8.124](https://github.com/kunalnagar/encrypt0r/compare/v3.8.123...v3.8.124) (2021-09-05)
+
+### Chores
+
+- **deps:** update dependency @kunalnagarco/eslint-config to v0.1.43 ([ccb7266](https://github.com/kunalnagar/encrypt0r/commit/ccb72663162edf317f7414e4a9cb4efe166e0979))
+
 ### [3.8.123](https://github.com/kunalnagar/encrypt0r/compare/v3.8.122...v3.8.123) (2021-09-05)
 
 ### Chores
