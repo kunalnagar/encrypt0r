@@ -1,5 +1,11 @@
 # Changelog
 
+### [3.8.123](https://github.com/kunalnagar/encrypt0r/compare/v3.8.122...v3.8.123) (2021-09-05)
+
+### Chores
+
+- **deps:** update dependency @semantic-release/git to v9.0.1 ([a61703e](https://github.com/kunalnagar/encrypt0r/commit/a61703e4f6623588584a9a19a899afceba3de1e7))
+
 ### [3.8.122](https://github.com/kunalnagar/encrypt0r/compare/v3.8.121...v3.8.122) (2021-09-04)
 
 ### Bug Fixes
