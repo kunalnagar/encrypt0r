@@ -1,5 +1,11 @@
 # Changelog
 
+### [3.8.128](https://github.com/kunalnagar/encrypt0r/compare/v3.8.127...v3.8.128) (2021-09-11)
+
+### Chores
+
+- **deps:** update dependency conventional-changelog-conventionalcommits to v4.6.1 ([f0ee279](https://github.com/kunalnagar/encrypt0r/commit/f0ee279181d5cc1f18dcaf17ebcfd4fe93f1532c))
+
 ### [3.8.127](https://github.com/kunalnagar/encrypt0r/compare/v3.8.126...v3.8.127) (2021-09-11)
 
 ### Chores
