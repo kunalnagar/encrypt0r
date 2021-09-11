@@ -1,5 +1,11 @@
 # Changelog
 
+### [3.8.126](https://github.com/kunalnagar/encrypt0r/compare/v3.8.125...v3.8.126) (2021-09-11)
+
+### Chores
+
+- **deps:** update dependency @types/node to v14.17.15 ([1734ab6](https://github.com/kunalnagar/encrypt0r/commit/1734ab6647a42ff5455043ebf5bbab746ea3b3cd))
+
 ### [3.8.125](https://github.com/kunalnagar/encrypt0r/compare/v3.8.124...v3.8.125) (2021-09-06)
 
 ### Chores
