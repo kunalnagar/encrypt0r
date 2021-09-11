@@ -1,5 +1,11 @@
 # Changelog
 
+### [3.8.131](https://github.com/kunalnagar/encrypt0r/compare/v3.8.130...v3.8.131) (2021-09-11)
+
+### Chores
+
+- **deps:** update dependency electron-packager to v15.4.0 ([78744f4](https://github.com/kunalnagar/encrypt0r/commit/78744f4d9a84e8f8d5d32c027e38490801589922))
+
 ### [3.8.130](https://github.com/kunalnagar/encrypt0r/compare/v3.8.129...v3.8.130) (2021-09-11)
 
 ### Chores
