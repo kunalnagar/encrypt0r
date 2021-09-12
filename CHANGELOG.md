@@ -1,5 +1,11 @@
 # Changelog
 
+### [3.8.133](https://github.com/kunalnagar/encrypt0r/compare/v3.8.132...v3.8.133) (2021-09-12)
+
+### Chores
+
+- **deps:** update dependency sort-package-json to v1.51.0 ([a32c2c2](https://github.com/kunalnagar/encrypt0r/commit/a32c2c20e1848164269d38ab14f75ee7e9e84bb2))
+
 ### [3.8.132](https://github.com/kunalnagar/encrypt0r/compare/v3.8.131...v3.8.132) (2021-09-12)
 
 ### Chores
