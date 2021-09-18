@@ -99,7 +99,7 @@
     "lint-staged": "11.1.2",
     "load-grunt-tasks": "5.1.0",
     "node-sass": "6.0.1",
-    "prettier": "2.4.0",
+    "prettier": "2.4.1",
     "semantic-release": "17.4.7",
     "sort-package-json": "1.51.0",
     "time-grunt": "2.0.0",
