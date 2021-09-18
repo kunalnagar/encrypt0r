@@ -11,6 +11,6 @@ jobs:
   main:
     runs-on: ubuntu-latest
     steps:
-      - uses: kunalnagarco/action-semantic-pr@v1.2.53
+      - uses: kunalnagarco/action-semantic-pr@v1.2.54
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
