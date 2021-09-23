@@ -1,5 +1,11 @@
 # Changelog
 
+### [3.8.145](https://github.com/kunalnagar/encrypt0r/compare/v3.8.144...v3.8.145) (2021-09-23)
+
+### Chores
+
+- **deps:** lock file maintenance ([#103](https://github.com/kunalnagar/encrypt0r/issues/103)) ([8635703](https://github.com/kunalnagar/encrypt0r/commit/86357037438c88f75a00c58529dda82492e8ffcf))
+
 ### [3.8.144](https://github.com/kunalnagar/encrypt0r/compare/v3.8.143...v3.8.144) (2021-09-19)
 
 ### Chores
