@@ -1,5 +1,11 @@
 # Changelog
 
+### [3.8.152](https://github.com/kunalnagar/encrypt0r/compare/v3.8.151...v3.8.152) (2021-09-26)
+
+### Chores
+
+- **deps:** update dependency sort-package-json to v1.52.0 ([a4955af](https://github.com/kunalnagar/encrypt0r/commit/a4955af6fc6acb33c26d44f81fbffd03cc335d38))
+
 ### [3.8.151](https://github.com/kunalnagar/encrypt0r/compare/v3.8.150...v3.8.151) (2021-09-25)
 
 ### Bug Fixes
