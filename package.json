@@ -66,7 +66,7 @@
     "electron-installer-debian": "^3.1.0",
     "electron-log": "^4.3.1",
     "jquery": "^3.5.1",
-    "yargs": "17.1.1"
+    "yargs": "17.2.1"
   },
   "devDependencies": {
     "@babel/core": "7.15.5",
@@ -79,7 +79,7 @@
     "@semantic-release/release-notes-generator": "9.0.3",
     "@types/jquery": "3.5.6",
     "@types/node": "14.17.19",
-    "@types/yargs": "17.0.2",
+    "@types/yargs": "17.0.3",
     "@typescript-eslint/eslint-plugin": "4.31.2",
     "@typescript-eslint/parser": "4.31.2",
     "conventional-changelog-conventionalcommits": "4.6.1",
