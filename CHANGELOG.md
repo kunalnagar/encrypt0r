@@ -1,5 +1,11 @@
 # Changelog
 
+### [3.8.158](https://github.com/kunalnagar/encrypt0r/compare/v3.8.157...v3.8.158) (2021-10-02)
+
+### Chores
+
+- **deps:** update node.js to v14.18.0 ([6022bc9](https://github.com/kunalnagar/encrypt0r/commit/6022bc907aae5777a4ee0a65d984a0c08f598456))
+
 ### [3.8.157](https://github.com/kunalnagar/encrypt0r/compare/v3.8.156...v3.8.157) (2021-10-02)
 
 ### Chores
