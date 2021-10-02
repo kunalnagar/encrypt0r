@@ -1,5 +1,11 @@
 # Changelog
 
+### [3.8.160](https://github.com/kunalnagar/encrypt0r/compare/v3.8.159...v3.8.160) (2021-10-02)
+
+### Bug Fixes
+
+- **deps:** update dependency electron to v12.2.1 ([ee4d758](https://github.com/kunalnagar/encrypt0r/commit/ee4d758b01f8bc45bf067bf37a9dd288dec44b72))
+
 ### [3.8.159](https://github.com/kunalnagar/encrypt0r/compare/v3.8.158...v3.8.159) (2021-10-02)
 
 ### Chores
