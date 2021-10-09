@@ -69,8 +69,8 @@
     "yargs": "17.2.1"
   },
   "devDependencies": {
-    "@babel/core": "7.15.5",
-    "@babel/eslint-parser": "7.15.7",
+    "@babel/core": "7.15.8",
+    "@babel/eslint-parser": "7.15.8",
     "@kunalnagarco/eslint-config": "0.1.51",
     "@semantic-release/changelog": "5.0.1",
     "@semantic-release/commit-analyzer": "8.0.1",
