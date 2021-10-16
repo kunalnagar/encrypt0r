@@ -1,5 +1,11 @@
 # Changelog
 
+### [3.8.179](https://github.com/kunalnagar/encrypt0r/compare/v3.8.178...v3.8.179) (2021-10-16)
+
+### Chores
+
+- **deps:** update dependency eslint-plugin-import to v2.25.2 ([bee6496](https://github.com/kunalnagar/encrypt0r/commit/bee6496c130bd65cbb32a32fb6af49156b3cf9c7))
+
 ### [3.8.178](https://github.com/kunalnagar/encrypt0r/compare/v3.8.177...v3.8.178) (2021-10-16)
 
 ### Bug Fixes
