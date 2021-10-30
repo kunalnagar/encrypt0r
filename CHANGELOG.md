@@ -1,5 +1,11 @@
 # Changelog
 
+### [3.8.191](https://github.com/kunalnagar/encrypt0r/compare/v3.8.190...v3.8.191) (2021-10-30)
+
+### Chores
+
+- **deps:** update dependency @types/yargs to v17.0.5 ([24c45e1](https://github.com/kunalnagar/encrypt0r/commit/24c45e100bee9c745411b2c239462c620948d4d1))
+
 ### [3.8.190](https://github.com/kunalnagar/encrypt0r/compare/v3.8.189...v3.8.190) (2021-10-30)
 
 ### Chores
