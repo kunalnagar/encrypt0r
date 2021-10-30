@@ -79,7 +79,7 @@
     "@semantic-release/release-notes-generator": "9.0.3",
     "@types/jquery": "3.5.8",
     "@types/node": "14.17.32",
-    "@types/yargs": "17.0.4",
+    "@types/yargs": "17.0.5",
     "@typescript-eslint/eslint-plugin": "4.33.0",
     "@typescript-eslint/parser": "4.33.0",
     "conventional-changelog-conventionalcommits": "4.6.1",
