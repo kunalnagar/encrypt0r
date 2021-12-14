@@ -13,7 +13,12 @@ export default class Vector extends Transform {
     this.isAppended = false;
   }
 
-  transform(chunk: any, encoding: BufferEncoding, cb: TransformCallback): void {
+  // eslint-disable-next-line no-underscore-dangle
+  _transform(
+    chunk: any,
+    encoding: BufferEncoding,
+    cb: TransformCallback,
+  ): void {
     if (!this.isAppended) {
       this.push(this.initVector);
       this.isAppended = true;
