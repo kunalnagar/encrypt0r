@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.9.0](https://github.com/kunalnagar/encrypt0r/compare/v3.8.197...v3.9.0) (2021-12-14)
+
+### Features
+
+- Change transform to \_transform in Vector ([#119](https://github.com/kunalnagar/encrypt0r/issues/119)) ([5b32850](https://github.com/kunalnagar/encrypt0r/commit/5b32850d5b22f3fd4701e743f2c878dd6b32d58a))
+
 ### [3.8.197](https://github.com/kunalnagar/encrypt0r/compare/v3.8.196...v3.8.197) (2021-11-21)
 
 ### Chores
