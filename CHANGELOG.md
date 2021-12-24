@@ -1,5 +1,14 @@
 # Changelog
 
+### [3.9.2](https://github.com/kunalnagar/encrypt0r/compare/v3.9.1...v3.9.2) (2021-12-24)
+
+### Chores
+
+- **deps:** update babel monorepo to v7.16.5 ([#115](https://github.com/kunalnagar/encrypt0r/issues/115)) ([0f7aaea](https://github.com/kunalnagar/encrypt0r/commit/0f7aaea6d2be09e26ac980e7189a23702a169570))
+- **deps:** update dependency @kunalnagarco/eslint-config to v0.1.61 ([#116](https://github.com/kunalnagar/encrypt0r/issues/116)) ([59294a7](https://github.com/kunalnagar/encrypt0r/commit/59294a75565c206b02821c8a1f8baacb908cca74))
+- **deps:** update dependency @types/jquery to v3.5.11 ([#117](https://github.com/kunalnagar/encrypt0r/issues/117)) ([1bd4749](https://github.com/kunalnagar/encrypt0r/commit/1bd474908cde5098f627d7ddacaeb6328a207f0b))
+- **deps:** update dependency eslint-plugin-import to v2.25.3 ([#118](https://github.com/kunalnagar/encrypt0r/issues/118)) ([8bc9e3e](https://github.com/kunalnagar/encrypt0r/commit/8bc9e3e943fb77be6f46a347e16205871f9c5ca4))
+
 ### [3.9.1](https://github.com/kunalnagar/encrypt0r/compare/v3.9.0...v3.9.1) (2021-12-20)
 
 ### Chores
