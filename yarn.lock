@@ -271,10 +271,10 @@
   resolved "https://registry.yarnpkg.com/@isaacs/string-locale-compare/-/string-locale-compare-1.1.0.tgz#291c227e93fd407a96ecd59879a35809120e432b"
   integrity sha512-SQ7Kzhh9+D+ZW9MA0zkYv3VXhIDNx+LzM6EJ+/65I3QY+enU6Itte7E5XX7EWrqLW2FN4n06GWzBnPoC3th2aQ==
 
-"@kunalnagarco/eslint-config@0.1.60":
-  version "0.1.60"
-  resolved "https://registry.yarnpkg.com/@kunalnagarco/eslint-config/-/eslint-config-0.1.60.tgz#a7f6243e0e56d87ce79632ceda341c948f118d2d"
-  integrity sha512-d0PCdheTUkLC1PdWoxEdKGVpYsEwnclX32NKNz8Y6Kll69Rvqw6ee16OhKizd0fm9uKw92j5YkbbsERgmNAvWw==
+"@kunalnagarco/eslint-config@0.1.61":
+  version "0.1.61"
+  resolved "https://registry.yarnpkg.com/@kunalnagarco/eslint-config/-/eslint-config-0.1.61.tgz#e441c4e33cf6dc63d7ab1566c63828f006250c2d"
+  integrity sha512-ipGU2/Kk3gRiQADDQcFMthQ0U4iGMqGPR4zwTPMX40V30gyNa8oyBf3aDzLncH93dmDWiLt+DjWOmu7eRCPtcg==
 
 "@malept/cross-spawn-promise@^1.0.0", "@malept/cross-spawn-promise@^1.1.0":
   version "1.1.1"
