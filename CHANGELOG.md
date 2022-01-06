@@ -1,5 +1,12 @@
 # Changelog
 
+### [3.9.4](https://github.com/kunalnagar/encrypt0r/compare/v3.9.3...v3.9.4) (2022-01-06)
+
+### Chores
+
+- **deps:** update dependency @babel/core to v7.16.7 ([#122](https://github.com/kunalnagar/encrypt0r/issues/122)) ([35a5199](https://github.com/kunalnagar/encrypt0r/commit/35a51993c78f6f419ef453a5a683ba5de0af9176))
+- **deps:** update dependency conventional-changelog-conventionalcommits to v4.6.3 ([#123](https://github.com/kunalnagar/encrypt0r/issues/123)) ([2e3824a](https://github.com/kunalnagar/encrypt0r/commit/2e3824a41f87ed6156b8c3c6c122f1d7f480ba54))
+
 ### [3.9.3](https://github.com/kunalnagar/encrypt0r/compare/v3.9.2...v3.9.3) (2021-12-30)
 
 ### Chores
