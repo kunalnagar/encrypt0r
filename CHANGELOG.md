@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.10.0](https://github.com/kunalnagar/encrypt0r/compare/v3.9.7...v3.10.0) (2022-01-29)
+
+### Features
+
+- Upgrade node LTS and other dependencies ([#127](https://github.com/kunalnagar/encrypt0r/issues/127)) ([f71870f](https://github.com/kunalnagar/encrypt0r/commit/f71870feefd47f7ef0861f57327dab0d1fba92f8))
+
 ### [3.9.7](https://github.com/kunalnagar/encrypt0r/compare/v3.9.6...v3.9.7) (2022-01-29)
 
 ### Chores
