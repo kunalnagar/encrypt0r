@@ -1,5 +1,13 @@
 # Changelog
 
+### [3.10.1](https://github.com/kunalnagar/encrypt0r/compare/v3.10.0...v3.10.1) (2022-02-07)
+
+### Chores
+
+- **deps:** lock file maintenance ([#129](https://github.com/kunalnagar/encrypt0r/issues/129)) ([db1bf96](https://github.com/kunalnagar/encrypt0r/commit/db1bf964db8ba3095a8c2b46880ce32768df1444))
+- **deps:** update kunalnagarco/action-semantic-pr action to v1.4.2 ([#131](https://github.com/kunalnagar/encrypt0r/issues/131)) ([06553cc](https://github.com/kunalnagar/encrypt0r/commit/06553cc6826daa3d0cd35f699aea826525e70a7b))
+- **deps:** update typescript-eslint monorepo to v5.10.2 ([#130](https://github.com/kunalnagar/encrypt0r/issues/130)) ([400c844](https://github.com/kunalnagar/encrypt0r/commit/400c844404b263c26ac3d9cdf842cb9eb36d31e8))
+
 ## [3.10.0](https://github.com/kunalnagar/encrypt0r/compare/v3.9.7...v3.10.0) (2022-01-29)
 
 ### Features
