@@ -1,5 +1,11 @@
 # Changelog
 
+### [3.10.2](https://github.com/kunalnagar/encrypt0r/compare/v3.10.1...v3.10.2) (2022-02-15)
+
+### Bug Fixes
+
+- **deps:** update dependency electron to v17 ([#132](https://github.com/kunalnagar/encrypt0r/issues/132)) ([2b1d9df](https://github.com/kunalnagar/encrypt0r/commit/2b1d9df9e6e9778d52e64321ded5324fd9030b61))
+
 ### [3.10.1](https://github.com/kunalnagar/encrypt0r/compare/v3.10.0...v3.10.1) (2022-02-07)
 
 ### Chores
