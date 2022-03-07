@@ -1,5 +1,13 @@
 # Changelog
 
+### [3.10.3](https://github.com/kunalnagar/encrypt0r/compare/v3.10.2...v3.10.3) (2022-03-07)
+
+### Chores
+
+- **deps:** lock file maintenance ([#133](https://github.com/kunalnagar/encrypt0r/issues/133)) ([98e8e2f](https://github.com/kunalnagar/encrypt0r/commit/98e8e2f59b8dc2d4fd244d84147dfa0ddbdb831b))
+- **deps:** update dependency @kunalnagarco/eslint-config to v0.1.65 ([#134](https://github.com/kunalnagar/encrypt0r/issues/134)) ([94384dc](https://github.com/kunalnagar/encrypt0r/commit/94384dca32b0bbfbf4964fe539a5cbd0389604de))
+- **deps:** update dependency @types/jquery to v3.5.14 ([#135](https://github.com/kunalnagar/encrypt0r/issues/135)) ([414c1e3](https://github.com/kunalnagar/encrypt0r/commit/414c1e38985feccd88cec5c18740c5f372f59654))
+
 ### [3.10.2](https://github.com/kunalnagar/encrypt0r/compare/v3.10.1...v3.10.2) (2022-02-15)
 
 ### Bug Fixes
