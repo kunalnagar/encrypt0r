@@ -1,5 +1,13 @@
 # Changelog
 
+### [3.10.5](https://github.com/kunalnagar/encrypt0r/compare/v3.10.4...v3.10.5) (2022-04-18)
+
+### Chores
+
+- **deps:** lock file maintenance ([#137](https://github.com/kunalnagar/encrypt0r/issues/137)) ([60ed5ab](https://github.com/kunalnagar/encrypt0r/commit/60ed5abd0e5cd9b99273355bba825954a4e6b73c))
+- **deps:** update dependency @kunalnagarco/eslint-config to v0.1.69 ([#138](https://github.com/kunalnagar/encrypt0r/issues/138)) ([5a3dd19](https://github.com/kunalnagar/encrypt0r/commit/5a3dd194bb1088a647ae6a7a1399b12bff6d8e02))
+- **deps:** update dependency @semantic-release/github to v8.0.4 ([#139](https://github.com/kunalnagar/encrypt0r/issues/139)) ([87cf71b](https://github.com/kunalnagar/encrypt0r/commit/87cf71b3502a116c29e6cd5522fc661568d0c6c4))
+
 ### [3.10.4](https://github.com/kunalnagar/encrypt0r/compare/v3.10.3...v3.10.4) (2022-03-20)
 
 ### Chores
