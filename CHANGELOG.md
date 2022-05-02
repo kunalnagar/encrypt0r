@@ -1,5 +1,14 @@
 # Changelog
 
+### [3.10.6](https://github.com/kunalnagar/encrypt0r/compare/v3.10.5...v3.10.6) (2022-05-02)
+
+### Chores
+
+- **deps:** update babel monorepo ([#143](https://github.com/kunalnagar/encrypt0r/issues/143)) ([e9260fc](https://github.com/kunalnagar/encrypt0r/commit/e9260fc929000afbba603ca800c0bc1cea1ee85c))
+- **deps:** update dependency eslint to v8.14.0 ([#145](https://github.com/kunalnagar/encrypt0r/issues/145)) ([27bf4dd](https://github.com/kunalnagar/encrypt0r/commit/27bf4dd63ec81eade324c8ffe446478f754e7884))
+- **deps:** update dependency grunt to v1.5.2 [security] ([#141](https://github.com/kunalnagar/encrypt0r/issues/141)) ([f6e3002](https://github.com/kunalnagar/encrypt0r/commit/f6e30023a60aab8f9f4a2d324f78e498e81b795e))
+- **deps:** update kunalnagarco/action-semantic-pr action to v1.4.7 ([#142](https://github.com/kunalnagar/encrypt0r/issues/142)) ([44eb24e](https://github.com/kunalnagar/encrypt0r/commit/44eb24e3191268665298d13c2c2e8e562dbb5db5))
+
 ### [3.10.5](https://github.com/kunalnagar/encrypt0r/compare/v3.10.4...v3.10.5) (2022-04-18)
 
 ### Chores
