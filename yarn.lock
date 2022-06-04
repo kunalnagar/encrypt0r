@@ -313,10 +313,10 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
-"@kunalnagarco/eslint-config@0.1.69":
-  version "0.1.69"
-  resolved "https://registry.yarnpkg.com/@kunalnagarco/eslint-config/-/eslint-config-0.1.69.tgz#d62ba83b42042f895afbf7ff2ad0cb4dc42ac9a9"
-  integrity sha512-PlZ0HLY2rVIU0bCKfzIzxz48IkoQgHZwpZVIUJ0Vi3I3miRfw+5cZP1u9gT4cZol7yQUWqY1MlyVzUO5SzGSQg==
+"@kunalnagarco/eslint-config@0.1.72":
+  version "0.1.72"
+  resolved "https://registry.yarnpkg.com/@kunalnagarco/eslint-config/-/eslint-config-0.1.72.tgz#27765df756de404f972ff77a25280ee159eff06e"
+  integrity sha512-p1EyWZdIvI1FY+gtAAhlykEW6LKjRWElVFR2CZgk3WcJ96oFw7aEcQWjYk6jh25oUWQ6EdabUcGrqz6W1ygesA==
 
 "@malept/cross-spawn-promise@^1.0.0", "@malept/cross-spawn-promise@^1.1.0":
   version "1.1.1"
