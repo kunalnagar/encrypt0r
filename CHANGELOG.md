@@ -1,5 +1,14 @@
 # Changelog
 
+### [3.10.9](https://github.com/kunalnagar/encrypt0r/compare/v3.10.8...v3.10.9) (2022-06-04)
+
+### Chores
+
+- **deps:** lock file maintenance ([#146](https://github.com/kunalnagar/encrypt0r/issues/146)) ([3cf21eb](https://github.com/kunalnagar/encrypt0r/commit/3cf21eb74c33265cb39e312dcfb3954c77e64b48))
+- **deps:** update dependency @kunalnagarco/eslint-config to v0.1.72 ([#148](https://github.com/kunalnagar/encrypt0r/issues/148)) ([b0417f2](https://github.com/kunalnagar/encrypt0r/commit/b0417f2a8a6e26fb8e6c68a1cb181efccfd8144e))
+- **deps:** update dependency grunt to v1.5.3 [security] ([#147](https://github.com/kunalnagar/encrypt0r/issues/147)) ([01bd5e5](https://github.com/kunalnagar/encrypt0r/commit/01bd5e5ed29c16b58e8b5a3b5ff7cfdaffc7e53b))
+- **deps:** update kunalnagarco/action-semantic-pr action to v1.4.9 ([#149](https://github.com/kunalnagar/encrypt0r/issues/149)) ([3458e49](https://github.com/kunalnagar/encrypt0r/commit/3458e49cee5768d1e2cbe3d0b8aae13a9a5d8e1c))
+
 ### [3.10.8](https://github.com/kunalnagar/encrypt0r/compare/v3.10.7...v3.10.8) (2022-05-07)
 
 ### Chores
