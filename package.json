@@ -100,7 +100,7 @@
     "load-grunt-tasks": "5.1.0",
     "node-sass": "7.0.1",
     "prettier": "2.5.1",
-    "semantic-release": "19.0.2",
+    "semantic-release": "19.0.3",
     "sort-package-json": "1.53.1",
     "time-grunt": "2.0.0",
     "typescript": "4.5.5"
