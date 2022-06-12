@@ -1,5 +1,12 @@
 # Changelog
 
+### [3.10.10](https://github.com/kunalnagar/encrypt0r/compare/v3.10.9...v3.10.10) (2022-06-12)
+
+### Chores
+
+- **deps:** lock file maintenance ([#150](https://github.com/kunalnagar/encrypt0r/issues/150)) ([92dc973](https://github.com/kunalnagar/encrypt0r/commit/92dc973b45762641f1cd57f1447ca473eb731b64))
+- **deps:** update dependency semantic-release to v19.0.3 [security] ([#151](https://github.com/kunalnagar/encrypt0r/issues/151)) ([29e2c60](https://github.com/kunalnagar/encrypt0r/commit/29e2c60913c1c898dcd8fd0f1a13d4a1e51d6303))
+
 ### [3.10.9](https://github.com/kunalnagar/encrypt0r/compare/v3.10.8...v3.10.9) (2022-06-04)
 
 ### Chores
