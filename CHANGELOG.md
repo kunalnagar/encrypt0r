@@ -1,5 +1,15 @@
 # Changelog
 
+### [3.10.12](https://github.com/kunalnagar/encrypt0r/compare/v3.10.11...v3.10.12) (2022-06-27)
+
+### Bug Fixes
+
+- **deps:** update dependency electron to v17.2.0 [security] ([#153](https://github.com/kunalnagar/encrypt0r/issues/153)) ([259f0fe](https://github.com/kunalnagar/encrypt0r/commit/259f0feefda55ebc3d0677f4756660862b469764))
+
+### Chores
+
+- **deps:** lock file maintenance ([#154](https://github.com/kunalnagar/encrypt0r/issues/154)) ([e0acd26](https://github.com/kunalnagar/encrypt0r/commit/e0acd26fa34d3a92027fc15d9c4fe5a630c5bfaa))
+
 ### [3.10.11](https://github.com/kunalnagar/encrypt0r/compare/v3.10.10...v3.10.11) (2022-06-15)
 
 ### Chores
