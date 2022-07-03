@@ -1,5 +1,11 @@
 # Changelog
 
+### [3.10.13](https://github.com/kunalnagar/encrypt0r/compare/v3.10.12...v3.10.13) (2022-07-03)
+
+### Chores
+
+- **deps:** update babel monorepo ([#157](https://github.com/kunalnagar/encrypt0r/issues/157)) ([038fb24](https://github.com/kunalnagar/encrypt0r/commit/038fb242591af4b108a73416cf994853856f2729))
+
 ### [3.10.12](https://github.com/kunalnagar/encrypt0r/compare/v3.10.11...v3.10.12) (2022-06-27)
 
 ### Bug Fixes
