@@ -1,5 +1,12 @@
 # Changelog
 
+### [3.10.15](https://github.com/kunalnagar/encrypt0r/compare/v3.10.14...v3.10.15) (2022-08-01)
+
+### Chores
+
+- **deps:** update babel monorepo to v7.18.9 ([#158](https://github.com/kunalnagar/encrypt0r/issues/158)) ([facc22d](https://github.com/kunalnagar/encrypt0r/commit/facc22d76c63322cbab5e7c1f488287782c388a0))
+- **deps:** update dependency @semantic-release/github to v8.0.5 ([#159](https://github.com/kunalnagar/encrypt0r/issues/159)) ([c7cbe1b](https://github.com/kunalnagar/encrypt0r/commit/c7cbe1b631a954d50d7cf580ce26b3909e681a76))
+
 ### [3.10.14](https://github.com/kunalnagar/encrypt0r/compare/v3.10.13...v3.10.14) (2022-07-03)
 
 ### Chores
