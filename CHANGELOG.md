@@ -1,5 +1,11 @@
 # Changelog
 
+### [3.10.18](https://github.com/kunalnagar/encrypt0r/compare/v3.10.17...v3.10.18) (2022-10-05)
+
+### Bug Fixes
+
+- Remove CI for PR title ([e2509ed](https://github.com/kunalnagar/encrypt0r/commit/e2509ed449924809bba4bdc4c09869f105773136))
+
 ### [3.10.17](https://github.com/kunalnagar/encrypt0r/compare/v3.10.16...v3.10.17) (2022-10-05)
 
 ### Chores
