@@ -1,5 +1,11 @@
 # Changelog
 
+### [3.10.21](https://github.com/kunalnagar/encrypt0r/compare/v3.10.20...v3.10.21) (2022-10-23)
+
+### Chores
+
+- **deps:** Upgrade electron-packager version ([#165](https://github.com/kunalnagar/encrypt0r/issues/165)) ([2144ec8](https://github.com/kunalnagar/encrypt0r/commit/2144ec8cfc216de7a9ac35b895e7046ca596bf33))
+
 ### [3.10.20](https://github.com/kunalnagar/encrypt0r/compare/v3.10.19...v3.10.20) (2022-10-17)
 
 ### Chores
