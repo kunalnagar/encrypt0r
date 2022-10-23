@@ -27,8 +27,8 @@ jobs:
           wget -qO- https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_22.04/Release.key | sudo apt-key add -
           sudo sh -c 'echo "deb https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_22.04/ ./" > /etc/apt/sources.list.d/obs.list'
           sudo apt update
-          sudo apt-get install -y --install-recommends winehq-devel
-          sudo apt-get install -y fakeroot
+          sudo aptitude install -y --install-recommends winehq-devel
+          sudo aptitude install -y fakeroot
       - name: Create build
         run: yarn build
       - name: Release (dry-run)
