@@ -21,6 +21,7 @@ jobs:
         run: |
           sudo dpkg --add-architecture i386
           sudo apt update
+          sudo apt-get install aptitude
           wget -qO- https://dl.winehq.org/wine-builds/winehq.key | sudo apt-key add -
           sudo apt install software-properties-common
           sudo apt-add-repository 'deb http://dl.winehq.org/wine-builds/ubuntu/ jammy main'
