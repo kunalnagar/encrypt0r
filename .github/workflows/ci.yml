@@ -21,15 +21,14 @@ jobs:
         run: |
           sudo dpkg --add-architecture i386
           sudo apt update
-          sudo apt-get install aptitude
           wget -qO- https://dl.winehq.org/wine-builds/winehq.key | sudo apt-key add -
           sudo apt install software-properties-common
           sudo apt-add-repository 'deb http://dl.winehq.org/wine-builds/ubuntu/ jammy main'
           wget -qO- https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_22.04/Release.key | sudo apt-key add -
           sudo sh -c 'echo "deb https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_22.04/ ./" > /etc/apt/sources.list.d/obs.list'
           sudo apt update
-          sudo aptitude install -y --install-recommends winehq-devel
-          sudo aptitude install -y fakeroot
+          sudo apt install -y --install-recommends winehq-devel
+          sudo apt install -y fakeroot
       - name: Create build
         run: yarn build
       - name: Release (dry-run)
