@@ -1,5 +1,9 @@
 {
   "eslint.enable": true,
+  "eslint.options": {
+    "overrideConfigFile": "config/lint/.eslintrc"
+  },
+  "prettier.configPath": "config/lint/.prettierrc.js",
   "editor.tabSize": 2,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
