@@ -32,7 +32,7 @@ jobs:
       - name: Create build
         run: yarn build
       - name: List release files
-        run: tree release-builds
+        run: ls -al release-builds
       - name: Release (dry-run)
         run: yarn release --dry-run
         env:
