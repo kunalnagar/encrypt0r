@@ -1,5 +1,13 @@
 # Changelog
 
+### [3.10.23](https://github.com/kunalnagar/encrypt0r/compare/v3.10.22...v3.10.23) (2022-11-04)
+
+### Chores
+
+- **deps:** lock file maintenance ([#170](https://github.com/kunalnagar/encrypt0r/issues/170)) ([37dd687](https://github.com/kunalnagar/encrypt0r/commit/37dd687e9145184cd31e1e2a811544a02466420c))
+- **deps:** update dependency node-sass to v7.0.3 ([#171](https://github.com/kunalnagar/encrypt0r/issues/171)) ([c9e0341](https://github.com/kunalnagar/encrypt0r/commit/c9e0341dc54b3bbbec1eac0f9abf115b08fb527c))
+- **deps:** update semantic-release monorepo ([#172](https://github.com/kunalnagar/encrypt0r/issues/172)) ([4388a7a](https://github.com/kunalnagar/encrypt0r/commit/4388a7ad40ea479217b303ac9800afc49c1349ad))
+
 ### [3.10.22](https://github.com/kunalnagar/encrypt0r/compare/v3.10.21...v3.10.22) (2022-10-29)
 
 ### Chores
