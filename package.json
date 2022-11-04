@@ -37,7 +37,7 @@
     "lint": "eslint -c config/lint/.eslintrc src/ --ext .ts,.tsx --max-warnings 0",
     "lint:fix": "eslint -c config/lint/.eslintrc --fix src/ --ext .ts,.tsx --max-warnings 0",
     "prepare": "husky install",
-    "release": "semantic-release --extends config/semantic-release/.releaserc.json",
+    "release": "semantic-release --extends config/semantic-release/.releaserc.json --debug",
     "release:prepare": "yarn prebuild && yarn build:tsc && yarn build:copy && yarn build-grunt && yarn build-mac-x64 && yarn zip-mac-x64 && yarn build-mac-m1 && yarn zip-mac-m1 && yarn build-win-x86 && yarn zip-win-x86 && yarn build-win-x64 && yarn zip-win-x64 && yarn build-linux-x64 && yarn zip-linux-x64 && yarn build-linux-deb && yarn zip-linux-deb",
     "zip-linux-deb": "zip -r release-builds/encrypt0r-linux-deb.zip release-builds/*.deb",
     "zip-linux-x64": "zip -r release-builds/encrypt0r-linux-x64.zip release-builds/encrypt0r-linux-x64",
