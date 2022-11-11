@@ -1,5 +1,11 @@
 # Changelog
 
+### [3.10.24](https://github.com/kunalnagar/encrypt0r/compare/v3.10.23...v3.10.24) (2022-11-11)
+
+### Bug Fixes
+
+- **deps:** update dependency electron to v18 [security] ([#175](https://github.com/kunalnagar/encrypt0r/issues/175)) ([4f19b58](https://github.com/kunalnagar/encrypt0r/commit/4f19b58554115863cb62e5b9b08838e488171050))
+
 ### [3.10.23](https://github.com/kunalnagar/encrypt0r/compare/v3.10.22...v3.10.23) (2022-11-04)
 
 ### Chores
