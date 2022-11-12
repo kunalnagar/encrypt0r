@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.11.0](https://github.com/kunalnagar/encrypt0r/compare/v3.10.25...v3.11.0) (2022-11-12)
+
+### Features
+
+- Organize build files + Updates ([#169](https://github.com/kunalnagar/encrypt0r/issues/169)) ([7f94cf3](https://github.com/kunalnagar/encrypt0r/commit/7f94cf38dacfc9833df989ba44bd95e2212aa8ac))
+
 ### [3.10.25](https://github.com/kunalnagar/encrypt0r/compare/v3.10.24...v3.10.25) (2022-11-12)
 
 ### Chores
