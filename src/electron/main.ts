@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { app, BrowserWindow, dialog, ipcMain, IpcMainEvent } from 'electron';
 import log from 'electron-log';
-import path from 'path';
 
 import Crypto from '../business-logic/Crypto';
 import {
@@ -22,7 +21,6 @@ const createWindow = (): BrowserWindow => {
       nodeIntegration: true,
       contextIsolation: false,
     },
-    icon: path.join('../../assets/icons/png/64x64.png'),
   });
   mainWindow.loadFile('dist/ui/index.html');
   mainWindow.on('closed', () => {
@@ -82,11 +80,6 @@ app.on('window-all-closed', () => {
   if (process.platform === 'darwin') {
     app.quit();
   }
-});
-
-app.on('activate', () => {
-  console.log('activate');
-  createWindow();
 });
 
 ipcMain.on(EVENT_LOG, (e, arg) => {
