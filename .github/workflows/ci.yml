@@ -31,8 +31,6 @@ jobs:
           sudo apt-get install -y fakeroot
       - name: Create build
         run: yarn build
-      - name: Audit
-        run: yarn audit
       - name: List release files
         run: ls -al release-builds
       - name: Release (dry-run)
