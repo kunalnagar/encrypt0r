@@ -60,7 +60,6 @@
   },
   "resolutions": {
     "electron-packager/**/minimatch": ">=3.0.5",
-    "electron/**/got": ">=11.8.5",
     "xmldom": "0.6.0"
   },
   "dependencies": {
