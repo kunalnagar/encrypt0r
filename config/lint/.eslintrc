@@ -1,5 +1,6 @@
 {
-  "extends": ["@kunalnagarco"],
+  "parser": "@typescript-eslint/parser",
+  "extends": ["plugin:@typescript-eslint/recommended", "prettier"],
   "parserOptions": {
     "project": "./tsconfig.json"
   },

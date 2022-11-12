@@ -23,19 +23,19 @@
     "prebuild": "rm -rf dist",
     "build": "yarn build:tsc && yarn build:copy && yarn build-grunt && yarn build-mac-x64 && yarn build-mac-m1 && yarn build-win-x86 && yarn build-win-x64 && yarn build-linux-x64 && yarn build-linux-deb",
     "build-grunt": "grunt build",
-    "build-linux-deb": "electron-installer-debian --src release-builds/encrypt0r-linux-x64/ --dest release-builds/ --arch amd64 --config debian.json",
-    "build-linux-x64": "electron-packager . --overwrite --asar --platform=linux --arch=x64 --icon=assets/icons/icon.png --prune=true --out=release-builds",
-    "build-mac-m1": "electron-packager . --overwrite --platform=darwin --arch=arm64 --icon=assets/icons/icon.icns --prune=true --out=release-builds",
-    "build-mac-x64": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/icon.icns --prune=true --out=release-builds",
-    "build-win-x64": "electron-packager . --overwrite --asar --platform=win32 --arch=x64 --icon=assets/icons/icon.ico --prune=true --out=release-builds",
-    "build-win-x86": "electron-packager . --overwrite --asar --platform=win32 --arch=ia32 --icon=assets/icons/icon.ico --prune=true --out=release-builds",
+    "build-linux-deb": "electron-installer-debian --src release-builds/encrypt0r-linux-x64/ --dest release-builds/ --arch amd64 --config config/electron/build/debian/debian.json",
+    "build-linux-x64": "electron-packager . --overwrite --asar --platform=linux --arch=x64 --icon=src/electron/assets/icons/icon.png --prune=true --out=release-builds",
+    "build-mac-m1": "electron-packager . --overwrite --platform=darwin --arch=arm64 --icon=src/electron/assets/icons/icon.icns --prune=true --out=release-builds",
+    "build-mac-x64": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=src/electron/assets/icons/icon.icns --prune=true --out=release-builds",
+    "build-win-x64": "electron-packager . --overwrite --asar --platform=win32 --arch=x64 --icon=src/electron/assets/icons/icon.ico --prune=true --out=release-builds",
+    "build-win-x86": "electron-packager . --overwrite --asar --platform=win32 --arch=ia32 --icon=src/electron/assets/icons/icon.ico --prune=true --out=release-builds",
     "build:copy": "cp src/ui/index.html dist/ui/",
     "build:tsc": "tsc",
     "build:tsc:watch": "tsc --watch",
     "deploy": "sh ./scripts/deploy.sh",
     "dev": "yarn prebuild && yarn build:tsc && yarn build:copy && yarn build-grunt && electron . & yarn build:tsc:watch & grunt watch",
-    "lint": "eslint src/ --ext .ts --max-warnings 0",
-    "lint:fix": "eslint --fix src/ --ext .ts --max-warnings 0",
+    "lint": "eslint -c config/lint/.eslintrc src/ --ext .ts,.tsx --max-warnings 0",
+    "lint:fix": "eslint -c config/lint/.eslintrc --fix src/ --ext .ts,.tsx --max-warnings 0",
     "prepare": "husky install",
     "release": "semantic-release",
     "release:prepare": "yarn prebuild && yarn build:tsc && yarn build:copy && yarn build-grunt && yarn build-mac-x64 && yarn zip-mac-x64 && yarn build-mac-m1 && yarn zip-mac-m1 && yarn build-win-x86 && yarn zip-win-x86 && yarn build-win-x64 && yarn zip-win-x64 && yarn build-linux-x64 && yarn zip-linux-x64 && yarn build-linux-deb && yarn zip-linux-deb",
@@ -48,13 +48,13 @@
   },
   "lint-staged": {
     "*.md": [
-      "prettier --parser markdown --write"
+      "prettier --config config/lint/.prettierrc.js --parser markdown --write"
     ],
     "package.json": [
       "sort-package-json"
     ],
     "src/**/*.ts": [
-      "prettier --write src/**/*.ts",
+      "prettier --config config/lint/.prettierrc.js --write src/**/*.ts",
       "yarn lint:fix"
     ]
   },
@@ -71,7 +71,6 @@
   "devDependencies": {
     "@babel/core": "7.18.9",
     "@babel/eslint-parser": "7.18.9",
-    "@kunalnagarco/eslint-config": "0.1.78",
     "@semantic-release/changelog": "6.0.1",
     "@semantic-release/commit-analyzer": "9.0.2",
     "@semantic-release/git": "10.0.1",
@@ -85,7 +84,6 @@
     "conventional-changelog-conventionalcommits": "4.6.3",
     "electron-packager": "17.0.0",
     "eslint": "8.14.0",
-    "eslint-config-airbnb-typescript-prettier": "5.0.0",
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-import": "2.25.4",
     "eslint-plugin-prettier": "4.0.0",
