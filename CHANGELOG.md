@@ -1,5 +1,11 @@
 # Changelog
 
+### [3.11.2](https://github.com/kunalnagar/encrypt0r/compare/v3.11.1...v3.11.2) (2022-11-27)
+
+### Chores
+
+- **deps:** lock file maintenance ([#178](https://github.com/kunalnagar/encrypt0r/issues/178)) ([ec8557c](https://github.com/kunalnagar/encrypt0r/commit/ec8557c77df926c6aec29e87dc00820f2af45763))
+
 ### [3.11.1](https://github.com/kunalnagar/encrypt0r/compare/v3.11.0...v3.11.1) (2022-11-12)
 
 ### Chores
