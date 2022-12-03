@@ -1,5 +1,16 @@
 # Changelog
 
+### [3.11.3](https://github.com/kunalnagar/encrypt0r/compare/v3.11.2...v3.11.3) (2022-12-03)
+
+### Bug Fixes
+
+- **deps:** update dependency electron to v18.3.15 ([#181](https://github.com/kunalnagar/encrypt0r/issues/181)) ([87c3f64](https://github.com/kunalnagar/encrypt0r/commit/87c3f64f0581b9ae1ef6bf83b9137a462a5a4a7c))
+
+### Chores
+
+- **deps:** lock file maintenance ([#179](https://github.com/kunalnagar/encrypt0r/issues/179)) ([92e4b08](https://github.com/kunalnagar/encrypt0r/commit/92e4b0854ad25f6aa47ed3f8c978112dad60fc5f))
+- **deps:** update semantic-release monorepo ([#180](https://github.com/kunalnagar/encrypt0r/issues/180)) ([6bea2b9](https://github.com/kunalnagar/encrypt0r/commit/6bea2b9c78037d00c6de14d08e1f5e668da45116))
+
 ### [3.11.2](https://github.com/kunalnagar/encrypt0r/compare/v3.11.1...v3.11.2) (2022-11-27)
 
 ### Chores
