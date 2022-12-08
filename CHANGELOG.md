@@ -1,5 +1,11 @@
 # Changelog
 
+### [3.11.4](https://github.com/kunalnagar/encrypt0r/compare/v3.11.3...v3.11.4) (2022-12-08)
+
+### Chores
+
+- Upgrade Ubuntu image in actions and node version to 16.18.1 ([#167](https://github.com/kunalnagar/encrypt0r/issues/167)) ([639bb21](https://github.com/kunalnagar/encrypt0r/commit/639bb215ba157e4e78c05e02a4ea1ba7dd3cc5a9))
+
 ### [3.11.3](https://github.com/kunalnagar/encrypt0r/compare/v3.11.2...v3.11.3) (2022-12-03)
 
 ### Bug Fixes
