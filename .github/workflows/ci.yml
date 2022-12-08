@@ -24,7 +24,6 @@ jobs:
           sudo add-apt-repository ppa:cybermax-dexter/sdl2-backport
           sudo apt-add-repository "deb https://dl.winehq.org/wine-builds/ubuntu $(lsb_release -cs) main"
           sudo apt install --install-recommends winehq-stable
-          sudo apt-get install -y fakeroot
       - name: Create build
         run: yarn build
       - name: Release (dry-run)
