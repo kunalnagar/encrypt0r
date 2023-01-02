@@ -1,5 +1,12 @@
 # Changelog
 
+### [3.11.7](https://github.com/kunalnagar/encrypt0r/compare/v3.11.6...v3.11.7) (2023-01-02)
+
+### Chores
+
+- **deps:** update babel monorepo ([#186](https://github.com/kunalnagar/encrypt0r/issues/186)) ([f02e864](https://github.com/kunalnagar/encrypt0r/commit/f02e8647650da7cbba5c016ee8b3c18567feb072))
+- **deps:** update dependency @types/jquery to v3.5.16 ([#185](https://github.com/kunalnagar/encrypt0r/issues/185)) ([a3c0784](https://github.com/kunalnagar/encrypt0r/commit/a3c0784443e897636f8b6c083e5a7884aab3443b))
+
 ### [3.11.6](https://github.com/kunalnagar/encrypt0r/compare/v3.11.5...v3.11.6) (2022-12-23)
 
 ### Chores
