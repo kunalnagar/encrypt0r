@@ -59,7 +59,7 @@
     ]
   },
   "resolutions": {
-    "xmldom": "0.6.0"
+    "@xmldom/xmldom": "0.7.5"
   },
   "dependencies": {
     "electron": "18.3.15",
