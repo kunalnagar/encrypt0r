@@ -1,5 +1,11 @@
 # Changelog
 
+### [3.11.18](https://github.com/kunalnagar/encrypt0r/compare/v3.11.17...v3.11.18) (2023-03-27)
+
+### Chores
+
+- **deps:** update dependency @xmldom/xmldom to v0.7.7 [security] ([#189](https://github.com/kunalnagar/encrypt0r/issues/189)) ([022f505](https://github.com/kunalnagar/encrypt0r/commit/022f505086c0f7b14823bfdcc2eb061e40eaf9af))
+
 ### [3.11.17](https://github.com/kunalnagar/encrypt0r/compare/v3.11.16...v3.11.17) (2023-03-26)
 
 ### Chores
