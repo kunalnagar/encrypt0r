@@ -1,5 +1,11 @@
 # Changelog
 
+### [3.11.24](https://github.com/kunalnagar/encrypt0r/compare/v3.11.23...v3.11.24) (2023-07-12)
+
+### Chores
+
+- **deps:** update babel monorepo to v7.22.9 ([30fd49c](https://github.com/kunalnagar/encrypt0r/commit/30fd49c405ec5ec0257ca9aefaaabf4cba9c54c1))
+
 ### [3.11.23](https://github.com/kunalnagar/encrypt0r/compare/v3.11.22...v3.11.23) (2023-05-15)
 
 ### Chores
