@@ -1,5 +1,11 @@
 # Changelog
 
+### [3.11.32](https://github.com/kunalnagar/encrypt0r/compare/v3.11.31...v3.11.32) (2023-08-09)
+
+### Chores
+
+- **deps:** update dependency eslint-plugin-prettier to v4.2.1 ([eaaf89f](https://github.com/kunalnagar/encrypt0r/commit/eaaf89f51dd08bbc76bb18564db29b2fbb7efdec))
+
 ### [3.11.31](https://github.com/kunalnagar/encrypt0r/compare/v3.11.30...v3.11.31) (2023-08-05)
 
 ### Chores
