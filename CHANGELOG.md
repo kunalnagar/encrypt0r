@@ -1,5 +1,11 @@
 # Changelog
 
+### [3.11.33](https://github.com/kunalnagar/encrypt0r/compare/v3.11.32...v3.11.33) (2023-08-09)
+
+### Chores
+
+- **deps:** update dependency grunt to v1.6.1 ([21c85f2](https://github.com/kunalnagar/encrypt0r/commit/21c85f27b6545a9f3eb683b0122bad632910fc91))
+
 ### [3.11.32](https://github.com/kunalnagar/encrypt0r/compare/v3.11.31...v3.11.32) (2023-08-09)
 
 ### Chores
