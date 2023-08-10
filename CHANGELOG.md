@@ -1,5 +1,11 @@
 # Changelog
 
+### [3.11.34](https://github.com/kunalnagar/encrypt0r/compare/v3.11.33...v3.11.34) (2023-08-10)
+
+### Chores
+
+- **deps:** update dependency lint-staged to v12.5.0 ([da79c56](https://github.com/kunalnagar/encrypt0r/commit/da79c56c9699340113b559850fcc824455e26bee))
+
 ### [3.11.33](https://github.com/kunalnagar/encrypt0r/compare/v3.11.32...v3.11.33) (2023-08-09)
 
 ### Chores
