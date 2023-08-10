@@ -1,5 +1,11 @@
 # Changelog
 
+### [3.11.35](https://github.com/kunalnagar/encrypt0r/compare/v3.11.34...v3.11.35) (2023-08-10)
+
+### Chores
+
+- **deps:** update dependency prettier to v2.8.8 ([984ba48](https://github.com/kunalnagar/encrypt0r/commit/984ba4838d9102acc7cdc0f42bd49a08c5531302))
+
 ### [3.11.34](https://github.com/kunalnagar/encrypt0r/compare/v3.11.33...v3.11.34) (2023-08-10)
 
 ### Chores
