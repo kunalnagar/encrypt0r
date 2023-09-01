@@ -1,5 +1,11 @@
 # Changelog
 
+### [3.11.40](https://github.com/kunalnagar/encrypt0r/compare/v3.11.39...v3.11.40) (2023-09-01)
+
+### Chores
+
+- **deps:** update dependency @types/node to v17.0.45 ([1152ec4](https://github.com/kunalnagar/encrypt0r/commit/1152ec4374c36f0ce738d2cb786514b81f58dc36))
+
 ### [3.11.39](https://github.com/kunalnagar/encrypt0r/compare/v3.11.38...v3.11.39) (2023-09-01)
 
 ### Chores
