@@ -1,5 +1,11 @@
 # Changelog
 
+### [3.11.41](https://github.com/kunalnagar/encrypt0r/compare/v3.11.40...v3.11.41) (2023-09-01)
+
+### Chores
+
+- **deps:** update dependency electron-packager to v17.1.2 ([4ff6c2a](https://github.com/kunalnagar/encrypt0r/commit/4ff6c2ac4d7ac516d029303903660b485b2e63ae))
+
 ### [3.11.40](https://github.com/kunalnagar/encrypt0r/compare/v3.11.39...v3.11.40) (2023-09-01)
 
 ### Chores
