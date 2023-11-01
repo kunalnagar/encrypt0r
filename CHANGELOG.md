@@ -1,5 +1,11 @@
 # Changelog
 
+### [3.11.52](https://github.com/kunalnagar/encrypt0r/compare/v3.11.51...v3.11.52) (2023-11-01)
+
+### Chores
+
+- **deps:** update dependency @babel/core to v7.23.2 ([95d1fa9](https://github.com/kunalnagar/encrypt0r/commit/95d1fa969a7bb7622572fb885ff4879e8b99d7ac))
+
 ### [3.11.51](https://github.com/kunalnagar/encrypt0r/compare/v3.11.50...v3.11.51) (2023-10-30)
 
 ### Chores
