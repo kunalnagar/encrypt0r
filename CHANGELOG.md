@@ -1,5 +1,11 @@
 # Changelog
 
+### [3.11.53](https://github.com/kunalnagar/encrypt0r/compare/v3.11.52...v3.11.53) (2023-11-01)
+
+### Chores
+
+- **deps:** update dependency @types/jquery to v3.5.25 ([f3d7941](https://github.com/kunalnagar/encrypt0r/commit/f3d794155cc0459dedd84909a9e66bd5a7055d3c))
+
 ### [3.11.52](https://github.com/kunalnagar/encrypt0r/compare/v3.11.51...v3.11.52) (2023-11-01)
 
 ### Chores
