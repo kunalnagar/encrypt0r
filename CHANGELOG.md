@@ -1,5 +1,11 @@
 # Changelog
 
+### [3.11.71](https://github.com/kunalnagar/encrypt0r/compare/v3.11.70...v3.11.71) (2024-02-01)
+
+### Chores
+
+- **deps:** update dependency @semantic-release/github to v8.1.0 ([df8779f](https://github.com/kunalnagar/encrypt0r/commit/df8779f2cdbce97852a3eff4b880236c5bb19186))
+
 ### [3.11.70](https://github.com/kunalnagar/encrypt0r/compare/v3.11.69...v3.11.70) (2024-02-01)
 
 ### Chores
