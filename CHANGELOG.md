@@ -1,5 +1,11 @@
 # Changelog
 
+### [3.11.73](https://github.com/kunalnagar/encrypt0r/compare/v3.11.72...v3.11.73) (2024-02-01)
+
+### Chores
+
+- **deps:** update dependency eslint-config-prettier to v8.10.0 ([e7016fc](https://github.com/kunalnagar/encrypt0r/commit/e7016fcf21c8a5addbce10c4efc4bb8fe713a767))
+
 ### [3.11.72](https://github.com/kunalnagar/encrypt0r/compare/v3.11.71...v3.11.72) (2024-02-01)
 
 ### Chores
