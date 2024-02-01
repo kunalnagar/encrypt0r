@@ -1,5 +1,11 @@
 # Changelog
 
+### [3.11.70](https://github.com/kunalnagar/encrypt0r/compare/v3.11.69...v3.11.70) (2024-02-01)
+
+### Chores
+
+- **deps:** update babel monorepo ([a735fc7](https://github.com/kunalnagar/encrypt0r/commit/a735fc769ef6e8936e41e1aa0d0c361b454769cd))
+
 ### [3.11.69](https://github.com/kunalnagar/encrypt0r/compare/v3.11.68...v3.11.69) (2024-01-29)
 
 ### Chores
