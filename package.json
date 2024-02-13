@@ -62,7 +62,7 @@
     "@xmldom/xmldom": "0.8.10"
   },
   "dependencies": {
-    "electron": "22.3.25",
+    "electron": "22.3.27",
     "electron-installer-debian": "^3.1.0",
     "electron-log": "^4.4.5",
     "jquery": "^3.6.0",
