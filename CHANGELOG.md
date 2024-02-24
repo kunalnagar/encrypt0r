@@ -1,5 +1,11 @@
 # Changelog
 
+### [3.11.78](https://github.com/kunalnagar/encrypt0r/compare/v3.11.77...v3.11.78) (2024-02-24)
+
+### Chores
+
+- **deps:** update dependency eslint to v8.57.0 ([e5d2614](https://github.com/kunalnagar/encrypt0r/commit/e5d26143e7a823039c2dc2f6bcd255b1c7dd72d0))
+
 ### [3.11.77](https://github.com/kunalnagar/encrypt0r/compare/v3.11.76...v3.11.77) (2024-02-19)
 
 ### Chores
