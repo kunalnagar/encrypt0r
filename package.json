@@ -87,7 +87,7 @@
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-import": "2.29.1",
     "eslint-plugin-prettier": "5.1.3",
-    "eslint-plugin-simple-import-sort": "7.0.0",
+    "eslint-plugin-simple-import-sort": "12.0.0",
     "grunt": "1.6.1",
     "grunt-cli": "1.4.3",
     "grunt-contrib-cssmin": "4.0.0",
