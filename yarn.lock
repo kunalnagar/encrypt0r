@@ -1644,7 +1644,7 @@ cidr-regex@^3.1.1:
   dependencies:
     ip-regex "^4.1.0"
 
-clean-css@^5.0.1:
+clean-css@^5.3.2:
   version "5.3.3"
   resolved "https://registry.yarnpkg.com/clean-css/-/clean-css-5.3.3.tgz#b330653cd3bd6b75009cc25c714cae7b93351ccd"
   integrity sha512-D5J+kHaVb/wKSFcyyV75uCn8fiY4sV38XJoe4CUyGQ+mOU/fMVYUdH1hJC+CJQ5uY3EnW27SbJYS4X8BiLrAFg==
@@ -3217,13 +3217,13 @@ grunt-cli@1.4.3, grunt-cli@~1.4.3:
     nopt "~4.0.1"
     v8flags "~3.2.0"
 
-grunt-contrib-cssmin@4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/grunt-contrib-cssmin/-/grunt-contrib-cssmin-4.0.0.tgz#ffe7460d0fa53dbc5c7879e80088404cfed93d3b"
-  integrity sha512-jXU+Zlk8Q8XztOGNGpjYlD/BDQ0n95IHKrQKtFR7Gd8hZrzgqiG1Ra7cGYc8h2DD9vkSFGNlweb9Q00rBxOK2w==
+grunt-contrib-cssmin@5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/grunt-contrib-cssmin/-/grunt-contrib-cssmin-5.0.0.tgz#c572bc20e8d085fcd66fc1c53dcd20d2c6e9b547"
+  integrity sha512-SNp4H4+85mm2xaHYi83FBHuOXylpi5vcwgtNoYCZBbkgeXQXoeTAKa59VODRb0woTDBvxouP91Ff5PzCkikg6g==
   dependencies:
-    chalk "^4.1.0"
-    clean-css "^5.0.1"
+    chalk "^4.1.2"
+    clean-css "^5.3.2"
     maxmin "^3.0.0"
 
 grunt-contrib-watch@1.1.0:
