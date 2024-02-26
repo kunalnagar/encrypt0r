@@ -1,5 +1,28 @@
 # Changelog
 
+## [3.12.0](https://github.com/kunalnagar/encrypt0r/compare/v3.11.81...v3.12.0) (2024-02-26)
+
+### Features
+
+- Upgrade dependencies ([#217](https://github.com/kunalnagar/encrypt0r/issues/217)) ([f040b48](https://github.com/kunalnagar/encrypt0r/commit/f040b4813363590c9fc6b607157acdf7c31a6e3d))
+
+### Bug Fixes
+
+- **deps:** update dependency yargs to v17.7.2 ([#202](https://github.com/kunalnagar/encrypt0r/issues/202)) ([e90cd18](https://github.com/kunalnagar/encrypt0r/commit/e90cd183d98a70a4ff48919a5e5345d66524b41d))
+
+### Chores
+
+- **deps:** update actions/checkout action to v4 ([#203](https://github.com/kunalnagar/encrypt0r/issues/203)) ([f52b5c6](https://github.com/kunalnagar/encrypt0r/commit/f52b5c6a6ac8b2d1a5584ef37dd9512cf36b0348))
+- **deps:** update actions/setup-node action to v4 ([#204](https://github.com/kunalnagar/encrypt0r/issues/204)) ([8d0fc7f](https://github.com/kunalnagar/encrypt0r/commit/8d0fc7f29d43ff08fa300a94d159f9f8240da0c2))
+- **deps:** update dependency conventional-changelog-conventionalcommits to v7 ([#205](https://github.com/kunalnagar/encrypt0r/issues/205)) ([6c81f27](https://github.com/kunalnagar/encrypt0r/commit/6c81f27ae5a41951200ebb61c9465b15f926f271))
+- **deps:** update dependency eslint-config-prettier to v9 ([#206](https://github.com/kunalnagar/encrypt0r/issues/206)) ([32972c2](https://github.com/kunalnagar/encrypt0r/commit/32972c22ca8f4b617f6a0584ce8a7f58e06e9b56))
+- **deps:** update dependency eslint-plugin-prettier to v5 ([#207](https://github.com/kunalnagar/encrypt0r/issues/207)) ([d929c59](https://github.com/kunalnagar/encrypt0r/commit/d929c5999118fc5ce70ada259eef865e99b50fee))
+- **deps:** update dependency eslint-plugin-simple-import-sort to v12 ([#208](https://github.com/kunalnagar/encrypt0r/issues/208)) ([a0d466e](https://github.com/kunalnagar/encrypt0r/commit/a0d466e3a00bfb607b65a6e363661f8a2ae195bb))
+- **deps:** update dependency grunt-contrib-cssmin to v5 ([#210](https://github.com/kunalnagar/encrypt0r/issues/210)) ([34c8aab](https://github.com/kunalnagar/encrypt0r/commit/34c8aabb0cd15be3cce249aaf93423be68c6fefc))
+- **deps:** update dependency node to v20 ([#213](https://github.com/kunalnagar/encrypt0r/issues/213)) ([528aa3f](https://github.com/kunalnagar/encrypt0r/commit/528aa3f326f19c267adf7f5f773815057999e2b8))
+- **deps:** update dependency node-sass to v9 ([#214](https://github.com/kunalnagar/encrypt0r/issues/214)) ([4961705](https://github.com/kunalnagar/encrypt0r/commit/4961705666faebbc0692dbff635c3cd8b7a9eabd))
+- **deps:** update dependency typescript to v4.9.5 ([0ebce45](https://github.com/kunalnagar/encrypt0r/commit/0ebce45b987bd3c1acedb33b6795b4ce453afbe5))
+
 ### [3.11.81](https://github.com/kunalnagar/encrypt0r/compare/v3.11.80...v3.11.81) (2024-02-25)
 
 ### Chores
