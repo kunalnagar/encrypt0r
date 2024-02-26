@@ -6,7 +6,7 @@
   "prettier.configPath": "config/lint/.prettierrc.js",
   "editor.tabSize": 2,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "explicit"
   },
   "editor.rulers": [80],
   "files.insertFinalNewline": true
