@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.12.4](https://github.com/kunalnagar/encrypt0r/compare/v3.12.3...v3.12.4) (2024-02-28)
+
+### Chores
+
+- **deps:** update dependency @types/node to v20.11.22 ([63ced5d](https://github.com/kunalnagar/encrypt0r/commit/63ced5d7d5e61cc86e3c2a954818aedc9ca6e60c))
+
 ## [3.12.3](https://github.com/kunalnagar/encrypt0r/compare/v3.12.2...v3.12.3) (2024-02-28)
 
 ### Chores
