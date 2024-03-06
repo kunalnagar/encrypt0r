@@ -101,6 +101,6 @@
     "semantic-release": "23.0.2",
     "sort-package-json": "2.8.0",
     "time-grunt": "2.0.0",
-    "typescript": "5.3.3"
+    "typescript": "5.4.2"
   }
 }
