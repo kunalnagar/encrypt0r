@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.12.9](https://github.com/kunalnagar/encrypt0r/compare/v3.12.8...v3.12.9) (2024-03-07)
+
+### Chores
+
+- **deps:** update dependency typescript to v5.4.2 ([6ed3bd1](https://github.com/kunalnagar/encrypt0r/commit/6ed3bd150f54bbe43bc91a8c546d8ed00a63cb7b))
+
 ## [3.12.8](https://github.com/kunalnagar/encrypt0r/compare/v3.12.7...v3.12.8) (2024-03-06)
 
 ### Chores
