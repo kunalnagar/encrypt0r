@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.12.10](https://github.com/kunalnagar/encrypt0r/compare/v3.12.9...v3.12.10) (2024-03-11)
+
+### Chores
+
+- **deps:** lock file maintenance ([d035c35](https://github.com/kunalnagar/encrypt0r/commit/d035c351018aacd2c57050973fcd3b405f9e3208))
+
 ## [3.12.9](https://github.com/kunalnagar/encrypt0r/compare/v3.12.8...v3.12.9) (2024-03-07)
 
 ### Chores
