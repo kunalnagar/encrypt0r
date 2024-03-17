@@ -1,5 +1,15 @@
 # Changelog
 
+## [3.12.18](https://github.com/kunalnagar/encrypt0r/compare/v3.12.17...v3.12.18) (2024-03-17)
+
+### Bug Fixes
+
+- **deps:** update dependency electron to v29.1.4 ([#220](https://github.com/kunalnagar/encrypt0r/issues/220)) ([60d44b0](https://github.com/kunalnagar/encrypt0r/commit/60d44b05e259a55e159baa91426c9200223e69b6))
+
+### Chores
+
+- **deps:** update dependency @semantic-release/github to v10 ([#221](https://github.com/kunalnagar/encrypt0r/issues/221)) ([ec5dce9](https://github.com/kunalnagar/encrypt0r/commit/ec5dce924e3d74fae7afa0306e5171e7e72b88ac))
+
 ## [3.12.17](https://github.com/kunalnagar/encrypt0r/compare/v3.12.16...v3.12.17) (2024-03-16)
 
 ### Chores
