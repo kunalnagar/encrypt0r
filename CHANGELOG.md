@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.12.20](https://github.com/kunalnagar/encrypt0r/compare/v3.12.19...v3.12.20) (2024-03-18)
+
+### Chores
+
+- **deps:** update dependency semantic-release to v23.0.5 ([bdb4297](https://github.com/kunalnagar/encrypt0r/commit/bdb42972116f8145c721ed23d058c8e2efeea4a3))
+
 ## [3.12.19](https://github.com/kunalnagar/encrypt0r/compare/v3.12.18...v3.12.19) (2024-03-18)
 
 ### Chores
