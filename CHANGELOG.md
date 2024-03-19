@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.12.22](https://github.com/kunalnagar/encrypt0r/compare/v3.12.21...v3.12.22) (2024-03-19)
+
+### Chores
+
+- **deps:** update typescript-eslint monorepo to v7.3.1 ([aa11368](https://github.com/kunalnagar/encrypt0r/commit/aa1136865e47c17ceba3882c3c109caf0329dc13))
+
 ## [3.12.21](https://github.com/kunalnagar/encrypt0r/compare/v3.12.20...v3.12.21) (2024-03-19)
 
 ### Chores
