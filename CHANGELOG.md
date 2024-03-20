@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.12.25](https://github.com/kunalnagar/encrypt0r/compare/v3.12.24...v3.12.25) (2024-03-20)
+
+### Chores
+
+- **deps:** update dependency @semantic-release/commit-analyzer to v12 ([#222](https://github.com/kunalnagar/encrypt0r/issues/222)) ([a6560af](https://github.com/kunalnagar/encrypt0r/commit/a6560affb27e59188a0cf2249bc055d11843b852))
+
 ## [3.12.24](https://github.com/kunalnagar/encrypt0r/compare/v3.12.23...v3.12.24) (2024-03-19)
 
 ### Chores
