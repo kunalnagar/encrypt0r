@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.12.27](https://github.com/kunalnagar/encrypt0r/compare/v3.12.26...v3.12.27) (2024-03-21)
+
+### Chores
+
+- **deps:** update dependency @babel/core to v7.24.3 ([a114018](https://github.com/kunalnagar/encrypt0r/commit/a114018a28dbd4fc68bf57dc18c8cdc783221a06))
+
 ## [3.12.26](https://github.com/kunalnagar/encrypt0r/compare/v3.12.25...v3.12.26) (2024-03-21)
 
 ### Chores
