@@ -13,3 +13,7 @@ encrypt0r provides a simple drag and drop interface to encrypt/decrypt your file
 ### 🔏 Signing Issues
 
 When running the app on Mac/Windows, you might get an untrusted developer warning. This is because the app is not signed by the developer (aka me). Signing an app requires a Signing Certificate that costs hundreds of dollars per year. Apart from the warning, the app works as advertised.
+
+### Demo
+
+https://github.com/kunalnagar/encrypt0r/assets/2741371/784e2782-f2dd-4601-87b9-9d9141d65942
