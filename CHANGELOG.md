@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.12.29](https://github.com/kunalnagar/encrypt0r/compare/v3.12.28...v3.12.29) (2024-03-23)
+
+### Chores
+
+- Update README ([#225](https://github.com/kunalnagar/encrypt0r/issues/225)) ([f7c52f5](https://github.com/kunalnagar/encrypt0r/commit/f7c52f5944e1012f0fcea772bd082f03c9139e03))
+
 ## [3.12.28](https://github.com/kunalnagar/encrypt0r/compare/v3.12.27...v3.12.28) (2024-03-22)
 
 ### Bug Fixes
