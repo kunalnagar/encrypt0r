@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.12.33](https://github.com/kunalnagar/encrypt0r/compare/v3.12.32...v3.12.33) (2024-03-26)
+
+### Chores
+
+- **deps:** update dependency sort-package-json to v2.9.0 ([5834dfe](https://github.com/kunalnagar/encrypt0r/commit/5834dfeb37770216a2327678a379020112499ad1))
+
 ## [3.12.32](https://github.com/kunalnagar/encrypt0r/compare/v3.12.31...v3.12.32) (2024-03-25)
 
 ### Chores
