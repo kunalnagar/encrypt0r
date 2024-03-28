@@ -1,5 +1,16 @@
 # Changelog
 
+## [3.12.34](https://github.com/kunalnagar/encrypt0r/compare/v3.12.33...v3.12.34) (2024-03-28)
+
+### Bug Fixes
+
+- **deps:** update dependency electron to v29.1.6 ([#228](https://github.com/kunalnagar/encrypt0r/issues/228)) ([bc3ca2a](https://github.com/kunalnagar/encrypt0r/commit/bc3ca2aa230c93ec6a36e96fc22ae9e71224730b))
+
+### Chores
+
+- **deps:** update dependency @semantic-release/release-notes-generator to v13 ([#226](https://github.com/kunalnagar/encrypt0r/issues/226)) ([090a8cf](https://github.com/kunalnagar/encrypt0r/commit/090a8cf8abaef766716414946e03ab837f6d6cef))
+- **deps:** update dependency node to v20.12.0 ([#227](https://github.com/kunalnagar/encrypt0r/issues/227)) ([0926971](https://github.com/kunalnagar/encrypt0r/commit/0926971b0c63728c2df4816695f64a30dad391e0))
+
 ## [3.12.33](https://github.com/kunalnagar/encrypt0r/compare/v3.12.32...v3.12.33) (2024-03-26)
 
 ### Chores
