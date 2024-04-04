@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.12.41](https://github.com/kunalnagar/encrypt0r/compare/v3.12.40...v3.12.41) (2024-04-04)
+
+### Chores
+
+- **deps:** update dependency semantic-release to v23.0.7 ([1ce2a19](https://github.com/kunalnagar/encrypt0r/commit/1ce2a19795aa9f0046028453ec5ac7b78d0e956c))
+
 ## [3.12.40](https://github.com/kunalnagar/encrypt0r/compare/v3.12.39...v3.12.40) (2024-04-03)
 
 ### Chores
