@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.12.43](https://github.com/kunalnagar/encrypt0r/compare/v3.12.42...v3.12.43) (2024-04-07)
+
+### Chores
+
+- **deps:** update dependency @semantic-release/github to v10.0.3 ([b1948e3](https://github.com/kunalnagar/encrypt0r/commit/b1948e3988b9973dd2aec6a92fa0ce59e8c9fd68))
+
 ## [3.12.42](https://github.com/kunalnagar/encrypt0r/compare/v3.12.41...v3.12.42) (2024-04-04)
 
 ### Chores
