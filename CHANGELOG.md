@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.12.46](https://github.com/kunalnagar/encrypt0r/compare/v3.12.45...v3.12.46) (2024-04-22)
+
+### Chores
+
+- **deps:** update dependency eslint to v9 ([#231](https://github.com/kunalnagar/encrypt0r/issues/231)) ([73ac3de](https://github.com/kunalnagar/encrypt0r/commit/73ac3de38b672376121d8bf942dc4e208284fd1c))
+- **deps:** update dependency node to v20.12.2 ([#229](https://github.com/kunalnagar/encrypt0r/issues/229)) ([e1603c1](https://github.com/kunalnagar/encrypt0r/commit/e1603c11d1942d92b08aa0a0511fd00db8e650ff))
+
 ## [3.12.45](https://github.com/kunalnagar/encrypt0r/compare/v3.12.44...v3.12.45) (2024-04-08)
 
 ### Chores
