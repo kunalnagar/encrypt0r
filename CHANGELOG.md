@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.12.50](https://github.com/kunalnagar/encrypt0r/compare/v3.12.49...v3.12.50) (2024-08-02)
+
+### Bug Fixes
+
+- **deps:** update dependency electron-log to v5.1.7 ([#232](https://github.com/kunalnagar/encrypt0r/issues/232)) ([2b385ca](https://github.com/kunalnagar/encrypt0r/commit/2b385ca2bc80b0ad4cd269b3d1c7037bd62ced32))
+
 ## [3.12.49](https://github.com/kunalnagar/encrypt0r/compare/v3.12.48...v3.12.49) (2024-08-01)
 
 ### Chores
