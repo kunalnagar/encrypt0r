@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.12.52](https://github.com/kunalnagar/encrypt0r/compare/v3.12.51...v3.12.52) (2024-11-01)
+
+### Chores
+
+- **deps:** update dependency @types/yargs to v17.0.33 ([8412657](https://github.com/kunalnagar/encrypt0r/commit/84126570ab676077e3268cc4ec2f83ad878c9aab))
+
 ## [3.12.51](https://github.com/kunalnagar/encrypt0r/compare/v3.12.50...v3.12.51) (2024-09-01)
 
 ### Chores
