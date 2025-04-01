@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.12.56](https://github.com/kunalnagar/encrypt0r/compare/v3.12.55...v3.12.56) (2025-04-01)
+
+### Chores
+
+- **deps:** update babel monorepo ([ce516b2](https://github.com/kunalnagar/encrypt0r/commit/ce516b2c38f24abd569ca5a8e6a83652f6c517b3))
+
 ## [3.12.55](https://github.com/kunalnagar/encrypt0r/compare/v3.12.54...v3.12.55) (2025-03-01)
 
 ### Chores
