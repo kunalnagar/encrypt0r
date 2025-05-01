@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.12.57](https://github.com/kunalnagar/encrypt0r/compare/v3.12.56...v3.12.57) (2025-05-01)
+
+### Chores
+
+- **deps:** update dependency eslint to v9.25.1 ([dc57a33](https://github.com/kunalnagar/encrypt0r/commit/dc57a333d2bf95d5a242be8f98f7dc96c58ebee2))
+
 ## [3.12.56](https://github.com/kunalnagar/encrypt0r/compare/v3.12.55...v3.12.56) (2025-04-01)
 
 ### Chores
