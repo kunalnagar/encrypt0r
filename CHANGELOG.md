@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.12.58](https://github.com/kunalnagar/encrypt0r/compare/v3.12.57...v3.12.58) (2025-07-09)
+
+### Bug Fixes
+
+- **deps:** update dependency electron to v29.3.3 [security] ([#235](https://github.com/kunalnagar/encrypt0r/issues/235)) ([50db414](https://github.com/kunalnagar/encrypt0r/commit/50db414f4e9eab7e9e2c94ab2fea92b82564d564))
+
 ## [3.12.57](https://github.com/kunalnagar/encrypt0r/compare/v3.12.56...v3.12.57) (2025-05-01)
 
 ### Chores
