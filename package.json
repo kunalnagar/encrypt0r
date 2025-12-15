@@ -99,7 +99,7 @@
     "node-sass": "9.0.0",
     "prettier": "3.2.5",
     "semantic-release": "23.0.7",
-    "sort-package-json": "2.10.0",
+    "sort-package-json": "2.15.1",
     "time-grunt": "2.0.0",
     "typescript": "5.4.4"
   }
