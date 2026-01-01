@@ -76,7 +76,7 @@
     "@semantic-release/git": "10.0.1",
     "@semantic-release/github": "10.0.3",
     "@semantic-release/release-notes-generator": "13.0.0",
-    "@types/jquery": "3.5.32",
+    "@types/jquery": "3.5.33",
     "@types/node": "20.12.7",
     "@types/yargs": "17.0.33",
     "@typescript-eslint/eslint-plugin": "7.6.0",
