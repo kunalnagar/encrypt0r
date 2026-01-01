@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.12.63](https://github.com/kunalnagar/encrypt0r/compare/v3.12.62...v3.12.63) (2026-01-01)
+
+### Chores
+
+- **deps:** update dependency eslint-plugin-import to v2.32.0 ([773eefa](https://github.com/kunalnagar/encrypt0r/commit/773eefa2479b9dde872d6a92d1ee6290d6326268))
+
 ## [3.12.62](https://github.com/kunalnagar/encrypt0r/compare/v3.12.61...v3.12.62) (2025-12-15)
 
 ### Chores
