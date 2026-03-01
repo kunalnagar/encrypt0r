@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.12.64](https://github.com/kunalnagar/encrypt0r/compare/v3.12.63...v3.12.64) (2026-03-01)
+
+### Chores
+
+- **deps:** update dependency @types/yargs to v17.0.35 ([3736f59](https://github.com/kunalnagar/encrypt0r/commit/3736f590e6415484715080c839528ba9f0ada8c0))
+
 ## [3.12.63](https://github.com/kunalnagar/encrypt0r/compare/v3.12.62...v3.12.63) (2026-01-01)
 
 ### Chores
