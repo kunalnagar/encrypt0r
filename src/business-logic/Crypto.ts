@@ -73,7 +73,7 @@ export default class Crypto extends EventEmitter implements ICrypto {
     const sourceStream = getSourceStream(this.sourceFilePath, 16);
     const destinationStream = getDestinationStream(this.destinationFilePath);
     initializationVectorStream.on('data', (chunk) => {
-      const initializationVector = chunk as Buffer;
+      const initializationVector = new Uint8Array(chunk as Buffer);
       const decipher = getDecipher(this.passphrase, initializationVector);
       pipeline(
         sourceStream,

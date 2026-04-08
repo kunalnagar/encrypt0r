@@ -1,19 +1,19 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
+ 
 import { Transform, TransformCallback } from 'stream';
 
 export default class Vector extends Transform {
-  private initVector: Buffer;
+  private initVector: Uint8Array;
 
   private isAppended: boolean;
 
-  constructor(initVector: Buffer) {
+  constructor(initVector: Uint8Array) {
     super();
     this.initVector = initVector;
     this.isAppended = false;
   }
 
-  // eslint-disable-next-line no-underscore-dangle
+   
   _transform(
     chunk: any,
     encoding: BufferEncoding,

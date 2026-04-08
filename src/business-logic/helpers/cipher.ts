@@ -1,19 +1,19 @@
 import {
-  Cipher,
+  Cipheriv,
   createCipheriv,
   createDecipheriv,
   createHash,
-  Decipher,
+  Decipheriv,
 } from 'crypto';
 
-const getCipherKey = (password: string): Buffer => {
-  return createHash('sha256').update(password).digest();
+const getCipherKey = (password: string): Uint8Array => {
+  return new Uint8Array(createHash('sha256').update(password).digest());
 };
 
 export const getCipher = (
   password: string,
-  initializationVector: Buffer,
-): Cipher => {
+  initializationVector: Uint8Array,
+): Cipheriv => {
   return createCipheriv(
     'aes-256-cbc',
     getCipherKey(password),
@@ -23,8 +23,8 @@ export const getCipher = (
 
 export const getDecipher = (
   password: string,
-  initializationVector: Buffer,
-): Decipher => {
+  initializationVector: Uint8Array,
+): Decipheriv => {
   return createDecipheriv(
     'aes-256-cbc',
     getCipherKey(password),
