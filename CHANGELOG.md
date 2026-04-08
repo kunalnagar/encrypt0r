@@ -1,5 +1,18 @@
 # Changelog
 
+## [3.12.66](https://github.com/kunalnagar/encrypt0r/compare/v3.12.65...v3.12.66) (2026-04-08)
+
+### Bug Fixes
+
+- **deps:** update dependency electron to v39 [security] ([#241](https://github.com/kunalnagar/encrypt0r/issues/241)) ([921a507](https://github.com/kunalnagar/encrypt0r/commit/921a5070f85ec66362d2e9aa5c0d8e3adfd64fcc))
+
+### Chores
+
+- **deps:** update babel monorepo ([#240](https://github.com/kunalnagar/encrypt0r/issues/240)) ([f2240d9](https://github.com/kunalnagar/encrypt0r/commit/f2240d986757799235cf7c311e0f3d55204bb0cf))
+- **deps:** update dependency @types/jquery to v3.5.34 ([#237](https://github.com/kunalnagar/encrypt0r/issues/237)) ([f282863](https://github.com/kunalnagar/encrypt0r/commit/f2828635d936ff5c1d64a9380cb0fddd349bfb65))
+- **deps:** update dependency @xmldom/xmldom to v0.8.12 [security] ([#239](https://github.com/kunalnagar/encrypt0r/issues/239)) ([9bdd830](https://github.com/kunalnagar/encrypt0r/commit/9bdd830d33990834552a01b3fd8e1c617a91e529))
+- **deps:** update dependency electron-log to v5.4.3 ([#238](https://github.com/kunalnagar/encrypt0r/issues/238)) ([b9ba0f0](https://github.com/kunalnagar/encrypt0r/commit/b9ba0f0ac15f7ee1e28425f34897cf443d47e49a))
+
 ## [3.12.65](https://github.com/kunalnagar/encrypt0r/compare/v3.12.64...v3.12.65) (2026-04-08)
 
 ### Bug Fixes
