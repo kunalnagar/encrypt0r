@@ -1,9 +1,9 @@
 import {
-  Cipher,
+  Cipheriv,
   createCipheriv,
   createDecipheriv,
   createHash,
-  Decipher,
+  Decipheriv,
 } from 'crypto';
 
 const getCipherKey = (password: string): Uint8Array => {
@@ -13,7 +13,7 @@ const getCipherKey = (password: string): Uint8Array => {
 export const getCipher = (
   password: string,
   initializationVector: Uint8Array,
-): Cipher => {
+): Cipheriv => {
   return createCipheriv(
     'aes-256-cbc',
     getCipherKey(password),
@@ -24,7 +24,7 @@ export const getCipher = (
 export const getDecipher = (
   password: string,
   initializationVector: Uint8Array,
-): Decipher => {
+): Decipheriv => {
   return createDecipheriv(
     'aes-256-cbc',
     getCipherKey(password),
