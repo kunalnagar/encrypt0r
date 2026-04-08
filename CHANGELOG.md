@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.12.67](https://github.com/kunalnagar/encrypt0r/compare/v3.12.66...v3.12.67) (2026-04-08)
+
+### Bug Fixes
+
+- debian package version reads from package.json during release ([b46e2bc](https://github.com/kunalnagar/encrypt0r/commit/b46e2bcec92881c6959133b6a12da2015f1d5414)), closes [#234](https://github.com/kunalnagar/encrypt0r/issues/234)
+
 ## [3.12.66](https://github.com/kunalnagar/encrypt0r/compare/v3.12.65...v3.12.66) (2026-04-08)
 
 ### Bug Fixes
