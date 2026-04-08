@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.12.68](https://github.com/kunalnagar/encrypt0r/compare/v3.12.67...v3.12.68) (2026-04-08)
+
+### Chores
+
+- upgrade to Node 24 LTS with related fixes ([737451a](https://github.com/kunalnagar/encrypt0r/commit/737451a11a0d7803981d76e4ef04f6ecc1d8de37))
+
 ## [3.12.67](https://github.com/kunalnagar/encrypt0r/compare/v3.12.66...v3.12.67) (2026-04-08)
 
 ### Bug Fixes
