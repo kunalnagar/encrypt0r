@@ -6,7 +6,14 @@ on:
 
 jobs:
   release:
-    runs-on: ubuntu-22.04
+    strategy:
+      matrix:
+        include:
+          - os: macos-latest
+            build_flags: --mac --win
+          - os: ubuntu-22.04
+            build_flags: --linux
+    runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -24,16 +31,8 @@ jobs:
           key: ${{ runner.os }}-node_modules-${{ hashFiles('**/yarn.lock') }}-${{ steps.node.outputs.version }}
       - name: Install dependencies
         run: yarn install
-      - name: Install windows dependencies
-        run: |
-          sudo dpkg --add-architecture i386
-          wget -qO - https://dl.winehq.org/wine-builds/winehq.key | sudo apt-key add -
-          sudo add-apt-repository ppa:cybermax-dexter/sdl2-backport
-          sudo apt-add-repository "deb https://dl.winehq.org/wine-builds/ubuntu $(lsb_release -cs) main"
-          sudo apt install --install-recommends winehq-stable
-          sudo ln -sf /usr/bin/wine /usr/bin/wine64
       - name: Create release files
-        run: yarn release:prepare
+        run: yarn build && electron-builder ${{ matrix.build_flags }} --publish never
       - name: Upload release files
         uses: svenstaro/upload-release-action@v2
         with:
