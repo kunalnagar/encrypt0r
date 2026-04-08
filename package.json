@@ -28,7 +28,7 @@
     "lint:fix": "eslint --fix src/ --max-warnings 0",
     "prepare": "husky install",
     "release": "semantic-release",
-    "release:prepare": "yarn build && electron-builder --mac --win --linux",
+    "release:prepare": "yarn build && electron-builder --mac --win --linux --publish never",
     "typecheck": "tsc --noEmit"
   },
   "lint-staged": {
@@ -47,7 +47,6 @@
     "@xmldom/xmldom": "0.8.12"
   },
   "dependencies": {
-    "electron": "39.8.5",
     "electron-log": "^5.1.1",
     "jquery": "^3.6.0",
     "yargs": "17.7.2"
@@ -65,6 +64,7 @@
     "@typescript-eslint/eslint-plugin": "7.6.0",
     "@typescript-eslint/parser": "7.6.0",
     "conventional-changelog-conventionalcommits": "7.0.2",
+    "electron": "39.8.5",
     "electron-builder": "^26.8.1",
     "electron-vite": "^5.0.0",
     "eslint": "9.25.1",
