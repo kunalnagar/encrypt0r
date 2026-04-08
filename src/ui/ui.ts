@@ -63,7 +63,9 @@ $(() => {
     e.stopPropagation();
     $fieldNotice.empty();
     // @ts-ignore
-    const file = e.originalEvent.dataTransfer.files[0];
+    const file = e.originalEvent.dataTransfer.files[0] as File & {
+      path: string;
+    };
     filePath = file.path;
     $filePath.html(file.path);
     $window.trigger(EVENT_LOG, {
