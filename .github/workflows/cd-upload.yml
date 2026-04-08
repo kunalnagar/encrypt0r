@@ -33,6 +33,15 @@ jobs:
         run: yarn install
       - name: Create release files
         run: yarn build && electron-builder ${{ matrix.build_flags }} --publish never
+      - name: Rename artifacts (mac + win)
+        if: runner.os == 'macOS'
+        run: |
+          mv release-builds/encrypt0r-mac-x64.zip release-builds/encrypt0r-mac.zip
+          mv release-builds/encrypt0r-mac-arm64.zip release-builds/encrypt0r-mac-m1.zip
+          mv release-builds/encrypt0r-windows-ia32.zip release-builds/encrypt0r-windows-x86.zip
+      - name: Zip linux deb
+        if: runner.os == 'Linux'
+        run: zip -j release-builds/encrypt0r-linux-deb.zip release-builds/*.deb
       - name: Upload release files
         uses: svenstaro/upload-release-action@v2
         with:

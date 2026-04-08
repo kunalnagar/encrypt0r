@@ -13,6 +13,7 @@ files:
 icon: src/electron/assets/icons/icon
 
 mac:
+  artifactName: "encrypt0r-mac-${arch}.zip"
   target:
     - target: zip
       arch:
@@ -21,6 +22,7 @@ mac:
   category: public.app-category.utilities
 
 win:
+  artifactName: "encrypt0r-windows-${arch}.zip"
   target:
     - target: zip
       arch:
@@ -29,6 +31,7 @@ win:
 
 linux:
   icon: src/electron/assets/icons/icon.png
+  artifactName: "encrypt0r-linux-${arch}.${ext}"
   target:
     - target: zip
       arch:

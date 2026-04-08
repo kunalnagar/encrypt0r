@@ -28,7 +28,7 @@
     "lint:fix": "eslint --fix src/ --max-warnings 0",
     "prepare": "husky install",
     "release": "semantic-release",
-    "release:prepare": "yarn build && electron-builder --mac --win --linux --publish never",
+    "release:prepare": "yarn build && electron-builder --mac --win --linux --publish never && mv release-builds/encrypt0r-mac-x64.zip release-builds/encrypt0r-mac.zip && mv release-builds/encrypt0r-mac-arm64.zip release-builds/encrypt0r-mac-m1.zip && mv release-builds/encrypt0r-windows-ia32.zip release-builds/encrypt0r-windows-x86.zip && zip -j release-builds/encrypt0r-linux-deb.zip release-builds/*.deb",
     "typecheck": "tsc --noEmit"
   },
   "lint-staged": {
