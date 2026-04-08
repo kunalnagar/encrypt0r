@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <title>encrypt0r - A simple way to encrypt and decrypt your files</title>
-    <link rel="stylesheet" type="text/css" href="css/app.min.css" />
   </head>
   <body>
     <section class="text-center">
@@ -35,12 +34,6 @@
       <p id="file_path"></p>
       <p class="notice"></p>
     </div>
-    <script>
-      require('./ui.js');
-      const userAgent = navigator.userAgent.toLowerCase();
-      if (userAgent.indexOf(' electron/') > -1) {
-        require('../electron/ui-adapter.js');
-      }
-    </script>
+    <script type="module" src="./main.ts"></script>
   </body>
 </html>
