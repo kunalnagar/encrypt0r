@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.12.65](https://github.com/kunalnagar/encrypt0r/compare/v3.12.64...v3.12.65) (2026-04-08)
+
+### Bug Fixes
+
+- **ci:** symlink wine to wine64 for Wine 11 compatibility ([#242](https://github.com/kunalnagar/encrypt0r/issues/242)) ([ed08677](https://github.com/kunalnagar/encrypt0r/commit/ed08677a374abcfa6dcb81bcc6d40cac9464eb25))
+
 ## [3.12.64](https://github.com/kunalnagar/encrypt0r/compare/v3.12.63...v3.12.64) (2026-03-01)
 
 ### Chores
