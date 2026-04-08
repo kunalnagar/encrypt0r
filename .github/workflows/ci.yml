@@ -27,6 +27,10 @@ jobs:
           key: ${{ runner.os }}-node_modules-${{ hashFiles('**/yarn.lock') }}-${{ steps.node.outputs.version }}
       - name: Install dependencies
         run: yarn install
+      - name: Lint
+        run: yarn lint
+      - name: Typecheck
+        run: yarn typecheck
       - name: Install windows dependencies
         run: |
           sudo dpkg --add-architecture i386

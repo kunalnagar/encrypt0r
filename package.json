@@ -39,6 +39,7 @@
     "prepare": "husky install",
     "release": "semantic-release",
     "release:prepare": "yarn prebuild && yarn build:tsc && yarn build:copy && yarn build-grunt && yarn build-mac-x64 && yarn zip-mac-x64 && yarn build-mac-m1 && yarn zip-mac-m1 && yarn build-win-x86 && yarn zip-win-x86 && yarn build-win-x64 && yarn zip-win-x64 && yarn build-linux-x64 && yarn zip-linux-x64 && yarn build-linux-deb && yarn zip-linux-deb",
+    "typecheck": "tsc --noEmit",
     "zip-linux-deb": "zip -r release-builds/encrypt0r-linux-deb.zip release-builds/*.deb",
     "zip-linux-x64": "zip -r release-builds/encrypt0r-linux-x64.zip release-builds/encrypt0r-linux-x64",
     "zip-mac-m1": "zip -r release-builds/encrypt0r-mac-m1.zip release-builds/encrypt0r-darwin-arm64",
