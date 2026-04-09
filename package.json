@@ -77,7 +77,7 @@
     "prettier": "3.2.5",
     "sass": "^1.99.0",
     "semantic-release": "23.0.7",
-    "sort-package-json": "2.10.0",
+    "sort-package-json": "2.15.1",
     "typescript": "5.4.4",
     "vite": "^8.0.7"
   }
