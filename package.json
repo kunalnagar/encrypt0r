@@ -78,7 +78,7 @@
     "sass": "^1.99.0",
     "semantic-release": "23.0.7",
     "sort-package-json": "2.10.0",
-    "typescript": "5.4.4",
+    "typescript": "5.9.3",
     "vite": "^8.0.7"
   }
 }
