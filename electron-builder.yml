@@ -1,0 +1,44 @@
+appId: com.kunalnagar.encrypt0r
+productName: encrypt0r
+copyright: Copyright © Kunal Nagar
+
+directories:
+  output: release-builds
+
+files:
+  - out/**/*
+  - dist/**/*
+  - package.json
+
+icon: src/electron/assets/icons/icon
+
+mac:
+  artifactName: "encrypt0r-mac-${arch}.zip"
+  target:
+    - target: zip
+      arch:
+        - x64
+        - arm64
+  category: public.app-category.utilities
+
+win:
+  artifactName: "encrypt0r-windows-${arch}.zip"
+  target:
+    - target: zip
+      arch:
+        - x64
+        - ia32
+
+linux:
+  icon: src/electron/assets/icons/icon.png
+  artifactName: "encrypt0r-linux-${arch}.${ext}"
+  target:
+    - target: zip
+      arch:
+        - x64
+    - target: deb
+      arch:
+        - x64
+  category: Utility
+
+publish: null

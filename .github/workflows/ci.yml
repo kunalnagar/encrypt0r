@@ -41,6 +41,8 @@ jobs:
           sudo ln -sf /usr/bin/wine /usr/bin/wine64
       - name: Create build
         run: yarn build
+      - name: Package (linux + win)
+        run: yarn electron-builder --linux --win --publish never
       - name: List release files
         run: ls -al release-builds
       - name: Release (dry-run)

@@ -1,4 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import { join } from 'path';
+
 import { app, BrowserWindow, dialog, ipcMain, IpcMainEvent } from 'electron';
 import log from 'electron-log';
 
@@ -22,7 +24,11 @@ const createWindow = (): BrowserWindow => {
       contextIsolation: false,
     },
   });
-  mainWindow.loadFile('dist/ui/index.html');
+  if (process.env['ELECTRON_RENDERER_URL']) {
+    mainWindow.loadURL(process.env['ELECTRON_RENDERER_URL']);
+  } else {
+    mainWindow.loadFile(join(__dirname, '../renderer/index.html'));
+  }
   mainWindow.on('closed', () => {
     mainWindow = null;
   });

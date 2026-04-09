@@ -15,37 +15,21 @@
   "repository": "https://github.com/kunalnagar/encrypt0r",
   "license": "MIT",
   "author": "Kunal Nagar <knlnagar@gmail.com>",
-  "main": "dist/electron/main.js",
+  "main": "out/main/index.mjs",
   "bin": {
     "encrypt0r": "dist/cli/index.js"
   },
   "scripts": {
-    "prebuild": "rm -rf dist",
-    "build": "yarn build:tsc && yarn build:copy && yarn build-grunt && yarn build-mac-x64 && yarn build-mac-m1 && yarn build-win-x86 && yarn build-win-x64 && yarn build-linux-x64 && yarn build-linux-deb",
-    "build-grunt": "grunt build",
-    "build-linux-deb": "electron-installer-debian --src release-builds/encrypt0r-linux-x64/ --dest release-builds/ --arch amd64 --config config/electron/build/debian/debian.json",
-    "build-linux-x64": "electron-packager . --overwrite --asar --platform=linux --arch=x64 --icon=src/electron/assets/icons/icon.png --prune=true --out=release-builds",
-    "build-mac-m1": "electron-packager . --overwrite --platform=darwin --arch=arm64 --icon=src/electron/assets/icons/icon.icns --prune=true --out=release-builds",
-    "build-mac-x64": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=src/electron/assets/icons/icon.icns --prune=true --out=release-builds",
-    "build-win-x64": "electron-packager . --overwrite --asar --platform=win32 --arch=x64 --icon=src/electron/assets/icons/icon.ico --prune=true --out=release-builds",
-    "build-win-x86": "electron-packager . --overwrite --asar --platform=win32 --arch=ia32 --icon=src/electron/assets/icons/icon.ico --prune=true --out=release-builds",
-    "build:copy": "cp src/ui/index.html dist/ui/",
-    "build:tsc": "tsc",
-    "build:tsc:watch": "tsc --watch",
+    "prebuild": "rm -rf out dist",
+    "build": "electron-vite build && tsc -p tsconfig.cli.json",
     "deploy": "sh ./scripts/deploy.sh",
-    "dev": "yarn prebuild && yarn build:tsc && yarn build:copy && yarn build-grunt && electron . & yarn build:tsc:watch & grunt watch",
+    "dev": "electron-vite dev",
     "lint": "eslint src/ --max-warnings 0",
     "lint:fix": "eslint --fix src/ --max-warnings 0",
     "prepare": "husky install",
     "release": "semantic-release",
-    "release:prepare": "yarn prebuild && yarn build:tsc && yarn build:copy && yarn build-grunt && yarn build-mac-x64 && yarn zip-mac-x64 && yarn build-mac-m1 && yarn zip-mac-m1 && yarn build-win-x86 && yarn zip-win-x86 && yarn build-win-x64 && yarn zip-win-x64 && yarn build-linux-x64 && yarn zip-linux-x64 && yarn build-linux-deb && yarn zip-linux-deb",
-    "typecheck": "tsc --noEmit",
-    "zip-linux-deb": "zip -r release-builds/encrypt0r-linux-deb.zip release-builds/*.deb",
-    "zip-linux-x64": "zip -r release-builds/encrypt0r-linux-x64.zip release-builds/encrypt0r-linux-x64",
-    "zip-mac-m1": "zip -r release-builds/encrypt0r-mac-m1.zip release-builds/encrypt0r-darwin-arm64",
-    "zip-mac-x64": "zip -r release-builds/encrypt0r-mac.zip release-builds/encrypt0r-darwin-x64",
-    "zip-win-x64": "zip -r release-builds/encrypt0r-windows-x64.zip release-builds/encrypt0r-win32-x64",
-    "zip-win-x86": "zip -r release-builds/encrypt0r-windows-x86.zip release-builds/encrypt0r-win32-ia32"
+    "release:prepare": "yarn build && electron-builder --mac --win --linux --publish never && mv release-builds/encrypt0r-mac-x64.zip release-builds/encrypt0r-mac.zip && mv release-builds/encrypt0r-mac-arm64.zip release-builds/encrypt0r-mac-m1.zip && mv release-builds/encrypt0r-windows-ia32.zip release-builds/encrypt0r-windows-x86.zip && zip -j release-builds/encrypt0r-linux-deb.zip release-builds/*.deb",
+    "typecheck": "tsc --noEmit"
   },
   "lint-staged": {
     "*.md": [
@@ -63,15 +47,11 @@
     "@xmldom/xmldom": "0.8.12"
   },
   "dependencies": {
-    "electron": "39.8.5",
-    "electron-installer-debian": "^3.1.0",
     "electron-log": "^5.1.1",
     "jquery": "^3.6.0",
     "yargs": "17.7.2"
   },
   "devDependencies": {
-    "@babel/core": "7.29.0",
-    "@babel/eslint-parser": "7.28.6",
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/commit-analyzer": "12.0.0",
     "@semantic-release/git": "10.0.1",
@@ -84,25 +64,21 @@
     "@typescript-eslint/eslint-plugin": "7.6.0",
     "@typescript-eslint/parser": "7.6.0",
     "conventional-changelog-conventionalcommits": "7.0.2",
-    "electron-packager": "17.1.2",
+    "electron": "39.8.5",
+    "electron-builder": "^26.8.1",
+    "electron-vite": "^5.0.0",
     "eslint": "9.25.1",
     "eslint-config-prettier": "9.1.2",
     "eslint-plugin-import": "2.32.0",
     "eslint-plugin-prettier": "5.1.3",
     "eslint-plugin-simple-import-sort": "12.0.0",
-    "grunt": "1.6.1",
-    "grunt-cli": "1.4.3",
-    "grunt-contrib-cssmin": "5.0.0",
-    "grunt-contrib-watch": "1.1.0",
-    "grunt-sass": "3.1.0",
     "husky": "9.0.11",
     "lint-staged": "15.2.2",
-    "load-grunt-tasks": "5.1.0",
     "prettier": "3.2.5",
     "sass": "^1.99.0",
     "semantic-release": "23.0.7",
     "sort-package-json": "2.10.0",
-    "time-grunt": "2.0.0",
-    "typescript": "5.4.4"
+    "typescript": "5.4.4",
+    "vite": "^8.0.7"
   }
 }
