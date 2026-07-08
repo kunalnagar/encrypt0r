@@ -14,7 +14,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 24
+          node-version: 22
       - name: Get node version
         id: node
         run: echo "::set-output name=version::$(node -v)"
@@ -45,6 +45,11 @@ jobs:
         run: yarn electron-builder --linux --win --publish never
       - name: List release files
         run: ls -al release-builds
+      - name: Smoke-test npm version
+        # semantic-release --dry-run skips the prepare step, so it never calls
+        # `npm version`. This step replicates that exact call to catch breakage
+        # (e.g. "Yallist is not a constructor" on npm v11) before it reaches cd.yml.
+        run: npm version --no-git-tag-version --allow-same-version
       - name: Release (dry-run)
         run: yarn release --dry-run
         env:
