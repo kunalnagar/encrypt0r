@@ -65,7 +65,7 @@
     "@typescript-eslint/eslint-plugin": "7.6.0",
     "@typescript-eslint/parser": "7.6.0",
     "conventional-changelog-conventionalcommits": "7.0.2",
-    "electron": "39.8.5",
+    "electron": "39.8.10",
     "electron-builder": "^26.8.1",
     "electron-vite": "^5.0.0",
     "eslint": "9.25.1",
