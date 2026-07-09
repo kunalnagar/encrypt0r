@@ -1,5 +1,21 @@
 # Changelog
 
+## [3.12.69](https://github.com/kunalnagar/encrypt0r/compare/v3.12.68...v3.12.69) (2026-07-09)
+
+### Bug Fixes
+
+- align .nvmrc with Node 22 LTS ([#249](https://github.com/kunalnagar/encrypt0r/issues/249)) ([920542c](https://github.com/kunalnagar/encrypt0r/commit/920542cb62f96031ce01c56cfa01295113f3c44e))
+- **ci:** downgrade Node to 22 LTS and smoke-test npm version in CI ([#248](https://github.com/kunalnagar/encrypt0r/issues/248)) ([792f030](https://github.com/kunalnagar/encrypt0r/commit/792f0307213cfdca093b2d2eb2224a0a4a9b0057))
+- **ci:** pin npm to v9 and fix broken smoke-test ([#250](https://github.com/kunalnagar/encrypt0r/issues/250)) ([b2a3fc4](https://github.com/kunalnagar/encrypt0r/commit/b2a3fc451ec608cab08f6e0e9f03fbb1eb200f35))
+- **release:** pin npm to 10.9.2 to fix "Yallist is not a constructor" ([#251](https://github.com/kunalnagar/encrypt0r/issues/251)) ([fa66364](https://github.com/kunalnagar/encrypt0r/commit/fa6636438059f139fccfef2a02e080d25ed5c15d))
+
+### Chores
+
+- **deps:** update dependency @xmldom/xmldom to v0.8.13 [security] ([#246](https://github.com/kunalnagar/encrypt0r/issues/246)) ([e0494f8](https://github.com/kunalnagar/encrypt0r/commit/e0494f8efec2760d34df3061c3169d2e3e663ea8))
+- **deps:** update dependency electron-log to v5.4.4 ([#247](https://github.com/kunalnagar/encrypt0r/issues/247)) ([4214778](https://github.com/kunalnagar/encrypt0r/commit/4214778b87401178011fdc2f799d1e8a9c8b4f1d))
+- **deps:** update dependency eslint-plugin-simple-import-sort to v12.1.1 ([145b749](https://github.com/kunalnagar/encrypt0r/commit/145b74983c4b4e65b549a6341c0ad2ab1826f2c5))
+- migrate build system to electron-vite and electron-builder ([#245](https://github.com/kunalnagar/encrypt0r/issues/245)) ([44a25e0](https://github.com/kunalnagar/encrypt0r/commit/44a25e0d3e846f61177c94ad763a341b32acd454))
+
 ## [3.12.68](https://github.com/kunalnagar/encrypt0r/compare/v3.12.67...v3.12.68) (2026-04-08)
 
 ### Chores
