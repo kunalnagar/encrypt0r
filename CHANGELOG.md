@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.12.70](https://github.com/kunalnagar/encrypt0r/compare/v3.12.69...v3.12.70) (2026-07-09)
+
+### Bug Fixes
+
+- **cd:** invoke electron-builder via yarn in upload workflow ([#252](https://github.com/kunalnagar/encrypt0r/issues/252)) ([ce16bd2](https://github.com/kunalnagar/encrypt0r/commit/ce16bd249ccb0ba7a4e1f0df7c022c07636ccc6d))
+
 ## [3.12.69](https://github.com/kunalnagar/encrypt0r/compare/v3.12.68...v3.12.69) (2026-07-09)
 
 ### Bug Fixes
