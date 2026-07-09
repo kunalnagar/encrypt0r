@@ -44,7 +44,8 @@
     ]
   },
   "resolutions": {
-    "@xmldom/xmldom": "0.8.13"
+    "@xmldom/xmldom": "0.8.13",
+    "npm": "10.9.2"
   },
   "dependencies": {
     "electron-log": "^5.1.1",

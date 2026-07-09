@@ -25,8 +25,6 @@ jobs:
           key: ${{ runner.os }}-node_modules-${{ hashFiles('**/yarn.lock') }}-${{ steps.node.outputs.version }}
       - name: Install dependencies
         run: yarn install
-      - name: Pin npm to v9
-        run: npm install -g npm@9
       - name: Release
         run: yarn release
         env:
