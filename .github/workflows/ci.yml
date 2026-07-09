@@ -45,13 +45,13 @@ jobs:
         run: yarn electron-builder --linux --win --publish never
       - name: List release files
         run: ls -al release-builds
-      - name: Pin npm to v9
-        run: npm install -g npm@9
-      - name: Smoke-test npm version
+      - name: Smoke-test the release's npm version bump
         # semantic-release --dry-run skips the prepare step, so it never calls
-        # `npm version <version>`. This replicates that exact call (with a real
-        # version number) so a broken npm surfaces here, not in cd.yml.
-        run: npm version $(node -p "require('./package.json').version") --no-git-tag-version --allow-same-version
+        # `npm version`. Crucially, that call runs via node_modules/.bin/npm
+        # (yarn puts it on PATH), NOT the system npm — so we invoke that exact
+        # binary here to catch a broken bundled npm (e.g. the yallist@5
+        # "Yallist is not a constructor" crash) before it reaches cd.yml.
+        run: ./node_modules/.bin/npm version $(node -p "require('./package.json').version") --no-git-tag-version --allow-same-version
       - name: Release (dry-run)
         run: yarn release --dry-run
         env:
