@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.12.71](https://github.com/kunalnagar/encrypt0r/compare/v3.12.70...v3.12.71) (2026-10-01)
+
+### Chores
+
+- **deps:** update dependency electron to v39.8.10 [security] ([b6c2ccb](https://github.com/kunalnagar/encrypt0r/commit/b6c2ccbed10a23adcb825f491812900671d0e51e))
+
 ## [3.12.70](https://github.com/kunalnagar/encrypt0r/compare/v3.12.69...v3.12.70) (2026-07-09)
 
 ### Bug Fixes
