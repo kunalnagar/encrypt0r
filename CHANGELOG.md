@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.12.72](https://github.com/kunalnagar/encrypt0r/compare/v3.12.71...v3.12.72) (2026-11-01)
+
+### Chores
+
+- **deps:** update dependency vite to v8.1.6 [security] ([abadf3f](https://github.com/kunalnagar/encrypt0r/commit/abadf3fe44c21041957fe3ae588f158a3fd18f4f))
+
 ## [3.12.71](https://github.com/kunalnagar/encrypt0r/compare/v3.12.70...v3.12.71) (2026-10-01)
 
 ### Chores
